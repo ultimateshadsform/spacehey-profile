@@ -545,7 +545,7 @@ nav .top .right a {
   grid-template-columns: repeat(3, minmax(1rem, 1fr));
   position: relative;
   justify-content: center;
-  place-items: center;
+  place-items: end;
 }
 
 .general-about .details p:nth-child(1) {
