@@ -301,12 +301,12 @@ button:hover,
 @keyframes profile-anim {
   0% {
     perspective: 1000px;
-    transform: rotateY(360deg) perspective(1000px);
+    transform: perspective(1000px) translateX(100%) rotateY(360deg);
   }
 
   100% {
     perspective: 1000px;
-    transform: rotateY(-360deg) perspective(1000px);
+    transform: perspective(1000px) translateX(-100%) rotateY(-360deg);
   }
 }
 
