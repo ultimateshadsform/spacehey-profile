@@ -54,7 +54,7 @@ body:after {
   width: 100%;
   height: 100%;
   background-image: url('https://a.l3n.co/i/myPcgm.jpeg');
-  background-position: center;
+  background-position: top;
   background-repeat-x: no-repeat;
   background-size: contain;
   z-index: -12;
