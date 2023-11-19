@@ -561,12 +561,16 @@ nav .top .right a {
   color: var(--accent-color);
   grid-column: 3;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   place-items: center;
 }
 
 .general-about .details .online img {
-  content: url(https://c.l3n.co/i/BE3n60.png) !important;
+  content: url('https://c.l3n.co/i/myqR02.gif');
+  width: 10em;
+  height: 10em;
+  object-fit: contain;
 }
 
 .profile .contact .inner div div a img {
