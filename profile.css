@@ -4,6 +4,7 @@
 :root {
   --primary-color: red;
   --accent-color: hsl(276 75% 75%);
+  --background-color: hsl(0, 100%, 5%);
 }
 
 * {
@@ -52,7 +53,7 @@ body:after {
   inset: 0;
   width: 100%;
   height: 100%;
-  background-image: url(https://a.l3n.co/i/m7gVNm.jpeg);
+  background-image: url('https://i.pinimg.com/564x/17/7a/5b/177a5b93954952fd717a11fcddd137f9.jpg');
   background-position: center;
   background-repeat-x: no-repeat;
   background-size: contain;
@@ -92,7 +93,7 @@ html:after {
 }
 
 body {
-  background: hsl(0, 100%, 5%);
+  background: var(--background-color);
   overflow-x: clip;
   position: relative;
   display: flex;
@@ -100,7 +101,7 @@ body {
 }
 
 html:before {
-  background-image: url(https://a.l3n.co/i/BHRPkZ.gif);
+  background-image: url('https://cdn.pnghd.pics/data/980/transparent-snow-gif-0.gif');
   content: '';
   position: fixed;
   height: 100%;
@@ -148,11 +149,11 @@ body:before {
   top: 0;
   left: 0;
   z-index: 100;
-  background-image: url(https://c.l3n.co/i/Btk2Qk.gif);
+  background-image: url('https://a.l3n.co/i/myVuSb.gif');
   background-size: cover;
   background-position: center;
-  background-color: hsl(185, 30%, 39%);
-  animation: loading-anim 5s ease 0s 1 normal forwards;
+  background-color: var(--background-color);
+  animation: loading-anim 1.14s ease 0s 1 normal forwards;
   pointer-events: none;
 }
 
@@ -441,7 +442,7 @@ h4,
 }
 
 .report a img {
-  content: url(https://b.l3n.co/i/BE3p4T.png);
+  content: url('https://a.l3n.co/i/my9ZQZ.png');
 }
 
 b {
@@ -573,11 +574,11 @@ nav .top .right a {
 }
 
 .profile .contact .inner div:nth-child(1) div:nth-child(1) a img {
-  content: url(https://a.l3n.co/i/BE3Krz.png);
+  content: url('https://b.l3n.co/i/my91Ti.png');
 }
 
 .profile .contact .inner div:nth-child(1) div:nth-child(1) a:hover img {
-  content: url(https://media.tenor.com/JuFnnZnCCloAAAAd/shadow-the-hedgehog-vr-chat.gif);
+  content: url('https://media.tenor.com/JuFnnZnCCloAAAAd/shadow-the-hedgehog-vr-chat.gif');
   width: 10rem;
   height: auto;
   object-fit: cover;
@@ -588,22 +589,11 @@ nav .top .right a {
 }
 
 .profile .contact .inner div:nth-child(1) div:nth-child(2) a img {
-  content: url(https://c.l3n.co/i/BE3C3P.png);
+  content: url('https://b.l3n.co/i/my9geP.png');
 }
 
 .profile .contact .inner div:nth-child(1) div:nth-child(2) a:hover img {
-  content: url(https://media.tenor.com/YqGbiw9VaiAAAAAC/sonic-the-hedgehog-shadow-the-hedgehog.gif);
-  width: 10rem;
-  height: auto;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.profile .contact .inner div:nth-child(2) div:nth-child(1) a:hover img {
-  content: url(https://media.tenor.com/6SOIHmw9t9AAAAAC/sonic-prime-shadow-the-hedgehog.gif);
+  content: url('https://media.tenor.com/YqGbiw9VaiAAAAAC/sonic-the-hedgehog-shadow-the-hedgehog.gif');
   width: 10rem;
   height: auto;
   object-fit: cover;
@@ -614,15 +604,26 @@ nav .top .right a {
 }
 
 .profile .contact .inner div:nth-child(2) div:nth-child(1) a img {
-  content: url(https://a.l3n.co/i/BE3qa2.png);
+  content: url('https://c.l3n.co/i/my98Fx.png');
+}
+
+.profile .contact .inner div:nth-child(2) div:nth-child(1) a:hover img {
+  content: url('https://media.tenor.com/6SOIHmw9t9AAAAAC/sonic-prime-shadow-the-hedgehog.gif');
+  width: 10rem;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .profile .contact .inner div:nth-child(2) div:nth-child(2) a img {
-  content: url(https://a.l3n.co/i/BE3slC.png);
+  content: url('https://c.l3n.co/i/my9im1.png');
 }
 
 .profile .contact .inner div:nth-child(2) div:nth-child(2) a:hover img {
-  content: url(https://pa1.aminoapps.com/6535/c77e4957b5b29263155c5e786f6b26cfe06edcab_hq.gif);
+  content: url('https://pa1.aminoapps.com/6535/c77e4957b5b29263155c5e786f6b26cfe06edcab_hq.gif');
   width: 10rem;
   height: auto;
   object-fit: cover;
@@ -633,26 +634,15 @@ nav .top .right a {
 }
 
 .profile .contact .inner div:nth-child(3) div:nth-child(1) a img {
-  content: url(https://b.l3n.co/i/BE3mkv.png);
+  content: url('https://b.l3n.co/i/my9joc.png');
 }
 
 .profile .contact .inner div:nth-child(3) div:nth-child(2) a img {
-  content: url(https://a.l3n.co/i/BE36rZ.png);
+  content: url('https://a.l3n.co/i/my9rym.png');
 }
 
 .profile .contact .inner div:nth-child(3) div:nth-child(2) a:hover img {
-  content: url(https://pbs.twimg.com/media/D5LF5fHW4AEzPTM.jpg);
-  width: 10rem;
-  height: auto;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.profile .contact .inner div:nth-child(4) div:nth-child(2) a:hover img {
-  content: url(https://media.tenor.com/jx7PJaSohs4AAAAC/sonic-shadow.gif);
+  content: url('https://pbs.twimg.com/media/D5LF5fHW4AEzPTM.jpg');
   width: 10rem;
   height: auto;
   object-fit: cover;
@@ -663,11 +653,22 @@ nav .top .right a {
 }
 
 .profile .contact .inner div:nth-child(4) div:nth-child(1) a img {
-  content: url(https://c.l3n.co/i/BE399o.png);
+  content: url('https://c.l3n.co/i/my9I8K.png');
 }
 
 .profile .contact .inner div:nth-child(4) div:nth-child(2) a img {
-  content: url(https://b.l3n.co/i/BE3p4T.png);
+  content: url('https://a.l3n.co/i/my9ZQZ.png');
+}
+
+.profile .contact .inner div:nth-child(4) div:nth-child(2) a:hover img {
+  content: url('https://media.tenor.com/jx7PJaSohs4AAAAC/sonic-shadow.gif');
+  width: 10rem;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .profile .mood {
@@ -807,7 +808,7 @@ main .profile div:nth-child(3) span + p {
 
 .shadow-art {
   position: absolute;
-  top: -200%;
+  top: -50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: radial-gradient(
