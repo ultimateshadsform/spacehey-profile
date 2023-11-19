@@ -508,7 +508,7 @@ nav .top .right a {
     left: unset !important;
     position: relative !important;
     justify-content: center;
-    place-items: center;
+    place-items: end;
   }
 
   main .profile meta + div:nth-child(3) {
