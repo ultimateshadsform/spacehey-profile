@@ -455,11 +455,11 @@ h4,
 .side-shadow-hat {
   position: fixed;
   object-fit: contain;
-  top: 200px;
   left: 135px;
   width: 300px;
   z-index: -1;
   transform: scaleX(-1) rotateZ(303deg);
+  bottom: 278px;
 }
 
 .report a img {
