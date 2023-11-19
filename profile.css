@@ -319,7 +319,7 @@ button:hover,
   perspective: 1000px;
   display: flex !important;
   justify-content: center;
-  z-index: 2;
+  z-index: -1;
   animation: profile-anim 5s ease-in-out infinite alternate both;
   animation-fill-mode: forwards;
   position: relative;
