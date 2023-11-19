@@ -453,9 +453,11 @@ h4,
 }
 
 .side-shadow-hat {
-  top: -5rem;
-  width: 20rem;
-  height: 20rem;
+  top: 135px;
+  left: 7rem;
+  width: 21rem;
+  z-index: -1;
+  transform: scaleX(-1) rotateZ(303deg);
 }
 
 .report a img {
