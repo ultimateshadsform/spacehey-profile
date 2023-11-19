@@ -81,7 +81,7 @@ html:after {
   0% {
     transform: translate(0, -100px);
   }
-  25 {
+  25% {
     transform: translate(0vh, 0vw);
   }
   50% {
@@ -409,11 +409,17 @@ h4,
   transition: all 300ms ease;
   filter: invert(420%) sepia(69420%) saturate(1000%) hue-rotate(320deg)
     brightness(100%) contrast(100%);
-  -webkit-mask-image: url(https://i.pinimg.com/originals/2e/1e/2e/2e1e2e419012a5f34c5140e515de0328.png);
+  -webkit-mask-image: url('https://i.pinimg.com/originals/2e/1e/2e/2e1e2e419012a5f34c5140e515de0328.png');
+  mask-image: url('https://i.pinimg.com/originals/2e/1e/2e/2e1e2e419012a5f34c5140e515de0328.png');
   -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
   -webkit-mask-position: center;
+  mask-position: center;
   -webkit-mask-size: contain;
+  mask-size: contain;
   -webkit-mask-type: alpha;
+  mask-type: alpha;
 }
 
 .profile .friends .person:first-child p {
@@ -437,13 +443,21 @@ h4,
   place-items: center;
 }
 
-.side-shadow {
+.side-shadow-container {
   position: fixed;
   left: 10px;
   object-fit: contain;
   bottom: 10px;
   max-height: 400px;
   z-index: -2;
+  background-image: url('https://collection.ju.mp/assets/images/gallery18/ab27fde1_original.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.side-shadow {
+  top: -5rem;
 }
 
 .report a img {
@@ -827,6 +841,7 @@ main .profile div:nth-child(3) span + p {
     rgb(98, 0, 0) 80%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: -1;
   user-select: none;
@@ -923,6 +938,7 @@ main:before {
     rgba(61, 26, 120, 1) 100%
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
