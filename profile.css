@@ -450,10 +450,6 @@ h4,
   bottom: 10px;
   max-height: 400px;
   z-index: -2;
-  background-image: url('https://collection.ju.mp/assets/images/gallery18/ab27fde1_original.gif');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .side-shadow {
