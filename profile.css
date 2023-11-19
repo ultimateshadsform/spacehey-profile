@@ -315,23 +315,33 @@ button:hover,
   }
 }
 
-.profile-pic {
+.general-about .profile-pic {
   perspective: 1000px;
   display: flex !important;
   justify-content: center;
   z-index: 2;
+  animation: profile-anim 5s ease-in-out infinite alternate both;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+
+.general-about .profile-pic:before {
+  content: '';
+  position: absolute;
+  top: -10.6rem;
+  left: -2rem;
+  background-image: url('https://c.l3n.co/i/mycZ9o.png');
+  width: 24rem;
+  height: 22rem;
+  z-index: 1;
+  background-size: contain;
+  pointer-events: none;
 }
 
 .general-about .profile-pic img {
-  width: 11rem !important;
-  height: 11rem !important;
-  max-height: 14rem !important;
-  max-width: 14rem !important;
-  left: 2rem;
-  animation-direction: alternate;
-  animation: profile-anim 5s ease-in-out infinite alternate both;
+  max-height: 14rem;
+  max-width: 14rem;
   perspective: 1000px;
-  animation-fill-mode: forwards;
   border-radius: 0.5rem;
   border: 3px solid var(--accent-color);
   object-fit: cover;
