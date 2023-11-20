@@ -617,6 +617,7 @@ nav .top .right a {
   flex-direction: column;
   justify-content: center;
   place-items: center;
+  position: relative;
 }
 
 .general-about .details .online img {
@@ -624,6 +625,7 @@ nav .top .right a {
   width: 10em;
   height: 10em;
   object-fit: contain;
+  position: absolute;
 }
 
 .profile .contact .inner div div a img {
