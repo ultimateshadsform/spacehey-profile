@@ -336,6 +336,7 @@ button:hover,
   z-index: 1;
   background-size: contain;
   pointer-events: none;
+  background-repeat: no-repeat;
 }
 
 .general-about .profile-pic img {
