@@ -20,6 +20,7 @@
   animation: cursor 500ms linear infinite;
   font-family: 'Watermelon Sugar', sans-serif;
   scroll-behavior: smooth;
+  font-size: 1rem;
 }
 
 ::-webkit-scrollbar {
