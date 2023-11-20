@@ -304,6 +304,27 @@ button:hover,
   background-position: center;
   font-family: 'Beyonders', sans-serif;
   overflow: hidden;
+  position: relative;
+}
+
+.profile-info:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://media.tenor.com/2100NQHbjV8AAAAi/shadow.gif');
+  background-size: contain;
+  z-index: 1;
+  height: 100%;
+  animation: shadow-running 5s ease-in-out infinite;
+}
+
+@keyframes shadow-running {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 @keyframes friend-text-anim {
