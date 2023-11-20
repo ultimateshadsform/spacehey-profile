@@ -1,16 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
-
 :root {
   --primary-color: red;
   --accent-color: hsl(276 75% 75%);
   --background-color: hsl(0, 100%, 5%);
 }
 
+@font-face {
+  font-family: 'Watermelon Sugar';
+  src: url('https://dl.dropboxusercontent.com/scl/fi/c8l5d9503ri5lli6pzqlb/WatermelonSugar.ttf?rlkey=fsgrd4kiixgw1jyc27atwvuby&dl=1')
+    format('truetype');
+}
+
+@font-face {
+  font-family: 'Beyonders';
+  src: url('https://dl.dropboxusercontent.com/scl/fi/j10eailb22tuhayzf8k1y/Beyonders.ttf?rlkey=1jqbxp5ddm5enazoms02vp645&dl=1');
+}
+
 * {
   cursor: url('https://c.l3n.co/i/mxtyRK.png'), auto;
   animation: cursor 500ms linear infinite;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Watermelon Sugar', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -517,7 +525,7 @@ main .profile span[itemprop='name'] {
 main .profile span[itemprop='name'] h1 {
   text-align: center;
   font-size: 1.3rem;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: 'Beyonders', sans-serif;
   transition: all 200ms ease;
 }
 
@@ -561,7 +569,8 @@ nav .top .right a {
     left: unset !important;
     position: relative !important;
     justify-content: center;
-    place-items: end;
+    place-items: center;
+    width: 100%;
   }
 
   main .profile meta + div:nth-child(3) {
@@ -598,7 +607,8 @@ nav .top .right a {
   grid-template-columns: repeat(3, minmax(1rem, 1fr));
   position: relative;
   justify-content: center;
-  place-items: end;
+  place-items: center;
+  width: 100%;
 }
 
 .general-about .details p:nth-child(1) {
@@ -784,7 +794,7 @@ main .profile div:nth-child(3) span + p {
 }
 
 .comment-reply p small a b {
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: 'Beyonders', sans-serif;
   text-shadow: 2px 2px red;
 }
 
@@ -841,7 +851,7 @@ main .profile div:nth-child(3) span + p {
 
 .comments-table td:first-child p {
   animation: name-anim 500ms ease-in-out infinite alternate both;
-  font-family: 'Dela Gothic One', sans-serif;
+  font-family: 'Beyonders', sans-serif;
   font-size: clamp(15px, 2vw, 1.5rem);
   z-index: 1;
   position: relative;
