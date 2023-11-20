@@ -690,6 +690,7 @@ nav .top .right a {
   justify-content: center;
   place-items: center;
   position: relative;
+  z-index: -2;
 }
 
 .general-about .details .online img {
@@ -698,6 +699,7 @@ nav .top .right a {
   height: 10em;
   object-fit: contain;
   position: absolute;
+  pointer-events: none;
 }
 
 .profile .contact .inner div div a img {
