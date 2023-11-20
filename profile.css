@@ -532,7 +532,7 @@ ul:not(nav .links):not(footer .links) li {
   object-fit: contain;
   bottom: 10px;
   max-height: 400px;
-  z-index: -3;
+  z-index: -4;
 }
 
 .side-shadow-hat {
@@ -540,7 +540,7 @@ ul:not(nav .links):not(footer .links) li {
   object-fit: contain;
   left: 135px;
   width: 300px;
-  z-index: -2;
+  z-index: -3;
   transform: scaleX(-1) rotateZ(303deg);
   bottom: 278px;
 }
