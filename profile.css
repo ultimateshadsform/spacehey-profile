@@ -513,6 +513,9 @@ span[itemprop='name'] h1 {
   font-size: 1.3rem;
   font-family: 'Dela Gothic One', sans-serif;
   transition: all 200ms ease;
+  display: flex;
+  width: fit-content;
+  justify-self: center;
 }
 
 span[itemprop='name'] h1:hover {
