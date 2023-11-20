@@ -515,13 +515,13 @@ span[itemprop='name'] h1 {
 }
 
 span[itemprop='name'] h1:hover {
-  text-shadow: 0px 0px 1px #c88fef, -0px 0px 1px #c88fef, 1px 4px 1px #c787dd,
-    -1px 4px 1px #c787dd, 2px 8px 1px #c67fcc, -2px 8px 1px #c67fcc,
-    3px 12px 1px #c577ba, -3px 12px 1px #c577ba, 4px 16px 1px #c46fa8,
-    -4px 16px 1px #c46fa8, 5px 20px 1px #c46797, -5px 20px 1px #c46797,
-    6px 24px 1px #c35f85, -6px 24px 1px #c35f85, 7px 28px 1px #c25774,
-    -7px 28px 1px #c25774, 8px 32px 1px #c14f62, -8px 32px 1px #c14f62,
-    9px 36px 1px #c04751, -9px 36px 1px #c04751, 0px 36px 1px #c04751;
+  text-shadow: 0px 0px 1px #bf3f3f, -0px 0px 1px #bf3f3f, 1px 4px 1px #c04751,
+    -1px 4px 1px #c04751, 2px 8px 1px #c14f62, -2px 8px 1px #c14f62,
+    3px 12px 1px #c25774, -3px 12px 1px #c25774, 4px 16px 1px #c35f85,
+    -4px 16px 1px #c35f85, 5px 20px 1px #c46797, -5px 20px 1px #c46797,
+    6px 24px 1px #c46fa8, -6px 24px 1px #c46fa8, 7px 28px 1px #c577ba,
+    -7px 28px 1px #c577ba, 8px 32px 1px #c67fcc, -8px 32px 1px #c67fcc,
+    9px 36px 1px #c787dd, -9px 36px 1px #c787dd, 0px 36px 1px #c787dd;
 }
 
 nav .top .center form {
