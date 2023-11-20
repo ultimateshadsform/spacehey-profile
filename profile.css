@@ -298,6 +298,10 @@ button:hover,
 .profile-info {
   border-color: var(--accent-color);
   border-radius: 10px;
+  background-image: url('https://media.tenor.com/agtOrBHk5XsAAAAC/stars-purple-stars.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .profile-info .inner h3,
