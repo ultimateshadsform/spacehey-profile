@@ -602,6 +602,7 @@ nav .top .right a {
   flex-direction: column;
   grid-column: span 2;
   align-items: center;
+  width: 100%;
 }
 
 .general-about .details {
