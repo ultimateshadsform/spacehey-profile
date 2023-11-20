@@ -5,8 +5,8 @@
 }
 
 @font-face {
-  font-family: 'Watermelon Sugar';
-  src: url('https://dl.dropboxusercontent.com/scl/fi/c8l5d9503ri5lli6pzqlb/WatermelonSugar.ttf?rlkey=fsgrd4kiixgw1jyc27atwvuby&dl=1')
+  font-family: 'Feijoada';
+  src: url('https://dl.dropboxusercontent.com/scl/fi/d4v2vt0k7562mhepj801x/Feijoada-Regular.ttf?rlkey=vtbsdxe4azusioddrws35fcx5&dl=1')
     format('truetype');
 }
 
@@ -18,7 +18,7 @@
 * {
   cursor: url('https://c.l3n.co/i/mxtyRK.png'), auto;
   animation: cursor 500ms linear infinite;
-  font-family: 'Watermelon Sugar', sans-serif;
+  font-family: 'Feijoada', sans-serif;
   scroll-behavior: smooth;
   font-size: 1rem;
 }
