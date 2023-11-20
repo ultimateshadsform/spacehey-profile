@@ -302,11 +302,14 @@ button:hover,
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  font-family: 'Beyonders', sans-serif;
 }
 
 .profile-info .inner h3,
 .profile-info .inner h3 a {
   color: var(--accent-color);
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
 .profile-pic {
