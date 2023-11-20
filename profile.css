@@ -806,6 +806,7 @@ main .profile div:nth-child(3) span + p {
 .comment-reply p small a b {
   font-family: 'Beyonders', sans-serif;
   text-shadow: 2px 2px red;
+  font-size: 0.5em;
 }
 
 .comment-reply:not(:first-child) {
@@ -862,7 +863,7 @@ main .profile div:nth-child(3) span + p {
 .comments-table td:first-child p {
   animation: name-anim 500ms ease-in-out infinite alternate both;
   font-family: 'Beyonders', sans-serif;
-  font-size: clamp(15px, 2vw, 1.5rem);
+  font-size: clamp(15px, 2vw, 1rem);
   z-index: 1;
   position: relative;
 }
