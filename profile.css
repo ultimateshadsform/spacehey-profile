@@ -318,6 +318,8 @@ button:hover,
     6px 24px 1px #c46fa8, -6px 24px 1px #c46fa8, 7px 28px 1px #c577ba,
     -7px 28px 1px #c577ba, 8px 32px 1px #c67fcc, -8px 32px 1px #c67fcc,
     9px 36px 1px #c787dd, -9px 36px 1px #c787dd, 0px 36px 1px #c787dd;
+  top: -1rem;
+  position: relative;
 }
 
 .profile-pic {
