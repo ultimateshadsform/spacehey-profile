@@ -1,14 +1,19 @@
 :root {
-  /* Text */
+  /* General */
   --bf4-shadow-outline-color: cyan;
   --bf4-shadow-outline-thickness: 2px;
   --primary-color: yellow;
+  --accent-color: cyan;
+  --header-spacer: ' ‖ ';
+  --overlay-opacity: 0.7;
 
   /* Images */
   --header-background: url('https://i.makeagif.com/media/1-23-2016/3IohJf.gif');
   --background-wallpaper: url('https://media.tenor.com/fu4woH3wVwcAAAAC/battlefield4-bf4.gif');
+  --overlay-image: url('https://spaceheyprofiles.fra1.cdn.digitaloceanspaces.com/BF4Profile/overlay.png');
   --cursor-image: url('https://spaceheyprofiles.fra1.cdn.digitaloceanspaces.com/BF4Profile/bf4cursor.png');
   --loading-image: url('https://media.tenor.com/fu4woH3wVwcAAAAC/battlefield4-bf4.gif');
+  --your-friends-with-image: url('https://pngimg.com/d/jet_fighter_PNG116.png');
 
   /* Icons */
   --report-comment-icon: url('https://pngimg.com/d/grenade_PNG1327.png');
@@ -47,6 +52,7 @@ html:before {
   background-size: cover;
   z-index: 100;
   animation: loading-anim 4s ease 0s 1 normal forwards;
+  pointer-events: none;
 }
 
 @keyframes loading-anim {
@@ -78,6 +84,21 @@ body {
     1px 0px var(--bf4-shadow-outline-thickness) var(--bf4-shadow-outline-color);
   display: flex;
   flex-direction: column;
+}
+
+body:after {
+  content: '';
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-image: var(--overlay-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: var(--overlay-opacity);
+  z-index: 10;
+  pointer-events: none;
 }
 
 .container {
@@ -133,6 +154,23 @@ nav .top .left .logo {
 
 nav .links {
   margin: 0 auto;
+}
+
+nav .links a {
+  text-shadow: unset;
+  transition: all 200ms ease;
+}
+
+nav .links a:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 2px black;
+  text-decoration: none;
+}
+
+nav .links li:not(:last-child)::after,
+footer .links li:not(:last-child)::after {
+  color: var(--accent-color);
+  content: var(--header-spacer);
 }
 
 main {
@@ -202,4 +240,37 @@ main {
 
 .profile .friends .person .verified-info .icon.verified {
   filter: sepia(420%) invert(420%) brightness(200%) hue-rotate(310deg);
+}
+
+.profile .profile-info {
+  border: 2px solid var(--accent-color);
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile .profile-info:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--your-friends-with-image);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+  height: 100%;
+  animation: slide-image 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes slide-image {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+footer {
+  background: transparent;
 }
