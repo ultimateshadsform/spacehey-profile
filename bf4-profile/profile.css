@@ -1,11 +1,12 @@
 :root {
   /* General */
-  --bf4-shadow-outline-color: cyan;
-  --bf4-shadow-outline-thickness: 2px;
+  --bf4-shadow-outline-color: cyan; /* Default: cyan */
+  --bf4-shadow-outline-thickness: 2px; /* Default: 2px */
   --primary-color: yellow;
-  --accent-color: cyan;
-  --header-spacer: ' ‖ ';
-  --overlay-opacity: 0.7;
+  --accent-color: cyan; /* Default: cyan */
+  --header-spacer: ' ‖ '; /* Default: ' ‖ ' */
+  --overlay-opacity: 0.7; /* Default: 0.7 */
+  --show-overlay: block; /* Set to none to hide overlay. Default: block */
 
   /* Images */
   --header-background: url('https://i.makeagif.com/media/1-23-2016/3IohJf.gif');
@@ -97,6 +98,7 @@ body:after {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: var(--overlay-opacity);
+  display: var(--show-overlay);
   z-index: 10;
   pointer-events: none;
 }
