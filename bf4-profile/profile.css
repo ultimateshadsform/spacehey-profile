@@ -1,13 +1,14 @@
 :root {
   /* Text */
   --bf4-shadow-outline-color: cyan;
-  --bf4-shadow-outline-thickness: 1px;
-  --primary-color: white;
+  --bf4-shadow-outline-thickness: 2px;
+  --primary-color: yellow;
 
-  /* Wallpapers */
+  /* Images */
+  --header-background: url('https://i.makeagif.com/media/1-23-2016/3IohJf.gif');
   --background-wallpaper: url('https://media.tenor.com/fu4woH3wVwcAAAAC/battlefield4-bf4.gif');
-  --header-background: url('https://images.hdqwalls.com/download/battlefield-4-pc-game-2560x1080.jpg');
   --cursor-image: url('https://spaceheyprofiles.fra1.cdn.digitaloceanspaces.com/BF4Profile/bf4cursor.png');
+  --loading-image: url('https://media.tenor.com/fu4woH3wVwcAAAAC/battlefield4-bf4.gif');
 
   /* Icons */
   --report-comment-icon: url('https://pngimg.com/d/grenade_PNG1327.png');
@@ -31,7 +32,34 @@
 }
 
 * {
-  cursor: var(--cursor-image) 32 32, auto;
+  cursor: var(--cursor-image) 32 32, auto !important;
+}
+
+html:before {
+  content: '';
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-image: var(--loading-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100;
+  animation: loading-anim 4s ease 0s 1 normal forwards;
+}
+
+@keyframes loading-anim {
+  0% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 a {
@@ -60,14 +88,18 @@ body {
 nav:before {
   content: '';
   background-image: var(--header-background);
-  -webkit-mask-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(0, 0, 0, 1)),
-    to(rgba(0, 0, 0, 0))
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
   );
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -113,6 +145,7 @@ main {
   bottom: 0;
   left: 0;
   max-height: 20rem;
+  pointer-events: none;
 }
 
 .recker-image {
@@ -120,6 +153,7 @@ main {
   bottom: 0;
   right: 0;
   max-height: 20rem;
+  pointer-events: none;
 }
 
 .report {
