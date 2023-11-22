@@ -417,10 +417,6 @@ button:hover,
   margin: unset;
 }
 
-.profile .blurbs .section h4 {
-  color: var(--accent-color);
-}
-
 .profile .friends .person p,
 .comments-table td:first-child p,
 .profile .blurbs .heading,
@@ -448,7 +444,10 @@ span[itemprop='name'] h1,
 .general-about .details p:nth-child(2),
 .profile .friends .person a p,
 .profile .friends .heading,
+.profile .blurbs .section,
 .profile .blurbs .heading,
+.profile .blurbs .section h4,
+.profile .blog-preview p,
 h4,
 .blurbs .inner .section p,
 .profile span h1 {
