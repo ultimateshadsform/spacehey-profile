@@ -183,6 +183,19 @@ body:before {
   content: url('https://b.l3n.co/i/sj5s2o.png');
 }
 
+.icon {
+  animation: shadow-spin 1s ease-in-out infinite;
+}
+
+@keyframes shadow-spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
 a {
   color: red;
   transition: all 200ms ease;
