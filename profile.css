@@ -49,7 +49,7 @@ h3,
 h4,
 p,
 label {
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 html {
@@ -205,7 +205,7 @@ a:hover {
 table,
 th,
 td {
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--accent-color);
 }
 
 table {
@@ -423,8 +423,8 @@ button:hover,
 
 .profile .friends .person p,
 .comments-table td:first-child p,
-.blurbs .heading h4,
-.friends .heading h4,
+.profile .blurbs .heading,
+.profile .friends .heading h4,
 span[itemprop='name'] h1,
 .profile .contact .heading h4,
 .profile .table-section .heading h4,
@@ -446,9 +446,9 @@ span[itemprop='name'] h1,
 
 .general-about .details p:nth-child(1),
 .general-about .details p:nth-child(2),
-.friends .person a p,
-.blurbs .heading,
-.blurbs .heading,
+.profile .friends .person a p,
+.profile .friends .heading,
+.profile .blurbs .heading,
 h4,
 .blurbs .inner .section p,
 .profile span h1 {
@@ -471,6 +471,26 @@ ul:not(nav .links):not(footer .links) li {
   100% {
     scale: 1;
   }
+}
+
+.profile .blurbs .heading h4,
+.profile .friends .heading h4 {
+  font-size: 0%;
+}
+
+.profile .blurbs .heading:before {
+  content: 'My shit';
+  font-size: 1.5rem;
+}
+
+.profile .friends .heading h4:before {
+  content: 'Cuties';
+  font-size: 1.5rem;
+}
+
+#comments .heading h4:before {
+  content: 'Complaints';
+  font-size: 1.5rem;
 }
 
 .profile .friends .person:hover {
