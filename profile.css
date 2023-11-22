@@ -320,6 +320,15 @@ iframe {
   color: var(--accent-color);
 }
 
+button.logout-btn {
+  font-size: 0%;
+}
+
+button.logout-btn:before {
+  content: 'Explode';
+  font-size: 1rem;
+}
+
 button,
 .logout-btn,
 .blog-entry .kudos-btn {
@@ -691,6 +700,12 @@ nav .top .right a:hover {
 
 nav .top .right a {
   color: red;
+  font-size: 0%;
+}
+
+nav .top .right a:before {
+  content: 'Therapy';
+  font-size: 1rem;
 }
 
 @media only screen and (max-width: 675px) {
