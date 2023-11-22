@@ -178,12 +178,8 @@ body:before {
   }
 }
 
-.icon,
-.award img {
+nav .links a:nth-child(1) .icon {
   content: url('https://b.l3n.co/i/sj5s2o.png');
-}
-
-.icon {
   animation: shadow-spin 1s ease-in-out infinite;
 }
 
