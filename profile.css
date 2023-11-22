@@ -461,6 +461,12 @@ ul:not(nav .links):not(footer .links) li {
   font-size: unset;
 }
 
+nav .links li:not(:last-child)::after,
+footer .links li:not(:last-child)::after {
+  content: ' ‖ ';
+  color: var(--accent-color);
+}
+
 @keyframes text-wobble {
   0% {
     scale: 1;
@@ -1091,4 +1097,8 @@ main {
 
 footer {
   background: transparent;
+}
+
+footer p {
+  font-size: 1rem;
 }
