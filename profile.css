@@ -178,6 +178,11 @@ body:before {
   }
 }
 
+.icon,
+.award img {
+  content: url('https://b.l3n.co/i/sj5s2o.png');
+}
+
 a {
   color: red;
   transition: all 200ms ease;
