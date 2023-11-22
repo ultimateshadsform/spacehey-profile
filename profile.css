@@ -462,8 +462,13 @@ ul:not(nav .links):not(footer .links) li {
 
 nav .links li:not(:last-child)::after,
 footer .links li:not(:last-child)::after {
-  content: ' ‖ ';
+  content: ' 🦔 ';
   color: var(--accent-color);
+}
+
+nav .links,
+footer .links {
+  text-wrap: balance;
 }
 
 @keyframes text-wobble {
