@@ -987,6 +987,12 @@ main .profile div:nth-child(3) span + p {
   text-shadow: 1px 1px 2px red, 0 0 1em orange, 0 0 0.2em yellow;
 }
 
+.comments-table tr:first-child td:nth-child(2) > p:first-child b .ago {
+  color: black;
+  text-shadow: 0 0 5px red, 0 0 10px yellow, -20px 0 20px yellow,
+    10px 0 20px white;
+}
+
 .comments-table tr:first-child td:first-child img:not(.icon) {
   animation: first-comment-profile-photo-anim 1s ease-in-out infinite alternate
     both;
