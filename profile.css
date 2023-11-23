@@ -364,8 +364,9 @@ button:hover,
   position: absolute;
   inset: 0;
   background-image: url('https://media.tenor.com/2100NQHbjV8AAAAi/shadow.gif');
-  background-size: contain;
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   z-index: 1;
   height: 100%;
   width: 100%;
