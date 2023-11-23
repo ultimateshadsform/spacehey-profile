@@ -62,7 +62,7 @@ body:after {
   inset: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://a.l3n.co/i/myPcgm.jpeg');
+  background-image: url('https://i.pinimg.com/originals/e6/c7/f0/e6c7f0417afa0ac563f7e781e8deb88b.jpg');
   background-position: top;
   background-repeat-x: no-repeat;
   background-size: contain;
@@ -984,6 +984,7 @@ main .profile div:nth-child(3) span + p {
 
 .comments-table tr:first-child td:nth-child(2) > p:nth-child(2) {
   color: yellow;
+  text-shadow: 1px 1px 2px red, 0 0 1em orange, 0 0 0.2em yellow;
 }
 
 .comments-table tr:first-child td:first-child img:not(.icon) {
