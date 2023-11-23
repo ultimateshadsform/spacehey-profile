@@ -365,8 +365,10 @@ button:hover,
   inset: 0;
   background-image: url('https://media.tenor.com/2100NQHbjV8AAAAi/shadow.gif');
   background-size: contain;
+  background-position: center;
   z-index: 1;
   height: 100%;
+  width: 100%;
   animation: shadow-running 5s ease-in-out infinite;
   pointer-events: none;
 }
