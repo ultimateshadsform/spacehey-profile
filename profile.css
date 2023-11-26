@@ -110,7 +110,7 @@ body {
 }
 
 body:before {
-  background-image: url('https://media4.giphy.com/media/eiMzTkBCN4lGg/200w.gif');
+  background-image: url('https://media0.giphy.com/media/loUqhBx0AKYRT5IrlH/giphy.gif');
   content: '';
   position: fixed;
   height: 100%;
@@ -353,7 +353,7 @@ button:hover,
 .profile-info {
   border-color: var(--accent-color);
   border-radius: 10px;
-  background-image: url('https://media.tenor.com/agtOrBHk5XsAAAAC/stars-purple-stars.gif');
+  background-image: url('https://usagif.com/wp-content/uploads/gifs/starfall-gif-14.gif');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
