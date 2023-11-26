@@ -636,10 +636,11 @@ footer .links {
   }
 
   50% {
-    filter: drop-shadow(0px 0px 8px yellow) sepia(100%) saturate(100%);
+    filter: drop-shadow(0px 0px 8px red) sepia(58%) saturate(3) invert(100%);
   }
+
   100% {
-    filter: drop-shadow(0px 0px 8px red) sepia(100%) saturate(10000%);
+    filter: drop-shadow(0px 0px 8px green) sepia(420%) saturate(5) invert(100%);
     transform: translateY(calc(-50% + 20svh));
   }
 }
@@ -651,6 +652,29 @@ footer .links {
   bottom: 10px;
   max-height: 400px;
   z-index: -4;
+}
+
+.sonic {
+  position: fixed;
+  left: 50%;
+  object-fit: contain;
+  bottom: 10px;
+  max-height: 400px;
+  z-index: -4;
+  filter: drop-shadow(0px 0px 8px blue);
+  transform: translateX(-50%);
+  animation: sonic-anim linear;
+  animation-timeline: scroll();
+}
+
+@keyframes sonic-anim {
+  0% {
+    transform: translateX(-100svw);
+  }
+
+  100% {
+    transform: translateX(100svw);
+  }
 }
 
 .report a img {
