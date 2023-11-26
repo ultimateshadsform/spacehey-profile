@@ -1013,8 +1013,8 @@ main .profile div:nth-child(3) span + p {
 }
 
 .comments-table tr:first-child td:first-child img:not(.icon) {
-  animation: first-comment-profile-photo-anim 1s ease-in-out infinite alternate
-    both;
+  animation: first-comment-profile-photo-anim 0.4s ease-in-out infinite
+    alternate both;
   box-shadow: 5px 5px 0 0 var(--accent-color);
   perspective: 1000px;
   box-shadow: yellow 0 0 20px 5px;
@@ -1042,7 +1042,7 @@ main .profile div:nth-child(3) span + p {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  animation: comment-profile-photo-anim 1s ease-in-out infinite alternate both;
+  animation: comment-profile-photo-anim 0.2s ease-in-out infinite alternate both;
   border: 2px solid var(--accent-color);
   box-shadow: 5px 5px 0 0 red;
   transition: all 200ms ease;
