@@ -437,12 +437,18 @@ button:hover,
 @keyframes profile-anim {
   0% {
     perspective: 1000px;
-    transform: perspective(1000px) translateX(100%) rotateY(360deg);
+    transform: perspective(1000px) translateX(100%) translateZ(-200px)
+      rotateY(45deg);
   }
 
+  50% {
+    perspective: 1000px;
+    transform: perspective(1000px) translateZ(100px);
+  }
   100% {
     perspective: 1000px;
-    transform: perspective(1000px) translateX(-100%) rotateY(-360deg);
+    transform: perspective(1000px) translateX(-100%) translateZ(-200px)
+      rotateY(-45deg);
   }
 }
 
@@ -450,8 +456,7 @@ button:hover,
   perspective: 1000px;
   display: flex !important;
   justify-content: center;
-  z-index: -1;
-  animation: profile-anim 5s ease-in-out infinite alternate both;
+  animation: profile-anim 200ms ease-in-out infinite alternate both;
   animation-fill-mode: forwards;
   position: relative;
 }
@@ -559,7 +564,7 @@ footer .links {
 }
 
 .profile .friends .person:hover {
-  animation: text-wobble 500ms ease-in-out infinite;
+  animation: text-wobble 200ms ease-in-out infinite;
 }
 
 .profile .friends .person p {
@@ -949,10 +954,12 @@ main .profile div:nth-child(3) span + p {
 
 @keyframes first-comment-profile-photo-anim {
   0% {
-    transform: scale(0.8) skewX(10deg) rotateY(0) perspective(1000px);
+    transform: scale(0.8) skewY(0deg) rotateZ(-45deg) rotateY(180deg)
+      perspective(1000px);
   }
+
   100% {
-    transform: scale(0.9) skewX(-10deg) rotateY(360deg) perspective(1000px);
+    transform: scale(0.9) skewY(0deg) rotateZ(45deg) perspective(1000px);
   }
 }
 
@@ -1030,7 +1037,7 @@ main .profile div:nth-child(3) span + p {
 }
 
 .comments-table td:first-child p {
-  animation: name-anim 500ms ease-in-out infinite alternate both;
+  animation: name-anim 200ms ease-in-out infinite alternate both;
   font-family: 'Beyonders', sans-serif;
   font-size: clamp(15px, 2vw, 1rem);
   z-index: 1;
@@ -1042,7 +1049,8 @@ main .profile div:nth-child(3) span + p {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  animation: comment-profile-photo-anim 0.2s ease-in-out infinite alternate both;
+  animation: comment-profile-photo-anim 200ms ease-in-out infinite alternate
+    both;
   border: 2px solid var(--accent-color);
   box-shadow: 5px 5px 0 0 red;
   transition: all 200ms ease;
