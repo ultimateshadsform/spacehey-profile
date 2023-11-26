@@ -459,6 +459,7 @@ button:hover,
   animation: profile-anim calc(200ms * 4) ease-in-out infinite alternate both;
   animation-fill-mode: forwards;
   position: relative;
+  z-index: -1;
 }
 
 .general-about .profile-pic img {
