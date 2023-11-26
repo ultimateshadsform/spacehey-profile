@@ -630,6 +630,22 @@ main .profile #comments .inner p:first-child b a:last-child:before {
   font-size: 1rem;
 }
 
+main .profile .friends .inner p b {
+  font-size: 0%;
+}
+
+main .profile .friends .inner p b:before {
+  content: '🖤 SHADOW 🖤 has';
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+main .profile .friends .inner p b:after {
+  content: 'furballs.';
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
 @keyframes text-wobble {
   0% {
     scale: 1;
@@ -856,6 +872,16 @@ main .profile #comments .inner p:first-child b a:last-child:before {
 
 .report a img {
   content: url('https://a.l3n.co/i/my9ZQZ.png');
+}
+
+.report a {
+  font-size: 0%;
+}
+
+.report a:after {
+  content: 'Report Complaint';
+  font-size: 1rem;
+  margin: auto 0.4rem;
 }
 
 b {
