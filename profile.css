@@ -109,7 +109,7 @@ body {
   flex-direction: column;
 }
 
-html:before {
+body:before {
   background-image: url('https://media4.giphy.com/media/eiMzTkBCN4lGg/200w.gif');
   content: '';
   position: fixed;
@@ -149,7 +149,7 @@ html:before {
   }
 }
 
-body:before {
+html:before {
   content: '';
   height: 100vh;
   width: 100vw;
@@ -169,12 +169,15 @@ body:before {
 @keyframes loading-anim {
   0.0% {
     opacity: 1;
+    filter: sepia(100%) saturate(100%) contrast(100%);
   }
   75% {
     opacity: 1;
+    filter: sepia(0%) saturate(200%) contrast(120%);
   }
   100% {
     opacity: 0;
+    filter: sepia(0%) saturate(200%) contrast(120%);
   }
 }
 
