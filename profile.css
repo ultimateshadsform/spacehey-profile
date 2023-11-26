@@ -635,8 +635,16 @@ footer .links {
     transform: translateY(calc(-50% - 20svh));
   }
 
-  50% {
+  45% {
+    filter: drop-shadow(0px 0px 8px white);
+    transform: translateY(calc(-50% - 20svh));
+  }
+
+  55% {
     filter: drop-shadow(0px 0px 8px yellow) sepia(58%) saturate(3) invert(100%);
+  }
+  65% {
+    filter: drop-shadow(100px 0px 60px red) sepia(420%) saturate(5) invert(100%);
   }
   100% {
     filter: drop-shadow(100px 0px 60px red) sepia(420%) saturate(5) invert(100%);
