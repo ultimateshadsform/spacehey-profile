@@ -23,6 +23,10 @@
   font-size: 1rem;
 }
 
+* a:hover {
+  text-decoration: none;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -117,7 +121,7 @@ html:after {
   width: 100%;
   pointer-events: none;
   inset: 0;
-  z-index: -2;
+  z-index: -3;
 }
 
 @keyframes cursor {
@@ -531,6 +535,101 @@ footer .links {
   text-wrap: balance;
 }
 
+main .blog-preview h4:first-child {
+  font-size: 0%;
+}
+
+main .blog-preview h4:first-child:before {
+  content: "🖤 SHADOW 🖤's Disappointments [";
+  font-size: 1rem;
+}
+
+main .blog-preview h4:first-child:after {
+  content: ']';
+  font-size: 1rem;
+}
+
+main .profile #comments .inner p:first-child b {
+  font-size: 0%;
+}
+
+main .profile #comments .inner p:first-child b span:nth-child(1):after {
+  content: 'Of';
+  font-size: 1rem;
+  margin: auto 0.5rem;
+  color: var(--accent-color);
+}
+
+main .profile #comments .inner p:first-child b span:nth-child(2):after {
+  content: 'Complaints';
+  font-size: 1rem;
+  margin: auto 0.5rem;
+  color: var(--accent-color);
+}
+
+main .profile #comments .inner p:first-child b a:nth-child(3):before {
+  content: '(';
+  font-size: 1rem;
+  margin: auto 0.5rem;
+  color: var(--accent-color);
+}
+
+main .profile #comments .inner p:first-child b a:last-child:after {
+  content: ')';
+  font-size: 1rem;
+  margin: auto 0.5rem;
+  color: var(--accent-color);
+  visibility: visible;
+}
+
+main .profile #comments .inner p:first-child b a:not(:last-child):after {
+  content: '|';
+  font-size: 1rem;
+  margin: auto 0.5rem;
+  color: var(--accent-color);
+}
+
+main .profile #comments .inner .comments-table .comment-replies + a {
+  visibility: hidden;
+  position: relative;
+}
+
+main .profile #comments .inner .comments-table .comment-replies + a:after {
+  content: 'Complain more';
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  width: max-content;
+  font-size: 1rem;
+  color: red;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.4rem;
+  border-radius: 5px;
+  transition: all 200ms ease;
+}
+
+main
+  .profile
+  #comments
+  .inner
+  .comments-table
+  .comment-replies
+  + a:hover:after {
+  color: var(--accent-color);
+}
+
+main .profile #comments .inner p:first-child b a:last-child {
+  visibility: hidden;
+  position: relative;
+}
+main .profile #comments .inner p:first-child b a:last-child:before {
+  content: 'File Complaint';
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+}
+
 @keyframes text-wobble {
   0% {
     scale: 1;
@@ -730,7 +829,7 @@ footer .links {
   object-fit: contain;
   bottom: 10px;
   max-height: 400px;
-  z-index: -1;
+  z-index: -2;
 }
 
 .sonic {
