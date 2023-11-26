@@ -446,20 +446,6 @@ button:hover,
   position: relative;
 }
 
-.general-about .profile-pic:before {
-  content: '';
-  position: absolute;
-  top: -10.6rem;
-  left: -2rem;
-  background-image: url('https://c.l3n.co/i/mycZ9o.png');
-  width: 24rem;
-  height: 22rem;
-  z-index: 1;
-  background-size: contain;
-  pointer-events: none;
-  background-repeat: no-repeat;
-}
-
 .general-about .profile-pic img {
   max-height: 14rem;
   max-width: 14rem;
@@ -632,16 +618,6 @@ footer .links {
   bottom: 10px;
   max-height: 400px;
   z-index: -4;
-}
-
-.side-shadow-hat {
-  position: fixed;
-  object-fit: contain;
-  left: 135px;
-  width: 300px;
-  z-index: -3;
-  transform: scaleX(-1) rotateZ(303deg);
-  bottom: 278px;
 }
 
 .report a img {
