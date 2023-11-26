@@ -456,7 +456,7 @@ button:hover,
   perspective: 1000px;
   display: flex !important;
   justify-content: center;
-  animation: profile-anim 200ms ease-in-out infinite alternate both;
+  animation: profile-anim calc(200ms * 4) ease-in-out infinite alternate both;
   animation-fill-mode: forwards;
   position: relative;
 }
