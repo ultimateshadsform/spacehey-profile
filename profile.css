@@ -158,12 +158,11 @@ body:before {
   top: 0;
   left: 0;
   z-index: 100;
-  background-image: url('https://c.l3n.co/i/sTcuhT.gif');
+  background-image: url('https://media.tenor.com/iSa7urk_-TkAAAAC/shadow-the-hedgehog-shadow.gif');
   background-size: cover;
-  animation-delay: 1.74s;
   background-position: center;
   background-color: var(--background-color);
-  animation: loading-anim 2.5s ease 0s 1 normal forwards;
+  animation: loading-anim 2.8s ease 0s 1 normal forwards;
   pointer-events: none;
 }
 
