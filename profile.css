@@ -662,7 +662,6 @@ footer .links {
 
 .sonic {
   position: fixed;
-  left: 50%;
   object-fit: contain;
   bottom: 10px;
   max-height: 400px;
