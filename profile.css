@@ -637,7 +637,7 @@ footer .links {
   opacity: 0.7;
 }
 
-.moon-container {
+.moon-shaker {
   position: fixed;
   right: 10px;
   object-fit: contain;
@@ -645,13 +645,44 @@ footer .links {
   transform: translateY(-50%);
   animation: moon-anim linear;
   animation-timeline: scroll();
+  max-height: 400px;
+  height: 100%;
+  max-width: 20rem;
+  width: 100%;
+  z-index: -4;
+}
+
+.moon-container {
+  position: fixed;
+  object-fit: contain;
   background: url('https://b.l3n.co/i/sEtwIH.webp') no-repeat center center;
   background-size: contain;
   max-height: 400px;
   height: 100%;
   max-width: 20rem;
   width: 100%;
-  z-index: -4;
+  animation: moon-shake 5s ease-in-out infinite alternate both;
+}
+
+@keyframes moon-shake {
+  0% {
+    transform: translateX(-1px) translateY(1px);
+  }
+  20% {
+    transform: translateX(-3px) translateY(3px);
+  }
+  40% {
+    transform: translateX(4px) translateY(-4px);
+  }
+  60% {
+    transform: translateX(0px) translateY(-1px);
+  }
+  80% {
+    transform: translateX(3px) translateY(0px);
+  }
+  100% {
+    transform: translateX(4px) translateY(-4px);
+  }
 }
 
 @keyframes moon-anim-color {
