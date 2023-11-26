@@ -610,18 +610,22 @@ footer .links {
   max-height: 400px;
   z-index: -4;
   filter: drop-shadow(0px 0px 8px white);
-  animation: moon-anim 5s ease-in-out infinite alternate both;
+  animation: moon-anim 5s linear infinite alternate both;
 }
 
 @keyframes moon-anim {
   0% {
     filter: drop-shadow(0px 0px 8px white);
+    transform: translateY(calc(-50% - 10px));
   }
+
   50% {
     filter: drop-shadow(0px 0px 8px yellow) sepia(100%);
+    transform: translateY(-50%);
   }
   100% {
     filter: drop-shadow(0px 0px 8px white);
+    transform: translateY(calc(-50% + 10px));
   }
 }
 
