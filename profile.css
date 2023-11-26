@@ -619,7 +619,8 @@ footer .links {
   position: fixed;
   right: 10px;
   object-fit: contain;
-  top: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   max-height: 400px;
   z-index: -4;
 }
