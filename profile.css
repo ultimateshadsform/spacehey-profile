@@ -1025,6 +1025,13 @@ main .profile div:nth-child(3) span + p {
   box-shadow: 5px 5px 0 0 var(--accent-color);
   perspective: 1000px;
   box-shadow: yellow 0 0 20px 5px;
+  transition: all 200ms ease;
+}
+
+.comments-table tr:first-child td:first-child img:not(.icon):hover {
+  filter: invert(420%) sepia(69420%) saturate(1000%) hue-rotate(320deg)
+    brightness(100%) contrast(100%);
+  box-shadow: 0 0 30px 10px rgb(0 255 0);
 }
 
 .comments-table tr:first-child td:first-child p {
