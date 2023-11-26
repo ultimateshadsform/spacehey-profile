@@ -636,11 +636,10 @@ footer .links {
   }
 
   50% {
-    filter: drop-shadow(0px 0px 8px red) sepia(58%) saturate(3) invert(100%);
+    filter: drop-shadow(0px 0px 8px yellow) sepia(58%) saturate(3) invert(100%);
   }
-
   100% {
-    filter: drop-shadow(0px 0px 8px green) sepia(420%) saturate(5) invert(100%);
+    filter: drop-shadow(100px 0px 60px red) sepia(420%) saturate(5) invert(100%);
     transform: translateY(calc(-50% + 20svh));
   }
 }
