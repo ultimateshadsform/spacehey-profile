@@ -763,16 +763,6 @@ footer .links {
   content: url('https://a.l3n.co/i/my9ZQZ.png');
 }
 
-.report a {
-  font-size: 0%;
-}
-
-.report a:after {
-  content: 'Report Complaint';
-  font-size: 1rem;
-  margin: auto 0.4rem;
-}
-
 b {
   color: var(--accent-color);
 }
