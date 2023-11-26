@@ -582,8 +582,8 @@ footer .links {
   transition: all 300ms ease;
   filter: invert(420%) sepia(69420%) saturate(1000%) hue-rotate(320deg)
     brightness(100%) contrast(100%);
-  -webkit-mask-image: url('https://i.pinimg.com/originals/2e/1e/2e/2e1e2e419012a5f34c5140e515de0328.png');
-  mask-image: url('https://i.pinimg.com/originals/2e/1e/2e/2e1e2e419012a5f34c5140e515de0328.png');
+  -webkit-mask-image: url('https://b.l3n.co/i/sk2gL9.gif');
+  mask-image: url('https://b.l3n.co/i/sk2gL9.gif');
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 
