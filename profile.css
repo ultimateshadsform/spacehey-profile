@@ -615,7 +615,7 @@ footer .links {
   place-items: center;
 }
 
-.moon-container:before {
+.moon-shaker:before {
   content: '';
   position: absolute;
   background: url('https://b.l3n.co/i/sEtwIH.webp') no-repeat center center;
@@ -637,7 +637,7 @@ footer .links {
   opacity: 0.7;
 }
 
-.moon-shaker {
+.moon-container {
   position: fixed;
   right: 10px;
   object-fit: contain;
@@ -652,7 +652,7 @@ footer .links {
   z-index: -4;
 }
 
-.moon-container {
+.moon-shaker {
   position: fixed;
   object-fit: contain;
   background: url('https://b.l3n.co/i/sEtwIH.webp') no-repeat center center;
