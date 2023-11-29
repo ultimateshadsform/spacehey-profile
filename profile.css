@@ -214,7 +214,7 @@ nav:before {
   z-index: -1;
 }
 
-nav .links a:nth-child(1) .icon {
+nav .links li:first-child a:nth-child(1) .icon {
   content: url('https://b.l3n.co/i/sj5s2o.png');
   animation: shadow-spin 1s ease-in-out infinite;
 }
