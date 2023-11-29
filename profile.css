@@ -514,7 +514,8 @@ span[itemprop='name'] h1,
 .profile .blog-preview p,
 h4,
 .blurbs .inner .section p,
-.profile span h1 {
+.profile span h1,
+.general-about .details .award a {
   color: var(--accent-color);
 }
 
