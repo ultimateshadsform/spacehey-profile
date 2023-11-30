@@ -614,6 +614,10 @@ footer .links {
   margin: 0;
 }
 
+.about-content * {
+  color: var(--accent-color);
+}
+
 .friends-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
