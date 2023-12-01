@@ -750,6 +750,13 @@ footer .links {
   bottom: 10px;
   max-height: 400px;
   z-index: -2;
+  animation: bounce 200ms ease-in-out infinite alternate both;
+}
+
+@keyframes bounce {
+  to {
+    scale: 0.98;
+  }
 }
 
 .sonic {
