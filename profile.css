@@ -243,11 +243,6 @@ a:hover {
   color: hsl(270, 80%, 80%);
 }
 
-.details-table tbody tr:nth-child(4),
-.details-table tbody tr:nth-child(5) {
-  display: none;
-}
-
 .details-table tbody td {
   background: transparent !important;
 }
