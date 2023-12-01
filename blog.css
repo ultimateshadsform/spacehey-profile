@@ -691,6 +691,6 @@ footer p {
   font-size: 1rem;
 }
 
-.content {
+.content > * {
   color: var(--accent-color);
 }
