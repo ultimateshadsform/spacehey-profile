@@ -687,15 +687,6 @@ b {
   color: $accent-color;
 }
 
-@media (max-width: 30em) {
-  .article .edit-info .author-details {
-    padding-left: unset;
-    width: unset;
-    min-width: unset;
-    max-width: unset;
-  }
-}
-
 @media only screen and (max-width: 675px) {
   .general-about {
     flex-direction: column;

@@ -382,6 +382,15 @@ b {
   color: $accent-color;
 }
 
+@media (max-width: 30em) {
+  .article .edit-info .author-details {
+    padding-left: unset;
+    width: unset;
+    min-width: unset;
+    max-width: unset;
+  }
+}
+
 main {
   background: transparent;
   position: relative;
