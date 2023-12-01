@@ -762,9 +762,20 @@ footer .links {
     }
   }
 
-  #comments .heading h4:before {
-    content: 'Complaints';
-    font-size: 1.5rem;
+  #comments {
+    .heading h4:before {
+      content: 'Complaints';
+      font-size: 1.5rem;
+    }
+
+    .report a img {
+      content: url('https://a.l3n.co/i/my9ZQZ.png');
+    }
+
+    .comment-replies {
+      border: 1px solid red !important;
+      border-radius: 1rem;
+    }
   }
 }
 
@@ -783,17 +794,8 @@ footer .links {
   }
 }
 
-.report a img {
-  content: url('https://a.l3n.co/i/my9ZQZ.png');
-}
-
 b {
   color: var($accent-color);
-}
-
-.comment-replies {
-  border: 1px solid red !important;
-  border-radius: 1rem;
 }
 
 main .profile {
