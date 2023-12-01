@@ -1,14 +1,17 @@
 {
-  "name": "SpaceHey",
+  "name": "spacehey-profile",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/ultimateshadsform/spacehey-profile.git",
   "author": "Alexander Carlsson <alexxycarlsson@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "sass blog.css dist/blog-min.css --style compressed --no-source-map"
+    "build:blog": "sass src/blog.scss dist/blog-min.css --style compressed --no-source-map",
+    "build:profile": "sass src/profile.scss dist/profile-min.css --style compressed --no-source-map",
+    "build": "concurrently \"yarn build:blog\" \"yarn build:profile\""
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "sass": "^1.69.5"
   }
 }

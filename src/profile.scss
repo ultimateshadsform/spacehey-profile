@@ -1,8 +1,4 @@
-:root {
-  --primary-color: red;
-  --accent-color: hsl(276 75% 75%);
-  --background-color: hsl(0, 100%, 5%);
-}
+@use './colors.scss';
 
 @font-face {
   font-family: 'Feijoada';
@@ -21,30 +17,30 @@
   font-family: 'Feijoada', sans-serif;
   scroll-behavior: smooth;
   font-size: 1rem;
-}
 
-* a:hover {
-  text-decoration: none;
-}
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
+  ::-webkit-scrollbar-track {
+    background: hsl(0, 100%, 5%);
+  }
 
-::-webkit-scrollbar-track {
-  background: hsl(0, 100%, 5%);
-}
+  ::-webkit-scrollbar-thumb {
+    background: red;
+    background-image: url(https://printler.com/media/photo/149787.jpg);
+    background-size: cover;
+    background-blend-mode: hard-light;
+    background-position: center;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: red;
-  background-image: url(https://printler.com/media/photo/149787.jpg);
-  background-size: cover;
-  background-blend-mode: hard-light;
-  background-position: center;
-}
+  ::-webkit-scrollbar-thumb:hover {
+    background-blend-mode: difference;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background-blend-mode: difference;
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 h1,
@@ -53,7 +49,7 @@ h3,
 h4,
 p,
 label {
-  color: var(--primary-color);
+  color: var($primary-color);
 }
 
 html {
@@ -106,7 +102,7 @@ body:after {
 }
 
 body {
-  background: var(--background-color);
+  background: var($background-color);
   overflow-x: clip;
   position: relative;
   display: flex;
@@ -165,7 +161,7 @@ html:before {
   background-image: url('https://media.tenor.com/iSa7urk_-TkAAAAC/shadow-the-hedgehog-shadow.gif');
   background-size: cover;
   background-position: center;
-  background-color: var(--background-color);
+  background-color: var($background-color);
   animation: loading-anim 2.8s ease 0s 1 normal forwards;
   pointer-events: none;
 }
@@ -250,7 +246,7 @@ a:hover {
 table,
 th,
 td {
-  border: 1px solid var(--primary-color);
+  border: 1px solid var($primary-color);
 }
 
 table {
@@ -282,11 +278,11 @@ nav .links {
 }
 
 nav .links li:not(:last-child):after {
-  color: var(--accent-color);
+  color: var($accent-color);
 }
 
 nav .links li.active a {
-  color: var(--accent-color) !important;
+  color: var($accent-color) !important;
   font-weight: unset !important;
 }
 
@@ -319,7 +315,7 @@ iframe {
   padding: 0.4rem 0.4rem;
   outline: 1px solid red;
   border: 1px solid red;
-  color: var(--accent-color);
+  color: var($accent-color);
 }
 
 button.logout-btn {
@@ -364,7 +360,7 @@ button:hover,
 }
 
 .profile-info {
-  border-color: var(--accent-color);
+  border-color: var($accent-color);
   border-radius: 10px;
   font-family: 'Beyonders', sans-serif;
   overflow: hidden;
@@ -397,7 +393,7 @@ button:hover,
 
 @keyframes friend-text-anim {
   0% {
-    color: var(--accent-color);
+    color: var($accent-color);
   }
   50% {
     color: red;
@@ -409,7 +405,7 @@ button:hover,
 
 .profile-info .inner h3,
 .profile-info .inner h3 a {
-  color: var(--accent-color);
+  color: var($accent-color);
   font-size: clamp(15px, 3vw, 2rem);
   text-transform: uppercase;
   animation: friend-text-anim 1s ease-in-out infinite alternate both;
@@ -466,13 +462,13 @@ button:hover,
   max-width: 14rem;
   perspective: 1000px;
   border-radius: 0.5rem;
-  border: 3px solid var(--accent-color);
+  border: 3px solid var($accent-color);
   object-fit: cover;
 }
 
 .blurbs .inner .section {
   position: relative;
-  color: var(--accent-color);
+  color: var($accent-color);
   margin: unset;
 }
 
@@ -495,8 +491,8 @@ span[itemprop='name'] h1,
   background: hsl(0, 100%, 20%) !important;
   border-radius: 10px;
   padding: 10px !important;
-  box-shadow: 5px 5px 0 0 var(--accent-color);
-  border: 2px solid var(--accent-color);
+  box-shadow: 5px 5px 0 0 var($accent-color);
+  border: 2px solid var($accent-color);
 }
 
 .general-about .details p:nth-child(1),
@@ -511,7 +507,7 @@ h4,
 .blurbs .inner .section p,
 .profile span h1,
 .general-about .details .award a {
-  color: var(--accent-color);
+  color: var($accent-color);
 }
 
 p,
@@ -523,7 +519,7 @@ ul:not(nav .links):not(footer .links) li {
 nav .links li:not(:last-child)::after,
 footer .links li:not(:last-child)::after {
   content: ' 🦔 ';
-  color: var(--accent-color);
+  color: var($accent-color);
 }
 
 nav .links,
@@ -568,7 +564,7 @@ footer .links {
 }
 
 .profile .friends .person p {
-  color: var(--accent-color);
+  color: var($accent-color);
 }
 
 .profile .friends .person img:not(.icon) {
@@ -610,7 +606,7 @@ footer .links {
 }
 
 .about-content * {
-  color: var(--accent-color);
+  color: var($accent-color);
 }
 
 .dni-flash h1 {
@@ -781,7 +777,7 @@ footer .links {
 }
 
 b {
-  color: var(--accent-color);
+  color: var($accent-color);
 }
 
 .comment-replies {
@@ -838,7 +834,7 @@ nav .top .center form {
 }
 
 nav .top .right {
-  color: var(--accent-color);
+  color: var($accent-color);
   column-gap: 0.2rem;
 }
 
@@ -929,7 +925,7 @@ nav .top .right a:before {
 }
 
 .general-about .details .online {
-  color: var(--accent-color);
+  color: var($accent-color);
   grid-column: 3;
   display: flex;
   flex-direction: column;
@@ -1091,7 +1087,7 @@ main .profile div:nth-child(3) span + p {
 }
 
 .comments-table .ago {
-  color: var(--accent-color);
+  color: var($accent-color);
 }
 
 @keyframes first-comment-profile-photo-anim {
@@ -1122,7 +1118,7 @@ main .profile div:nth-child(3) span + p {
 }
 
 .comment-reply:not(:first-child) {
-  border-top: 1px solid var(--accent-color);
+  border-top: 1px solid var($accent-color);
 }
 
 .comment-reply p:not(:last-child):first-letter {
@@ -1166,7 +1162,7 @@ main .profile div:nth-child(3) span + p {
 .comments-table tr:first-child td:first-child img:not(.icon) {
   animation: first-comment-profile-photo-anim 0.4s ease-in-out infinite
     alternate both;
-  box-shadow: 5px 5px 0 0 var(--accent-color);
+  box-shadow: 5px 5px 0 0 var($accent-color);
   perspective: 1000px;
   box-shadow: yellow 0 0 20px 5px;
   transition: all 200ms ease;
@@ -1202,7 +1198,7 @@ main .profile div:nth-child(3) span + p {
   border-radius: 10px;
   animation: comment-profile-photo-anim 200ms ease-in-out infinite alternate
     both;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var($accent-color);
   box-shadow: 5px 5px 0 0 red;
   transition: all 200ms ease;
 }
@@ -1218,7 +1214,7 @@ main .profile div:nth-child(3) span + p {
 }
 
 .comments-table td:first-child p {
-  color: var(--accent-color);
+  color: var($accent-color);
 }
 
 .about-banner-1 {
@@ -1263,7 +1259,7 @@ main .article .w-20 {
 }
 
 main .article .title {
-  color: var(--accent-color);
+  color: var($accent-color);
 }
 
 main .profile .general-about .details .edit-link {

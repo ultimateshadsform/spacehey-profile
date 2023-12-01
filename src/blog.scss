@@ -400,7 +400,7 @@ span[itemprop='author'] span[itemprop='name'] a {
 
 .article div.col:last-child .title {
   font-family: 'Beyonders';
-  font-size: clamp(0.5em, 2.5svw, 2rem);
+  font-size: clamp(0.5em, 1svw, 2rem);
 }
 
 nav .links li:not(:last-child)::after,
@@ -696,6 +696,7 @@ footer p {
   font-size: 1rem;
 }
 
+.content,
 .content > * {
   color: var(--accent-color);
 }
