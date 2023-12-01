@@ -305,7 +305,7 @@ nav {
         }
       }
 
-      .active a {
+      &.active a {
         color: $accent-color !important;
         font-weight: unset !important;
       }
