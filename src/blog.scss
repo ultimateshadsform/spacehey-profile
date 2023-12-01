@@ -139,7 +139,7 @@ body {
     background-image: url('https://i.pinimg.com/originals/ec/4b/80/ec4b8036978369f715f59ee07cf37c0b.jpg');
     background-position: top;
     background-repeat-x: no-repeat;
-    background-size: contain;
+    background-size: cover;
     z-index: -12;
     opacity: 0.5;
   }
@@ -410,29 +410,11 @@ main {
       width: 100% !important;
     }
 
-    span[itemprop='author'] span[itemprop='name'] a {
-      font-size: 1.3rem;
-      font-family: 'Beyonders', sans-serif;
-      transition: all 200ms ease;
-      color: $accent-color;
-      text-shadow: 2px 2px $primary-color;
-
-      &:hover {
-        text-shadow: 0px 0px 1px #bf3f3f, -0px 0px 1px #bf3f3f,
-          1px 4px 1px #c04751, -1px 4px 1px #c04751, 2px 8px 1px #c14f62,
-          -2px 8px 1px #c14f62, 3px 12px 1px #c25774, -3px 12px 1px #c25774,
-          4px 16px 1px #c35f85, -4px 16px 1px #c35f85, 5px 20px 1px #c46797,
-          -5px 20px 1px #c46797, 6px 24px 1px #c46fa8, -6px 24px 1px #c46fa8,
-          7px 28px 1px #c577ba, -7px 28px 1px #c577ba, 8px 32px 1px #c67fcc,
-          -8px 32px 1px #c67fcc, 9px 36px 1px #c787dd, -9px 36px 1px #c787dd,
-          0px 36px 1px #c787dd;
-      }
-    }
-
     .title {
       color: $accent-color;
       font-size: clamp(0.5rem, 1svw, 2rem);
       font-family: 'Beyonders', sans-serif;
+      text-shadow: 2px 2px $primary-color;
     }
 
     .edit-info {
@@ -453,18 +435,53 @@ main {
           object-fit: cover;
         }
       }
-    }
 
-    .author-details {
-      display: flex;
-      flex-direction: column;
-      place-items: center;
-
-      h4:first-child {
+      .author-details {
         display: flex;
         flex-direction: column;
-        row-gap: 1rem;
         place-items: center;
+
+        h4 {
+          display: flex;
+          flex-direction: column;
+          row-gap: 1rem;
+          place-items: center;
+
+          a {
+            font-size: 1.3rem;
+            font-family: 'Beyonders', sans-serif;
+            transition: all 200ms ease;
+            color: $accent-color;
+            text-shadow: 2px 2px $primary-color;
+
+            &:hover {
+              text-shadow: 0px 0px 1px #bf3f3f, -0px 0px 1px #bf3f3f,
+                1px 4px 1px #c04751, -1px 4px 1px #c04751, 2px 8px 1px #c14f62,
+                -2px 8px 1px #c14f62, 3px 12px 1px #c25774,
+                -3px 12px 1px #c25774, 4px 16px 1px #c35f85,
+                -4px 16px 1px #c35f85, 5px 20px 1px #c46797,
+                -5px 20px 1px #c46797, 6px 24px 1px #c46fa8,
+                -6px 24px 1px #c46fa8, 7px 28px 1px #c577ba,
+                -7px 28px 1px #c577ba, 8px 32px 1px #c67fcc,
+                -8px 32px 1px #c67fcc, 9px 36px 1px #c787dd,
+                -9px 36px 1px #c787dd, 0px 36px 1px #c787dd;
+            }
+          }
+        }
+
+        .links {
+          a:nth-child(1) img {
+            content: url('https://c.l3n.co/i/mxgfcQ.png');
+          }
+
+          a:nth-child(2) img {
+            content: url('https://b.l3n.co/i/my9joc.png');
+          }
+
+          a:nth-child(3) img {
+            content: url('https://a.l3n.co/i/my9ZQZ.png');
+          }
+        }
       }
     }
   }
