@@ -398,6 +398,11 @@ span[itemprop='author'] span[itemprop='name'] a {
   flex-direction: column-reverse !important;
 }
 
+.article div.col:last-child .title {
+  font-family: 'Beyonders';
+  font-size: clamp(0.5em, 2.5svw, 2rem);
+}
+
 nav .links li:not(:last-child)::after,
 footer .links li:not(:last-child)::after {
   content: ' 🦔 ';
@@ -1062,7 +1067,8 @@ button:hover,
   object-fit: cover;
 }
 
-span[itemprop='author'] span[itemprop='name'] a {
+span[itemprop='author'] span[itemprop='name'] a,
+.author-details h4 a {
   font-family: 'Beyonders';
 }
 
