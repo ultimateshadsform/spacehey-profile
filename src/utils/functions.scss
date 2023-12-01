@@ -21,13 +21,13 @@
   $hasHoverImage: $hoverImage != null;
 
   // Generate styles for the regular image
-  &:nth-child(#{$rowIndex}) div:nth-child(#{$columnIndex}) a img {
+  div:nth-child(#{$rowIndex}) div:nth-child(#{$columnIndex}) a img {
     content: url($image);
   }
 
   @if $hasHoverImage {
     // Generate styles for the hover image
-    &:nth-child(#{$rowIndex}) div:nth-child(#{$columnIndex}) a:hover img {
+    div:nth-child(#{$rowIndex}) div:nth-child(#{$columnIndex}) a:hover img {
       content: url($hoverImage);
       @include hoverShadow($hoverImage);
     }

@@ -1,5 +1,5 @@
-@use './colors.scss' as *;
-@use './utils/functions.scss';
+@use './utils/colors.scss' as *;
+@use './utils/functions.scss' as *;
 
 @font-face {
   font-family: 'Feijoada';
@@ -10,6 +10,10 @@
 @font-face {
   font-family: 'Beyonders';
   src: url('https://dl.dropboxusercontent.com/scl/fi/j10eailb22tuhayzf8k1y/Beyonders.ttf?rlkey=1jqbxp5ddm5enazoms02vp645&dl=1');
+}
+
+:root {
+  --accent-color: #{$accent-color};
 }
 
 * {
@@ -78,7 +82,7 @@ h3,
 h4,
 p,
 label {
-  color: var($primary-color);
+  color: $primary-color;
 }
 
 html {
@@ -96,7 +100,7 @@ html {
     background-image: url('https://media.tenor.com/iSa7urk_-TkAAAAC/shadow-the-hedgehog-shadow.gif');
     background-size: cover;
     background-position: center;
-    background-color: var($background-color);
+    background-color: $background-color;
     animation: loading-anim 2.8s ease 0s 1 normal forwards;
     pointer-events: none;
 
@@ -129,7 +133,7 @@ html {
 }
 
 body {
-  background: var($background-color);
+  background: $background-color;
   overflow-x: clip;
   position: relative;
   display: flex;
@@ -240,7 +244,7 @@ nav {
         padding: 0.4rem 0.4rem;
         outline: 1px solid $primary-color;
         border: 1px solid $primary-color;
-        color: var($accent-color);
+        color: $accent-color;
       }
 
       form {
@@ -252,7 +256,7 @@ nav {
     }
 
     .right {
-      color: var($accent-color);
+      color: $accent-color;
       column-gap: 0.2rem;
 
       a {
@@ -270,49 +274,49 @@ nav {
       }
     }
   }
-}
 
-.links {
-  text-align: center;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    hsl(0, 100%, 20%) 50%,
-    transparent 100%
-  );
+  .links {
+    text-align: center;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(0, 100%, 20%) 50%,
+      transparent 100%
+    );
 
-  a {
-    color: $primary-color;
-    text-decoration: none !important;
-    text-shadow: 0 0 2px $primary-color;
+    a {
+      color: $primary-color;
+      text-decoration: none !important;
+      text-shadow: 0 0 2px $primary-color;
 
-    &:hover {
-      color: hsl(270, 80%, 80%) !important;
-    }
-  }
-
-  li {
-    &:not(:last-child):after {
-      color: var($accent-color);
-    }
-
-    &:first-child a:nth-child(1) .icon {
-      content: url('https://b.l3n.co/i/sj5s2o.png');
-      animation: shadow-spin 1s ease-in-out infinite;
-
-      @keyframes shadow-spin {
-        0% {
-          transform: rotateZ(0);
-        }
-        100% {
-          transform: rotateZ(360deg);
-        }
+      &:hover {
+        color: hsl(270, 80%, 80%) !important;
       }
     }
 
-    .active a {
-      color: var($accent-color) !important;
-      font-weight: unset !important;
+    li {
+      &:not(:last-child):after {
+        color: $accent-color;
+      }
+
+      &:first-child a:nth-child(1) .icon {
+        content: url('https://b.l3n.co/i/sj5s2o.png');
+        animation: shadow-spin 1s ease-in-out infinite;
+
+        @keyframes shadow-spin {
+          0% {
+            transform: rotateZ(0);
+          }
+          100% {
+            transform: rotateZ(360deg);
+          }
+        }
+      }
+
+      .active a {
+        color: $accent-color !important;
+        font-weight: unset !important;
+      }
     }
   }
 }
@@ -326,7 +330,7 @@ nav {
 table,
 th,
 td {
-  border: 1px solid var($primary-color);
+  border: 1px solid $primary-color;
 }
 
 table {
@@ -338,35 +342,33 @@ iframe {
   position: relative;
 }
 
-button {
-  .logout-btn {
-    font-size: 0%;
+.logout-btn {
+  font-size: 0%;
 
-    &:before {
-      content: 'Explode';
-      font-size: 1rem;
-    }
+  &:before {
+    content: 'Explode';
+    font-size: 1rem;
   }
+}
 
-  button,
-  .logout-btn,
-  .blog-entry .kudos-btn {
-    color: $primary-color;
-    border: none;
-    background: rgba(0, 0, 0, 0.3) !important;
-    padding: 0.4rem !important;
-    border-radius: 5px;
-    text-decoration: none !important;
-    transition: all 200ms ease;
+button,
+.logout-btn,
+.blog-entry .kudos-btn {
+  color: $primary-color;
+  border: none;
+  background: rgba(0, 0, 0, 0.3) !important;
+  padding: 0.4rem !important;
+  border-radius: 5px;
+  text-decoration: none !important;
+  transition: all 200ms ease;
 
-    &:hover {
-      color: hsl(270, 80%, 80%) !important;
-    }
+  &:hover {
+    color: hsl(270, 80%, 80%) !important;
   }
 }
 
 .profile-info {
-  border-color: var($accent-color);
+  border-color: $accent-color;
   border-radius: 10px;
   font-family: 'Beyonders', sans-serif;
   overflow: hidden;
@@ -412,13 +414,13 @@ button {
   .inner {
     h3,
     h3 a {
-      color: var($accent-color);
+      color: $accent-color;
       font-size: clamp(15px, 3vw, 2rem);
       text-transform: uppercase;
       animation: friend-text-anim 1s ease-in-out infinite alternate both;
       @keyframes friend-text-anim {
         0% {
-          color: var($accent-color);
+          color: $accent-color;
         }
         50% {
           color: $primary-color;
@@ -445,7 +447,7 @@ button {
   .inner {
     .section {
       position: relative;
-      color: var($accent-color);
+      color: $accent-color;
       margin: unset;
 
       .moon-container {
@@ -629,8 +631,8 @@ button {
   background: hsl(0, 100%, 20%) !important;
   border-radius: 10px;
   padding: 10px !important;
-  box-shadow: 5px 5px 0 0 var($accent-color);
-  border: 2px solid var($accent-color);
+  box-shadow: 5px 5px 0 0 $accent-color;
+  border: 2px solid $accent-color;
 }
 
 .profile-pic {
@@ -680,7 +682,7 @@ button {
     max-width: 14rem;
     perspective: 1000px;
     border-radius: 0.5rem;
-    border: 3px solid var($accent-color);
+    border: 3px solid $accent-color;
     object-fit: cover;
   }
 }
@@ -711,7 +713,7 @@ h4,
 .blurbs .inner .section p,
 .profile span h1,
 .general-about .details .award a {
-  color: var($accent-color);
+  color: $accent-color;
 }
 
 p,
@@ -723,7 +725,7 @@ ul:not(nav .links):not(footer .links) li {
 nav .links li:not(:last-child)::after,
 footer .links li:not(:last-child)::after {
   content: ' 🦔 ';
-  color: var($accent-color);
+  color: $accent-color;
 }
 
 nav .links,
@@ -731,8 +733,12 @@ footer .links {
   text-wrap: balance;
 }
 
+nav .links {
+  background-color: transparent;
+}
+
 b {
-  color: var($accent-color);
+  color: $accent-color;
 }
 
 @media only screen and (max-width: 675px) {
@@ -800,10 +806,6 @@ main {
     display: flex !important;
     flex-direction: column;
 
-    .heading {
-      border-radius: 5px 5px 0 0;
-    }
-
     .contact,
     .url-info,
     .table-section {
@@ -832,6 +834,7 @@ main {
 
       .heading {
         background-color: hsl(0, 100%, 20%) !important;
+        border-radius: 5px 5px 0 0;
       }
     }
 
@@ -874,7 +877,7 @@ main {
         }
 
         .online {
-          color: var($accent-color);
+          color: $accent-color;
           grid-column: 3;
           display: flex;
           flex-direction: column;
@@ -895,7 +898,6 @@ main {
 
         .edit-link {
           position: absolute;
-          top: 20px;
           grid-row: 1;
         }
       }
@@ -974,7 +976,7 @@ main {
 
       .about-content {
         * {
-          color: var($accent-color);
+          color: $accent-color;
         }
 
         .dni-flash h1 {
@@ -1043,7 +1045,7 @@ main {
 
         .person {
           p {
-            color: var($accent-color);
+            color: $accent-color;
 
             &:first-child {
               color: yellow;
@@ -1119,7 +1121,7 @@ main {
             font-size: clamp(15px, 2vw, 1rem);
             z-index: 1;
             position: relative;
-            color: var($accent-color);
+            color: $accent-color;
           }
 
           img:not(.icon) {
@@ -1137,7 +1139,7 @@ main {
                 transform: scale(0.9);
               }
             }
-            border: 2px solid var($accent-color);
+            border: 2px solid $accent-color;
             box-shadow: 5px 5px 0 0 red;
             transition: all 200ms ease;
 
@@ -1183,7 +1185,7 @@ main {
                   rotateY(-10deg) perspective(1000px);
               }
             }
-            box-shadow: 5px 5px 0 0 var($accent-color);
+            box-shadow: 5px 5px 0 0 $accent-color;
             perspective: 1000px;
             box-shadow: yellow 0 0 20px 5px;
             transition: all 200ms ease;
@@ -1236,7 +1238,7 @@ main {
       }
 
       .ago {
-        color: var($accent-color);
+        color: $accent-color;
       }
 
       .comment-reply {
@@ -1247,7 +1249,7 @@ main {
         }
 
         &:not(:first-child) {
-          border-top: 1px solid var($accent-color);
+          border-top: 1px solid $accent-color;
         }
 
         p:not(:last-child):first-letter {
