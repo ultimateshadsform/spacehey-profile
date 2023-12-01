@@ -388,6 +388,11 @@ b {
     width: unset;
     min-width: unset;
     max-width: unset;
+
+    .links a:last-child {
+      display: unset;
+      margin-top: unset;
+    }
   }
 }
 
