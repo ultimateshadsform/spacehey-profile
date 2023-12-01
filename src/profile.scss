@@ -742,43 +742,47 @@ b {
 }
 
 @media only screen and (max-width: 675px) {
-  .profile {
-    .general-about {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  .general-about {
+    flex-direction: column;
 
-      .details {
-        top: unset !important;
-        left: unset !important;
-        position: relative !important;
-        justify-content: center;
-        place-items: center;
-        width: 100%;
-      }
-
-      span[itemprop='name'] {
-        position: unset;
-        top: unset;
-        left: unset;
-        right: unset;
-      }
-
-      span + p {
-        position: relative !important;
-        top: unset !important;
-        right: unset !important;
-        place-self: center;
-        display: flex;
-      }
+    .details {
+      top: unset !important;
+      left: unset !important;
+      position: relative !important;
+      justify-content: center;
+      place-items: center;
+      width: 100%;
     }
   }
 
-  .music-container {
-    flex-direction: column;
-    row-gap: 1rem;
-    img {
-      height: auto;
+  main .profile {
+    meta + div:nth-child(3) {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    div:nth-child(3) span[itemprop='name'] {
+      position: unset;
+      top: unset;
+      left: unset;
+      right: unset;
+    }
+
+    div:nth-child(3) span + p {
+      position: relative !important;
+      top: unset !important;
+      right: unset !important;
+      place-self: center;
+      display: flex;
+    }
+
+    .music-container {
+      flex-direction: column;
+      row-gap: 1rem;
+      img {
+        height: auto;
+      }
     }
   }
 }
@@ -786,6 +790,7 @@ b {
 main {
   background: transparent;
   position: relative;
+  color: $accent-color;
 
   &:before {
     content: '';
