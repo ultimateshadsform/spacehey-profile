@@ -635,58 +635,6 @@ button,
   border: 2px solid $accent-color;
 }
 
-.profile-pic {
-  height: auto !important;
-  margin: unset !important;
-  //   animation: parallax linear;
-  //   @keyframes parallax {
-  //     0% {
-  //       perspective: 1000px;
-  //       transform: translateY(0) perspective(1000px);
-  //     }
-
-  //     25% {
-  //       transform: translateY(-100vh) perspective(1000px);
-  //     }
-  //   }
-  //   animation-timeline: scroll();
-  width: fit-content;
-  perspective: 1000px;
-  display: flex !important;
-  justify-content: center;
-  animation: profile-anim calc(200ms * 4) ease-in-out infinite alternate both;
-  @keyframes profile-anim {
-    0% {
-      perspective: 1000px;
-      transform: perspective(1000px) translateX(100%) translateZ(-200px)
-        rotateY(45deg);
-    }
-
-    50% {
-      perspective: 1000px;
-      transform: perspective(1000px) translateZ(100px);
-    }
-    100% {
-      perspective: 1000px;
-      transform: perspective(1000px) translateX(-100%) translateZ(-200px)
-        rotateY(-45deg);
-    }
-  }
-
-  animation-fill-mode: forwards;
-  position: relative;
-  z-index: -1;
-
-  img {
-    max-height: 14rem;
-    max-width: 14rem;
-    perspective: 1000px;
-    border-radius: 0.5rem;
-    border: 3px solid $accent-color;
-    object-fit: cover;
-  }
-}
-
 .profile .friends .person p,
 .comments-table td:first-child p,
 .profile .blurbs .heading,
@@ -861,6 +809,59 @@ main {
       grid-column: span 2;
       align-items: center;
       width: 100%;
+
+      .profile-pic {
+        height: auto !important;
+        margin: unset !important;
+        //   animation: parallax linear;
+        //   @keyframes parallax {
+        //     0% {
+        //       perspective: 1000px;
+        //       transform: translateY(0) perspective(1000px);
+        //     }
+
+        //     25% {
+        //       transform: translateY(-100vh) perspective(1000px);
+        //     }
+        //   }
+        //   animation-timeline: scroll();
+        width: fit-content;
+        perspective: 1000px;
+        display: flex !important;
+        justify-content: center;
+        animation: profile-anim calc(200ms * 4) ease-in-out infinite alternate
+          both;
+        @keyframes profile-anim {
+          0% {
+            perspective: 1000px;
+            transform: perspective(1000px) translateX(100%) translateZ(-200px)
+              rotateY(45deg);
+          }
+
+          50% {
+            perspective: 1000px;
+            transform: perspective(1000px) translateZ(100px);
+          }
+          100% {
+            perspective: 1000px;
+            transform: perspective(1000px) translateX(-100%) translateZ(-200px)
+              rotateY(-45deg);
+          }
+        }
+
+        animation-fill-mode: forwards;
+        position: relative;
+        z-index: -1;
+
+        img {
+          max-height: 14rem;
+          max-width: 14rem;
+          perspective: 1000px;
+          border-radius: 0.5rem;
+          border: 3px solid $accent-color;
+          object-fit: cover;
+        }
+      }
 
       .details {
         display: grid;
