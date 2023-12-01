@@ -353,6 +353,11 @@
     z-index: -1;
   }
 
+  .profile-pic {
+    display: flex;
+    justify-content: center;
+  }
+
   .profile-pic img {
     max-height: 14rem;
     max-width: 14rem;
@@ -360,6 +365,38 @@
     border-radius: 0.5rem;
     border: 3px solid var(--accent-color);
     object-fit: cover;
+  }
+
+  span[itemprop='author'] span[itemprop='name'] a {
+    font-family: 'Beyonders';
+  }
+
+  .blog-entry .profile-pic img,
+  .bulletin .profile-pic img {
+    max-height: 14rem;
+    max-width: 14rem;
+  }
+
+  .author-details {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+  }
+
+  .author-details h4:first-child {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    place-items: center;
+  }
+
+  #comments .heading h4 {
+    font-size: 0%;
+  }
+
+  .blog-entry {
+    display: flex;
+    flex-direction: column-reverse !important;
   }
 
   nav .links li:not(:last-child)::after,
