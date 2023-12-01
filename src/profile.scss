@@ -76,15 +76,6 @@
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-p,
-label {
-  color: $primary-color;
-}
-
 html {
   overflow-x: clip;
 
@@ -187,6 +178,7 @@ body {
 
 nav {
   position: relative;
+  color: $primary-color;
 
   &:before {
     content: '';
@@ -322,8 +314,14 @@ nav {
 }
 
 .details-table {
+  td:first-child {
+    color: $accent-color;
+  }
   tbody td {
     background: transparent !important;
+    a {
+      color: $accent-color;
+    }
   }
 }
 
@@ -1248,6 +1246,8 @@ main {
       }
 
       .comment-reply {
+        color: $accent-color;
+
         p small a b {
           font-family: 'Beyonders', sans-serif;
           text-shadow: 2px 2px $primary-color;
