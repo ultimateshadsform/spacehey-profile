@@ -378,6 +378,13 @@ nav .links {
   background-color: transparent;
 }
 
+.blog-entry .content,
+.bulletin .content,
+.topic-box .content,
+.reply-box .content {
+  padding: unset;
+}
+
 b {
   color: $accent-color;
 }
