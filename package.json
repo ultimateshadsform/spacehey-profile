@@ -1,0 +1,14 @@
+{
+  "name": "SpaceHey",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ultimateshadsform/spacehey-profile.git",
+  "author": "Alexander Carlsson <alexxycarlsson@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "sass blog.css dist/blog-min.css --style compressed --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}
