@@ -1,5 +1,6 @@
 @use './utils/colors.scss' as *;
 @use './utils/functions.scss' as *;
+@use './utils/vars.scss' as *;
 
 @font-face {
   font-family: 'Feijoada';
@@ -136,7 +137,7 @@ body {
     inset: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://gifsec.com/wp-content/uploads/2022/09/heart-gif-9.gif');
+    background-image: $background-image;
     background-position: top;
     background-repeat-x: no-repeat;
     background-size: cover;
