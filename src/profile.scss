@@ -746,7 +746,7 @@ main {
     border-radius: 1rem;
     padding: 2px;
     pointer-events: none;
-    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/New_Gay_Pride_Flag.svg/1600px-New_Gay_Pride_Flag.svg.png');
+    background: $border-image;
     -webkit-mask: linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
