@@ -564,6 +564,7 @@ button,
         background-size: cover;
         border-radius: 50%;
         pointer-events: none;
+        z-index: 2;
         position: fixed;
         animation: moveX 5s linear 0s infinite alternate,
           moveY 6.8s linear 0s infinite alternate;
