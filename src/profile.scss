@@ -631,11 +631,11 @@ button,
         animation-timeline: scroll();
         @keyframes sonic-anim {
           0% {
-            transform: translateX(-100svw);
+            transform: translateX(calc(50% - 100svw));
           }
 
           100% {
-            transform: translateX(100svw);
+            transform: translateX(calc(50% + 100svw));
           }
         }
       }
