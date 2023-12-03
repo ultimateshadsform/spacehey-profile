@@ -556,6 +556,35 @@ button,
         }
       }
 
+      .tails {
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-image: url('https://b.l3n.co/i/s7l5VF.gif');
+        background-size: cover;
+        border-radius: 50%;
+        pointer-events: none;
+        position: fixed;
+        animation: moveX 5s linear 0s infinite alternate,
+          moveY 6.8s linear 0s infinite alternate;
+        @keyframes moveX {
+          from {
+            left: 0;
+          }
+          to {
+            left: calc(100% - 50px);
+          }
+        }
+        @keyframes moveY {
+          from {
+            top: 0;
+          }
+          to {
+            top: calc(100% - 50px);
+          }
+        }
+      }
+
       .side-shadow {
         position: fixed;
         left: 10px;
