@@ -113,7 +113,7 @@ html {
   }
 
   &:after {
-    background-image: url('https://media0.giphy.com/media/loUqhBx0AKYRT5IrlH/giphy.gif');
+    background-image: $overlay-image;
     content: '';
     position: fixed;
     height: 100%;
@@ -140,7 +140,7 @@ body {
     background-image: $background-image;
     background-position: top;
     background-repeat-x: no-repeat;
-    background-size: cover;
+    background-size: contain;
     z-index: -12;
     opacity: 0.5;
   }
