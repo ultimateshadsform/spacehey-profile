@@ -89,7 +89,7 @@ html {
     top: 0;
     left: 0;
     z-index: 100;
-    background-image: url('https://media.tenor.com/iSa7urk_-TkAAAAC/shadow-the-hedgehog-shadow.gif');
+    background-image: $loading-image;
     background-size: cover;
     background-position: center;
     background-color: $background-color;
