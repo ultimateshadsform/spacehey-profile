@@ -586,6 +586,16 @@ button,
         }
       }
 
+      .lights {
+        position: fixed;
+        object-fit: contain;
+        bottom: 0;
+        left: 0;
+        pointer-events: none;
+        background-repeat: repeat-x;
+        z-index: 2;
+      }
+
       .side-shadow {
         position: fixed;
         left: 10px;
