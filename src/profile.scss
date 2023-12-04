@@ -571,6 +571,7 @@ button,
         @keyframes moveX {
           from {
             left: 0;
+            transform: rotateY(180deg);
           }
           to {
             left: calc(100% - 50px);
