@@ -180,6 +180,7 @@ body {
 nav {
   position: relative;
   color: $primary-color;
+  z-index: 1;
 
   &:before {
     content: '';
@@ -778,7 +779,7 @@ main {
   background: transparent;
   position: relative;
   color: $accent-color;
-  box-shadow: 0 -10px 15px 10px #bd67b0, 0px 10px 15px 10px #d4b84f;
+  box-shadow: -10px -10px 15px 10px #bd67b0, 10px 10px 15px 10px #d4b84f;
   border-radius: 1rem;
 
   &:before {
