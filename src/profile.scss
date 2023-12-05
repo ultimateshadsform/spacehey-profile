@@ -1033,6 +1033,12 @@ main {
 
           .f-col {
             text-align: start;
+
+            a {
+              display: flex;
+              column-gap: 0.4rem;
+              align-items: center;
+            }
           }
         }
 
