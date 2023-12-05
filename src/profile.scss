@@ -785,6 +785,30 @@ b {
       display: flex;
     }
 
+    .contact .inner {
+      margin: 0 auto;
+      grid-template-columns: repeat(1, minmax(auto, 1fr)) !important;
+
+      .f-row {
+        grid-template-columns: repeat(2, minmax(max-content, 1fr)) !important;
+
+        .f-col {
+          a {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            text-wrap: nowrap;
+          }
+          &:nth-child(2) {
+            a {
+              display: flex;
+              flex-direction: row-reverse;
+            }
+          }
+        }
+      }
+    }
+
     .music-container {
       flex-direction: column;
       row-gap: 1rem;
@@ -996,19 +1020,18 @@ main {
 
       .inner {
         padding: 0.4rem;
-        display: flex;
-        flex-direction: column;
-        place-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+        place-items: start;
+        place-self: center;
 
         .f-row {
           margin: 0;
           width: 100%;
-          max-width: 300px;
-          display: flex;
-          justify-content: space-between;
+          display: grid;
+          grid-template-columns: repeat(2, minmax(auto, 1fr));
 
           .f-col {
-            flex: 1;
             text-align: start;
           }
         }
