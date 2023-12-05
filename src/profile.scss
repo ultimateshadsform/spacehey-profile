@@ -1181,12 +1181,21 @@ main {
           }
         }
       }
+    }
+
+    #comments {
+      .heading h4:before {
+        content: 'Complaints';
+        font-size: 1.5rem;
+      }
+
+      .report a img {
+        content: url('https://a.l3n.co/i/my9ZQZ.png');
+      }
 
       .comments-table {
+        min-height: 30rem;
         border: none;
-        td:nth-child(2) > p:nth-child(2):first-letter {
-          text-transform: capitalize;
-        }
 
         td:first-child {
           position: relative;
@@ -1294,51 +1303,41 @@ main {
             }
           }
         }
-      }
-    }
 
-    #comments {
-      .heading h4:before {
-        content: 'Complaints';
-        font-size: 1.5rem;
-      }
+        td {
+          border: none !important;
+          background: transparent;
 
-      .report a img {
-        content: url('https://a.l3n.co/i/my9ZQZ.png');
-      }
-
-      .comment-replies {
-        border: 1px solid $extra-color;
-        border-radius: 1rem;
-      }
-    }
-
-    .comments-table {
-      min-height: 30rem;
-      td {
-        border: none !important;
-        background: transparent;
-      }
-
-      .ago {
-        color: $accent-color;
-      }
-
-      .comment-reply {
-        color: $accent-color;
-
-        p small a b {
-          font-family: 'Beyonders', sans-serif;
-          text-shadow: 2px 2px $secondary-color;
-          font-size: 0.5em;
+          &:nth-child(2) > p:nth-child(2):first-letter {
+            text-transform: capitalize;
+          }
         }
 
-        &:not(:first-child) {
-          border-top: 1px solid $accent-color;
+        .ago {
+          color: $accent-color;
         }
 
-        p:not(:last-child):first-letter {
-          text-transform: capitalize;
+        .comment-replies {
+          border: 1px solid $extra-color;
+          border-radius: 1rem;
+
+          .comment-reply {
+            color: $accent-color;
+
+            p small a b {
+              font-family: 'Beyonders', sans-serif;
+              text-shadow: $text-shadow;
+              font-size: 0.5em;
+            }
+
+            &:not(:first-child) {
+              border-top: 1px solid $accent-color;
+            }
+
+            p:not(:last-child):first-letter {
+              text-transform: capitalize;
+            }
+          }
         }
       }
     }
