@@ -225,7 +225,7 @@ nav {
         img.logo {
           object-fit: contain;
           margin: 0;
-          filter: drop-shadow(0px 0px 2px $primary-color);
+          filter: drop-shadow(0px 0px 2px $secondary-color);
           content: url('https://b.l3n.co/i/myDWge.png');
         }
       }
@@ -254,7 +254,7 @@ nav {
       column-gap: 0.2rem;
 
       a {
-        color: red;
+        color: $primary-color;
         font-size: 0%;
 
         &:before {
@@ -281,7 +281,7 @@ nav {
     a {
       color: $primary-color;
       text-decoration: none !important;
-      text-shadow: 0 0 2px $primary-color;
+      text-shadow: $text-shadow;
 
       &:hover {
         color: hsl(270, 80%, 80%) !important;
@@ -315,33 +315,6 @@ nav {
   }
 }
 
-.details-table {
-  td:first-child {
-    color: $accent-color;
-  }
-  tbody td {
-    background: transparent !important;
-    a {
-      color: $accent-color;
-    }
-  }
-}
-
-table,
-th,
-td {
-  border: 1px solid $primary-color;
-}
-
-table {
-  border: none;
-}
-
-iframe {
-  z-index: 1;
-  position: relative;
-}
-
 .logout-btn {
   font-size: 0%;
 
@@ -368,7 +341,7 @@ button,
 }
 
 .profile-info {
-  border-color: $accent-color;
+  border-color: $extra-color;
   border-radius: 10px;
   font-family: 'Beyonders', sans-serif;
   overflow: hidden;
@@ -460,11 +433,11 @@ button,
         @keyframes moon-anim {
           0% {
             transform: translateY(calc(-50% - 20svh));
-            filter: drop-shadow(0px 0px 8px $primary-color);
+            filter: drop-shadow(0px 0px 8px $secondary-color);
           }
 
           55% {
-            filter: drop-shadow(0px 0px 8px $primary-color);
+            filter: drop-shadow(0px 0px 8px $secondary-color);
           }
 
           75% {
@@ -528,11 +501,11 @@ button,
           animation: moon-anim-color linear;
           @keyframes moon-anim-color {
             0% {
-              background-color: red;
+              background-color: $secondary-color;
             }
 
             55% {
-              background-color: red;
+              background-color: $secondary-color;
             }
 
             75% {
@@ -620,6 +593,39 @@ button,
         padding: 1rem;
         border-radius: 1rem;
         column-gap: 1rem;
+
+        .iframe-container {
+          position: relative;
+          border-radius: 1rem;
+          background: $theme-background;
+          padding: 3px;
+          iframe {
+            z-index: 1;
+            position: relative;
+            height: 100%;
+            min-height: 24rem;
+          }
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 53%;
+            left: 0;
+            border-radius: 1rem;
+            box-shadow: 0 0 10px #d919e5;
+          }
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 53%;
+            left: 0;
+            border-radius: 1rem;
+            box-shadow: 0 0 10px #d4b84f;
+          }
+        }
       }
 
       .sonic {
@@ -668,11 +674,11 @@ button,
 
 .blurbs .heading,
 .friends .heading {
-  background: hsl(0, 100%, 20%) !important;
+  background: $theme-background;
   border-radius: 10px;
   padding: 10px !important;
-  box-shadow: 5px 5px 0 0 $accent-color;
-  border: 2px solid $accent-color;
+  box-shadow: 5px 5px 11px 0 #d919e5;
+  border: 2px solid $extra-color;
 }
 
 .profile .friends .person p,
@@ -686,7 +692,7 @@ span[itemprop='name'] h1,
 .home-actions .heading,
 .profile .url-info p:first-child,
 .profile-info {
-  text-shadow: 2px 2px red;
+  text-shadow: $text-shadow;
 }
 
 .general-about .details p:nth-child(1),
@@ -727,6 +733,13 @@ nav .links {
 
 b {
   color: $accent-color;
+}
+
+.profile .contact .heading,
+.profile .table-section .heading,
+.setting-section .heading,
+.home-actions .heading {
+  background: $theme-background;
 }
 
 @media only screen and (max-width: 675px) {
@@ -779,7 +792,8 @@ main {
   background: transparent;
   position: relative;
   color: $accent-color;
-  box-shadow: -10px -10px 15px 10px #bd67b0, 10px 10px 15px 10px #d4b84f;
+  box-shadow: -10px -10px 15px 10px $secondary-color,
+    10px 10px 15px 10px $extra-color, 0 0 15px 10px $secondary-color inset;
   border-radius: 1rem;
 
   &:before {
@@ -815,16 +829,17 @@ main {
     .contact,
     .url-info,
     .table-section {
-      border-radius: 10px !important;
+      border-radius: 1rem !important;
+      overflow: hidden;
     }
 
     .url-info {
-      border-color: hsl(0, 100%, 20%) !important;
+      border-color: $extra-color;
       border-radius: 5px;
       padding: 0;
 
       p:first-child {
-        background-color: hsl(0, 100%, 20%) !important;
+        background: $theme-background;
         padding: 2px 7px;
         border-radius: 5px 5px 0 0;
       }
@@ -835,11 +850,9 @@ main {
     }
 
     .table-section {
-      border-color: hsl(0, 100%, 20%) !important;
-      border-radius: 5px;
+      border-color: $extra-color;
 
       .heading {
-        background-color: hsl(0, 100%, 20%) !important;
         border-radius: 5px 5px 0 0;
       }
     }
@@ -973,10 +986,9 @@ main {
     .contact {
       display: flex !important;
       flex-direction: column;
-      border-color: hsl(0, 100%, 20%) !important;
+      border-color: $extra-color;
 
       .heading {
-        background-color: hsl(0, 100%, 20%) !important;
         border-radius: 5px 5px 0 0;
       }
 
@@ -1042,14 +1054,14 @@ main {
           animation: dni-flash 300ms linear infinite alternate both;
           @keyframes dni-flash {
             to {
-              color: red;
+              color: $secondary-color;
             }
           }
         }
       }
     }
 
-    meta + div:nth-child(3) {
+    meta[itemprop='identifier'] + div.left {
       display: grid;
       grid-template-columns: repeat(2, minmax(auto, 1fr));
       grid-template-rows: minmax(20px, 1fr);
@@ -1059,6 +1071,27 @@ main {
 
       span[itemprop='name'] {
         grid-column: span 2;
+      }
+
+      .details-table {
+        border: none;
+
+        td:first-child {
+          color: $accent-color;
+          width: 100%;
+          background: transparent;
+        }
+
+        tr {
+          display: flex;
+          flex-direction: column;
+        }
+        td {
+          background: transparent;
+          a {
+            color: $accent-color;
+          }
+        }
       }
     }
 
@@ -1159,6 +1192,7 @@ main {
       }
 
       .comments-table {
+        border: none;
         td:nth-child(2) > p:nth-child(2):first-letter {
           text-transform: capitalize;
         }
@@ -1198,8 +1232,8 @@ main {
                 transform: scale(0.9);
               }
             }
-            border: 2px solid $accent-color;
-            box-shadow: 5px 5px 0 0 red;
+            border: 2px solid $extra-color;
+            box-shadow: 5px 5px 0 0 $secondary-color;
             transition: all 200ms ease;
 
             &:hover {
@@ -1217,20 +1251,20 @@ main {
           }
         }
 
-        tr {
-          &:first-child td:nth-child(2) > p:nth-child(2) {
+        tr:first-child {
+          td:nth-child(2) > p:nth-child(2) {
             color: yellow;
-            text-shadow: 1px 1px 2px $primary-color, 0 0 1em orange,
-              0 0 0.2em yellow;
+            text-shadow: 1px 1px 2px $secondary-color, 0 0 1em orange,
+              0 0 0.2em $extra-color;
           }
 
-          &:first-child td:nth-child(2) > p:first-child b .ago {
-            color: black;
-            text-shadow: 0 0 5px red, 0 0 10px yellow, -20px 0 20px yellow,
-              10px 0 20px white;
+          td:nth-child(2) > p:first-child b .ago {
+            color: $primary-color;
+            text-shadow: 0 0 5px $secondary-color, 0 0 10px $secondary-color,
+              -20px 0 20px $extra-color, 10px 0 20px $primary-color;
           }
 
-          &:first-child td:first-child img:not(.icon) {
+          td:first-child img:not(.icon) {
             animation: first-comment-profile-photo-anim 0.4s ease-in-out
               infinite alternate both;
             @keyframes first-comment-profile-photo-anim {
@@ -1244,19 +1278,18 @@ main {
                   rotateY(-10deg) perspective(1000px);
               }
             }
-            box-shadow: 5px 5px 0 0 $accent-color;
             perspective: 1000px;
-            box-shadow: yellow 0 0 20px 5px;
+            box-shadow: $secondary-color 0 0 20px 5px;
             transition: all 200ms ease;
           }
 
-          &:first-child td:first-child img:not(.icon):hover {
+          td:first-child img:not(.icon):hover {
             filter: invert(420%) sepia(69420%) saturate(1000%)
               hue-rotate(320deg) brightness(100%) contrast(100%);
             box-shadow: 0 0 30px 10px rgb(0 255 0);
           }
 
-          &:first-child td:first-child p {
+          td:first-child p {
             color: yellow;
             animation: first-name-anim 400ms ease-in-out infinite alternate both;
             @keyframes first-name-anim {
@@ -1284,7 +1317,7 @@ main {
       }
 
       .comment-replies {
-        border: 1px solid red !important;
+        border: 1px solid $extra-color;
         border-radius: 1rem;
       }
     }

@@ -1,4 +1,11 @@
-$primary-color: red;
-$secondary-color: yellow;
-$accent-color: hsl(276, 75%, 75%);
+$primary-color: white;
+$secondary-color: #d919e5;
+$accent-color: white;
+$extra-color: #d4b84f;
 $background-color: hsl(0, 100%, 5%);
+$text-shadow: 3px -1px #d919e5;
+$theme-background: linear-gradient(
+  to bottom,
+  #d919e5 -50%,
+  #d4b84f 100%
+) !important;
