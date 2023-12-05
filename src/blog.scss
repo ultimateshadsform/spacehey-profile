@@ -498,6 +498,10 @@ main {
     }
   }
 
+  #comments .heading {
+    border-top: 2px solid $secondary-color;
+  }
+
   @include comments;
 }
 
