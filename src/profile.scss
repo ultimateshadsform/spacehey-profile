@@ -844,6 +844,8 @@ main {
       border-color: $extra-color;
       border-radius: 5px;
       padding: 0;
+      grid-column: 1 / -1;
+      text-align: center;
 
       p:first-child {
         background: $theme-background;
@@ -989,8 +991,28 @@ main {
       display: flex !important;
       flex-direction: column;
       border-color: $extra-color;
+      grid-column: 1 / -1;
+      text-align: center;
 
       .inner {
+        padding: 0.4rem;
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+
+        .f-row {
+          margin: 0;
+          width: 100%;
+          max-width: 300px;
+          display: flex;
+          justify-content: space-between;
+
+          .f-col {
+            flex: 1;
+            text-align: start;
+          }
+        }
+
         div div a img {
           transition: all 300ms ease;
         }
