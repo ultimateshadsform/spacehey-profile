@@ -27,9 +27,16 @@
 
   @if $hasHoverImage {
     // Generate styles for the hover image
-    div:nth-child(#{$rowIndex}) div:nth-child(#{$columnIndex}) a:hover img {
-      content: url($hoverImage);
-      @include hoverShadow($hoverImage);
+    div:nth-child(#{$rowIndex}) div:nth-child(#{$columnIndex}) a:hover {
+      display: flex;
+      flex-direction: column-reverse !important;
+      align-items: center;
+
+      img {
+        content: url($hoverImage);
+
+        @include hoverShadow($hoverImage);
+      }
     }
   }
 }
