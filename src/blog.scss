@@ -500,9 +500,12 @@ main {
   #comments {
     .heading {
       border-top: 2px solid $secondary-color;
-      h4:before {
-        content: 'Complaints';
-        font-size: 1.5rem;
+      h4 {
+        font-size: 0%;
+        &:before {
+          content: 'Complaints';
+          font-size: 1.5rem;
+        }
       }
     }
 
