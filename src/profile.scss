@@ -600,6 +600,10 @@ button,
           border-radius: 1rem;
           background: $theme-background;
           padding: 3px;
+          display: flex;
+          justify-content: center;
+          place-items: center;
+
           iframe {
             z-index: 1;
             position: relative;
