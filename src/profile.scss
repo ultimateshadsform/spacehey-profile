@@ -638,6 +638,7 @@ button,
         position: fixed;
         object-fit: contain;
         bottom: 10px;
+        left: 50%;
         max-height: 400px;
         z-index: -1;
         transform: translateX(-50%);
@@ -645,11 +646,11 @@ button,
         animation-timeline: scroll();
         @keyframes sonic-anim {
           0% {
-            transform: translateX(calc(50% - 100svw));
+            transform: translateX(calc(-50% - 100svw));
           }
 
           100% {
-            transform: translateX(calc(50% + 100svw));
+            transform: translateX(calc(-50% + 100svw));
           }
         }
       }
