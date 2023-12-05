@@ -148,7 +148,7 @@ body {
   &:after {
     content: '';
     inset: 0;
-    background: #720000;
+    background: $extra-color;
     width: 100px;
     height: 100px;
     position: fixed;
@@ -656,8 +656,8 @@ button,
         background: radial-gradient(
           circle,
           hsl(18deg, 100%, 38.03%) 10%,
-          #5f0063 40%,
-          rgb(98, 0, 0) 80%
+          #bf3f3f 40%,
+          $extra-color 80%
         );
         -webkit-background-clip: text;
         background-clip: text;
@@ -1338,7 +1338,7 @@ main {
 
         p small a b {
           font-family: 'Beyonders', sans-serif;
-          text-shadow: 2px 2px $primary-color;
+          text-shadow: 2px 2px $secondary-color;
           font-size: 0.5em;
         }
 
