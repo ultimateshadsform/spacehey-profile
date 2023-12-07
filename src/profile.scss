@@ -64,16 +64,13 @@
     background-blend-mode: difference;
   }
 
-  a:hover {
-    text-decoration: none;
-  }
-
   a {
     color: $primary-color;
     transition: all 200ms ease;
 
     &:hover {
-      color: hsl(270, 80%, 80%);
+      text-decoration: none;
+      color: hsl(270, 80%, 80%) !important;
     }
   }
 }
@@ -885,6 +882,29 @@ main {
 
     .table-section {
       border-color: $extra-color;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+
+      .inner {
+        display: flex;
+        flex: 1;
+
+        .details-table {
+          height: 100%;
+
+          tbody {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            td p {
+              text-wrap: balance;
+            }
+          }
+        }
+      }
     }
 
     .blurbs .heading h4,
