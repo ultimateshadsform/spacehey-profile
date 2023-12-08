@@ -14,10 +14,6 @@
   src: url('https://dl.dropboxusercontent.com/scl/fi/j10eailb22tuhayzf8k1y/Beyonders.ttf?rlkey=1jqbxp5ddm5enazoms02vp645&dl=1');
 }
 
-:root {
-  --accent-color: #{$accent-color};
-}
-
 * {
   cursor: url('https://c.l3n.co/i/mxtyRK.png'), auto;
   animation: cursor 500ms linear infinite;
@@ -227,7 +223,7 @@ nav {
           object-fit: contain;
           margin: 0;
           filter: drop-shadow(0px 0px 2px $secondary-color);
-          content: url('https://b.l3n.co/i/myDWge.png');
+          content: $logo-image;
         }
       }
     }
