@@ -1,6 +1,7 @@
 @use '../utils/settings.scss' as *;
 @use '../utils/colors.scss' as *;
 @use '../utils/vars.scss' as *;
+@use '../utils/functions.scss' as *;
 
 @mixin nav-background {
   &:before {
@@ -84,14 +85,9 @@ nav {
       color: var(--accent-color);
       column-gap: 0.2rem;
 
+      @include rename('a', 'Therapy');
       a {
         color: var(--primary-color);
-        font-size: 0%;
-
-        &:before {
-          content: 'Therapy';
-          font-size: 1rem;
-        }
 
         &:hover {
           color: hsl(270, 80%, 80%) !important;

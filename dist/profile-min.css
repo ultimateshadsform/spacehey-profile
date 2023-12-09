@@ -81,12 +81,14 @@ nav .top .right {
   column-gap: 0.2rem;
 }
 nav .top .right a {
-  color: var(--primary-color);
   font-size: 0%;
 }
 nav .top .right a:before {
   content: "Therapy";
   font-size: 1rem;
+}
+nav .top .right a {
+  color: var(--primary-color);
 }
 nav .top .right a:hover {
   color: hsl(270, 80%, 80%) !important;
@@ -328,9 +330,9 @@ button:hover,
   height: 100%;
   width: 100%;
   pointer-events: none;
-  animation: running 5s ease-in-out infinite;
+  animation: marquee 5s ease-in-out infinite;
 }
-@keyframes running {
+@keyframes marquee {
   0% {
     transform: translateX(-100%);
   }

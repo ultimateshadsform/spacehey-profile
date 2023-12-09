@@ -81,12 +81,14 @@ nav .top .right {
   column-gap: 0.2rem;
 }
 nav .top .right a {
-  color: var(--primary-color);
   font-size: 0%;
 }
 nav .top .right a:before {
   content: "Therapy";
   font-size: 1rem;
+}
+nav .top .right a {
+  color: var(--primary-color);
 }
 nav .top .right a:hover {
   color: hsl(270, 80%, 80%) !important;

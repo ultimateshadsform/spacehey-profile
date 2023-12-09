@@ -28,8 +28,8 @@
       height: 100%;
       width: 100%;
       pointer-events: none;
-      animation: running 5s ease-in-out infinite;
-      @keyframes running {
+      animation: marquee 5s ease-in-out infinite;
+      @keyframes marquee {
         0% {
           transform: translateX(-100%);
         }
