@@ -8,6 +8,7 @@
 @use './utils/fonts.scss' as *;
 
 // Partials
+@use './partials/background.scss' as *;
 @use './partials/comments.scss' as *;
 @use './partials/scrollbar.scss' as *;
 @use './partials/overlay.scss' as *;
@@ -34,7 +35,7 @@
 
     &:hover {
       text-decoration: none;
-      color: hsl(270, 80%, 80%) !important;
+      color: var(--hover-color);
     }
   }
 }
@@ -67,14 +68,7 @@ body {
   }
 }
 
-.logout-btn {
-  font-size: 0%;
-
-  &:before {
-    content: 'Explode';
-    font-size: 1rem;
-  }
-}
+@include rename('.logout-btn', 'Explode');
 
 button,
 .logout-btn,
@@ -88,7 +82,7 @@ button,
   transition: all 200ms ease;
 
   &:hover {
-    color: hsl(270, 80%, 80%) !important;
+    color: var(--hover-color);
   }
 }
 
