@@ -454,7 +454,10 @@ main {
           max-width: 14rem;
           perspective: 1000px;
           border-radius: 0.5rem;
-          border: 3px solid var(--accent-color);
+          border: 3px solid var(--secondary-color);
+          box-shadow: -10px -10px 15px 10px var(--secondary-color),
+            10px 10px 15px 10px var(--extra-color),
+            0 0 15px 10px var(--secondary-color) inset;
           object-fit: cover;
         }
       }
