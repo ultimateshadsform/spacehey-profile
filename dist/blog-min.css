@@ -121,7 +121,7 @@ nav .links li:first-child a:nth-child(1) .icon {
   }
 }
 nav .links li.active a {
-  color: hsl(270, 80%, 80%) !important;
+  color: var(--hover-color) !important;
   font-weight: unset !important;
 }
 
