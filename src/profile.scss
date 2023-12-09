@@ -26,7 +26,12 @@
 
 * {
   @if $include-cursor {
-    @include cursor;
+    @include cursor(
+      'https://c.l3n.co/i/mxtyRK.png',
+      'https://b.l3n.co/i/mxt57Z.png',
+      'https://c.l3n.co/i/mxtGFP.png',
+      'https://b.l3n.co/i/mxthIm.png'
+    );
   }
 
   font-family: $primary-font;

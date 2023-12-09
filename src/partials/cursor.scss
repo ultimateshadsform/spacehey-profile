@@ -1,22 +1,28 @@
-@mixin cursor {
-  cursor: url('https://c.l3n.co/i/mxtyRK.png'), auto;
-  animation: cursor 500ms linear infinite;
+@use 'sass:math';
 
-  @keyframes cursor {
-    0% {
-      cursor: url('https://c.l3n.co/i/mxtyRK.png'), auto;
-    }
+@mixin cursor($images...) {
+  cursor: url('#{nth($images, 1)}'), auto;
+  animation: cursor-anim 500ms linear infinite;
 
-    25% {
-      cursor: url('https://b.l3n.co/i/mxt57Z.png'), auto;
-    }
+  $keylist: ();
 
-    50% {
-      cursor: url('https://c.l3n.co/i/mxtGFP.png'), auto;
-    }
+  // loop through the images
+  // Use the loop-images function to create a keyframe for each image
 
-    100% {
-      cursor: url('https://b.l3n.co/i/mxthIm.png'), auto;
+  @each $image in $images {
+    $keylist: append($keylist, $image);
+  }
+
+  @keyframes cursor-anim {
+    @for $i from 1 through length($images) {
+      $currentImage: nth($keylist, $i);
+      $percentage: math.div(
+        $i,
+        length($images)
+      ); // Calculate percentage for each keyframe
+      #{$percentage * 100%} {
+        cursor: url('#{$currentImage}'), auto;
+      }
     }
   }
 }
