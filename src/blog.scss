@@ -218,16 +218,16 @@ main {
         }
 
         .links {
-          a:nth-child(1) img {
-            content: url('https://c.l3n.co/i/mxgfcQ.png');
-          }
+          $links: (
+            'https://c.l3n.co/i/mxgfcQ.png',
+            'https://b.l3n.co/i/my9joc.png',
+            'https://a.l3n.co/i/my9ZQZ.png'
+          );
 
-          a:nth-child(2) img {
-            content: url('https://b.l3n.co/i/my9joc.png');
-          }
-
-          a:nth-child(3) img {
-            content: url('https://a.l3n.co/i/my9ZQZ.png');
+          @for $i from 1 through length($links) {
+            a:nth-child(#{$i}) img {
+              content: url(nth($links, $i));
+            }
           }
         }
       }
