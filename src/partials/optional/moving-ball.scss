@@ -16,16 +16,16 @@
 
     @keyframes shadow-bg {
       0% {
-        transform: translate(0, -100px);
+        transform: translate(0svw, -50svh);
       }
       25% {
-        transform: translate(0vh, 0vw);
+        transform: translate(0svw, 0svh);
       }
       50% {
-        transform: translate(2px, 100vh);
+        transform: translate(15svw, 100svh);
       }
       100% {
-        transform: translate(50vw, -50vh);
+        transform: translate(50svw, -50svh);
       }
     }
   }
