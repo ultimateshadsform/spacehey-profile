@@ -2,6 +2,7 @@
 @use './utils/functions.scss' as *;
 @use './utils/vars.scss' as *;
 @use './partials/comments.scss' as *;
+@use './utils/root.scss' as *;
 
 @font-face {
   font-family: 'Feijoada';
@@ -65,7 +66,7 @@
   }
 
   a {
-    color: $primary-color;
+    color: var(--primary-color);
     transition: all 200ms ease;
 
     &:hover {
@@ -86,10 +87,10 @@ html {
     top: 0;
     left: 0;
     z-index: 100;
-    background-image: $loading-image;
+    background-image: var(--loading-image);
     background-size: cover;
     background-position: center;
-    background-color: $background-color;
+    background-color: var(--background-color);
     animation: loading-anim 2.8s ease 0s 1 normal forwards;
     pointer-events: none;
 
@@ -110,7 +111,7 @@ html {
   }
 
   &:after {
-    background-image: $overlay-image;
+    background-image: var(--overlay-image);
     content: '';
     position: fixed;
     height: 100%;
@@ -122,7 +123,7 @@ html {
 }
 
 body {
-  background: $background-color;
+  background: var(--background-color);
   overflow-x: clip;
   position: relative;
   display: flex;
@@ -134,9 +135,9 @@ body {
     inset: 0;
     width: 100%;
     height: 100%;
-    background-image: $background-image;
+    background-image: var(--background-image);
     background-position: top;
-    background-repeat-x: no-repeat;
+    background-repeat: no-repeat repeat;
     background-size: contain;
     z-index: -12;
     opacity: 0.5;
@@ -145,7 +146,7 @@ body {
   &:after {
     content: '';
     inset: 0;
-    background: $extra-color;
+    background: var(--extra-color);
     width: 100px;
     height: 100px;
     position: fixed;
@@ -176,12 +177,12 @@ body {
 
 nav {
   position: relative;
-  color: $primary-color;
+  color: var(--primary-color);
   z-index: 1;
 
   &:before {
     content: '';
-    background-image: url('https://www.icegif.com/wp-content/uploads/2022/04/icegif-581.gif');
+    background-image: var(--nav-image);
     -webkit-mask-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0),
@@ -222,8 +223,8 @@ nav {
         img.logo {
           object-fit: contain;
           margin: 0;
-          filter: drop-shadow(0px 0px 2px $secondary-color);
-          content: $logo-image;
+          filter: drop-shadow(0px 0px 2px var(--secondary-color));
+          content: var(--logo-image);
         }
       }
     }
@@ -233,9 +234,9 @@ nav {
         background: transparent;
         border-radius: 10px;
         padding: 0.4rem 0.4rem;
-        outline: 1px solid $primary-color;
-        border: 1px solid $primary-color;
-        color: $accent-color;
+        outline: 1px solid var(--primary-color);
+        border: 1px solid var(--primary-color);
+        color: var(--accent-color);
       }
 
       form {
@@ -247,11 +248,11 @@ nav {
     }
 
     .right {
-      color: $accent-color;
+      color: var(--accent-color);
       column-gap: 0.2rem;
 
       a {
-        color: $primary-color;
+        color: var(--primary-color);
         font-size: 0%;
 
         &:before {
@@ -276,9 +277,9 @@ nav {
     );
 
     a {
-      color: $primary-color;
+      color: var(--primary-color);
       text-decoration: none !important;
-      text-shadow: $text-shadow;
+      text-shadow: var(--text-shadow);
 
       &:hover {
         color: hsl(270, 80%, 80%) !important;
@@ -287,7 +288,7 @@ nav {
 
     li {
       &:not(:last-child):after {
-        color: $accent-color;
+        color: var(--accent-color);
       }
 
       &:first-child a:nth-child(1) .icon {
@@ -324,7 +325,7 @@ nav {
 button,
 .logout-btn,
 .blog-entry .kudos-btn {
-  color: $primary-color;
+  color: var(--primary-color);
   border: none;
   background: rgba(0, 0, 0, 0.3) !important;
   padding: 0.4rem !important;
@@ -338,7 +339,7 @@ button,
 }
 
 .comments-table td:first-child p {
-  text-shadow: $text-shadow;
+  text-shadow: var(--text-shadow);
 }
 
 p,
@@ -350,7 +351,7 @@ ul:not(nav .links):not(footer .links) li {
 nav .links li:not(:last-child)::after,
 footer .links li:not(:last-child)::after {
   content: ' 🦔 ';
-  color: $accent-color;
+  color: var(--accent-color);
 }
 
 nav .links,
@@ -370,7 +371,7 @@ nav .links {
 }
 
 b {
-  color: $accent-color;
+  color: var(--accent-color);
 }
 
 @media (max-width: 30em) {
@@ -390,9 +391,10 @@ b {
 main {
   background: transparent;
   position: relative;
-  color: $accent-color;
-  box-shadow: -10px -10px 15px 10px $secondary-color,
-    10px 10px 15px 10px $extra-color, 0 0 15px 10px $secondary-color inset;
+  color: var(--accent-color);
+  box-shadow: -10px -10px 15px 10px var(--secondary-color),
+    10px 10px 15px 10px var(--extra-color),
+    0 0 15px 10px var(--secondary-color) inset;
   border-radius: 1rem;
 
   &:before {
@@ -402,7 +404,7 @@ main {
     border-radius: 1rem;
     padding: 2px;
     pointer-events: none;
-    background: $border-image;
+    background: var(--border-image);
     -webkit-mask: linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -419,15 +421,15 @@ main {
     }
 
     .title {
-      color: $accent-color;
+      color: var(--accent-color);
       font-size: clamp(0.5rem, 1svw, 2rem);
       font-family: 'Beyonders', sans-serif;
-      text-shadow: $text-shadow;
+      text-shadow: var(--text-shadow);
     }
 
     .edit-info {
       background: transparent;
-      border: 1px solid $extra-color;
+      border: 1px solid var(--extra-color);
       border-radius: 1rem;
 
       .profile-pic {
@@ -439,7 +441,7 @@ main {
           max-width: 14rem;
           perspective: 1000px;
           border-radius: 0.5rem;
-          border: 3px solid $secondary-color;
+          border: 3px solid var(--secondary-color);
           object-fit: cover;
         }
       }
@@ -459,8 +461,8 @@ main {
             font-size: 1.3rem;
             font-family: 'Beyonders', sans-serif;
             transition: all 200ms ease;
-            color: $accent-color;
-            text-shadow: 3px -1px $secondary-color;
+            color: var(--accent-color);
+            text-shadow: 3px -1px var(--secondary-color);
 
             &:hover {
               text-shadow: 0px 0px 1px #bf3f3f, -0px 0px 1px #bf3f3f,
@@ -495,14 +497,14 @@ main {
   }
 
   #comments .heading {
-    border-top: 2px solid $secondary-color;
+    border-top: 2px solid var(--secondary-color);
   }
 
   @include comments;
 }
 
 footer {
-  color: $primary-color;
+  color: var(--primary-color);
   background: transparent;
   p {
     font-size: 1rem;

@@ -1,0 +1,21 @@
+@use './colors.scss' as *;
+@use './vars.scss' as *;
+
+:root {
+  /* Images */
+  --background-image: #{$background-image};
+  --border-image: #{$border-image};
+  --overlay-image: #{$overlay-image};
+  --loading-image: #{$loading-image};
+  --logo-image: #{$logo-image};
+  --nav-image: #{$nav-image};
+
+  /* Colors */
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --accent-color: #{$accent-color};
+  --extra-color: #{$extra-color};
+  --background-color: #{$background-color};
+  --text-shadow: #{$text-shadow};
+  --theme-background: #{$theme-background};
+}
