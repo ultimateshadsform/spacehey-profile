@@ -94,7 +94,7 @@ nav {
         color: var(--primary-color);
 
         &:hover {
-          color: hsl(270, 80%, 80%) !important;
+          color: var(--hover-color);
           text-decoration: none;
         }
       }

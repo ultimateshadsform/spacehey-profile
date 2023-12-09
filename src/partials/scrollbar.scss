@@ -18,4 +18,9 @@
   ::-webkit-scrollbar-thumb:hover {
     background-blend-mode: difference;
   }
+
+  ::selection {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
 }

@@ -32,7 +32,7 @@
         left: 0;
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
-        box-shadow: 0 0 10px #d919e5;
+        box-shadow: 0 0 10px var(--secondary-color);
       }
       &:after {
         content: '';
@@ -43,7 +43,7 @@
         left: 0;
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
-        box-shadow: 0 0 10px #d4b84f;
+        box-shadow: 0 0 10px var(--extra-color);
       }
     }
   }

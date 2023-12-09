@@ -1,28 +1,27 @@
 // Utils
-@use './utils/colors.scss' as *;
 @use './utils/functions.scss' as *;
+@use './utils/settings.scss' as *;
+@use './utils/colors.scss' as *;
+@use './utils/fonts.scss' as *;
 @use './utils/vars.scss' as *;
 @use './utils/root.scss' as *;
-@use './utils/fonts.scss' as *;
-@use './utils/settings.scss' as *;
-@use './utils/fonts.scss' as *;
 
 // Partials
-@use './partials/background.scss' as *;
-@use './partials/comments.scss' as *;
-@use './partials/scrollbar.scss' as *;
-@use './partials/overlay.scss' as *;
-@use './partials/loading.scss' as *;
 @use './partials/nav.scss' as *;
-@use './partials/profile-friend.scss' as *;
-@use './partials/profile-frame.scss' as *;
-@use './partials/cursor.scss' as *;
 @use './partials/footer.scss' as *;
 @use './partials/border.scss' as *;
-@use './partials/optional/moving-ball.scss' as *;
+@use './partials/cursor.scss' as *;
+@use './partials/overlay.scss' as *;
+@use './partials/loading.scss' as *;
+@use './partials/comments.scss' as *;
+@use './partials/scrollbar.scss' as *;
+@use './partials/background.scss' as *;
+@use './partials/profile-frame.scss' as *;
+@use './partials/profile-friend.scss' as *;
 @use './partials/optional/characters.scss' as *;
-@use './partials/optional/moon.scss' as *;
+@use './partials/optional/moving-ball.scss' as *;
 @use './partials/optional/music-container.scss' as *;
+@use './partials/optional/moon.scss' as *;
 
 * {
   @if $include-cursor {

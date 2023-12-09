@@ -1,22 +1,22 @@
 // Utils
-@use './utils/colors.scss' as *;
 @use './utils/functions.scss' as *;
+@use './utils/settings.scss' as *;
+@use './utils/colors.scss' as *;
+@use './utils/fonts.scss' as *;
+@use './utils/fonts.scss' as *;
 @use './utils/vars.scss' as *;
 @use './utils/root.scss' as *;
-@use './utils/fonts.scss' as *;
-@use './utils/settings.scss' as *;
-@use './utils/fonts.scss' as *;
 
 // Partials
-@use './partials/background.scss' as *;
-@use './partials/comments.scss' as *;
-@use './partials/scrollbar.scss' as *;
-@use './partials/overlay.scss' as *;
 @use './partials/nav.scss' as *;
-@use './partials/loading.scss' as *;
 @use './partials/cursor.scss' as *;
 @use './partials/footer.scss' as *;
 @use './partials/border.scss' as *;
+@use './partials/overlay.scss' as *;
+@use './partials/loading.scss' as *;
+@use './partials/comments.scss' as *;
+@use './partials/scrollbar.scss' as *;
+@use './partials/background.scss' as *;
 @use './partials/optional/moving-ball.scss' as *;
 
 * {

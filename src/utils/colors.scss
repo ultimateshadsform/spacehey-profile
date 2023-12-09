@@ -1,8 +1,12 @@
 $primary-color: white;
-$secondary-color: #d919e5;
+$secondary-color: red;
 $accent-color: white;
-$extra-color: #d4b84f;
+$extra-color: #7800de;
 $background-color: hsl(0, 100%, 5%);
 $text-shadow: 3px -1px #d919e5;
-$hover-color: hsl(270, 80%, 80%);
-$theme-background: linear-gradient(to bottom, #d919e5 -50%, #d4b84f 100%);
+$hover-color: red;
+$theme-background: linear-gradient(
+  to bottom,
+  red -50%,
+  var(--extra-color) 100%
+);
