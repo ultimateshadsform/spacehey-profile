@@ -1,3 +1,5 @@
+@use '../utils/settings.scss' as *;
+
 @mixin you-are-friends {
   &:before {
     content: '';

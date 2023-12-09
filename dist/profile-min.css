@@ -9,6 +9,7 @@
   --nav-image: url("https://www.icegif.com/wp-content/uploads/2022/04/icegif-581.gif");
   --scrollbar-image: url("https://printler.com/media/photo/149787.jpg");
   --profile-friend-image: url("https://img.wattpad.com/16adc1dab5d33b05b1458cb7861f6a9e0a996e06/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f39463649635656615f4c62736f773d3d2d3932333032343136302e313632333162363761353136663530613735313232323632313136312e676966");
+  --profile-friend-image-overlay: url("https://media.tenor.com/2100NQHbjV8AAAAi/shadow.gif");
   /* Colors */
   --primary-color: white;
   --secondary-color: #d919e5;
@@ -318,7 +319,7 @@ button:hover,
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("https://media.tenor.com/2100NQHbjV8AAAAi/shadow.gif");
+  background-image: var(--profile-friend-image-overlay);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -326,9 +327,9 @@ button:hover,
   height: 100%;
   width: 100%;
   pointer-events: none;
-  animation: shadow-running 5s ease-in-out infinite;
+  animation: running 5s ease-in-out infinite;
 }
-@keyframes shadow-running {
+@keyframes running {
   0% {
     transform: translateX(-100%);
   }
