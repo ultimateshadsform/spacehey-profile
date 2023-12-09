@@ -10,8 +10,8 @@
     max-width: 20rem;
     width: 100%;
     z-index: -4;
-    animation-timeline: scroll();
     animation: moon-anim linear;
+    animation-timeline: scroll();
     @keyframes moon-anim {
       0% {
         transform: translateY(calc(-50% - 20svh));
