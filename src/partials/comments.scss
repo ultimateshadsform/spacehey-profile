@@ -1,15 +1,10 @@
 @use '../utils/colors.scss' as *;
+@use '../utils/functions.scss' as *;
 
 @mixin comments {
   #comments {
     .heading {
-      h4 {
-        font-size: 0%;
-        &:before {
-          content: 'Complaints';
-          font-size: 1.5rem;
-        }
-      }
+      @include rename('h4', 'Complaints');
     }
 
     .report a img {

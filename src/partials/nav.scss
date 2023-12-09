@@ -116,7 +116,7 @@ nav {
       text-shadow: var(--text-shadow);
 
       &:hover {
-        color: hsl(270, 80%, 80%) !important;
+        color: var(--hover-color) !important;
       }
     }
 
