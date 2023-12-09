@@ -4,18 +4,12 @@
   cursor: url('#{nth($images, 1)}'), auto;
   animation: cursor-anim 500ms linear infinite;
 
-  $keylist: ();
-
   // loop through the images
   // Use the loop-images function to create a keyframe for each image
 
-  @each $image in $images {
-    $keylist: append($keylist, $image);
-  }
-
   @keyframes cursor-anim {
     @for $i from 1 through length($images) {
-      $currentImage: nth($keylist, $i);
+      $currentImage: nth($images, $i);
       $percentage: percentage(
         // Calcuate percentage for each keyframe min 0% max 100%
         math.div($i, length($images))
