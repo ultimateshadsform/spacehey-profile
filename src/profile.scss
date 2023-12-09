@@ -490,7 +490,7 @@ main {
           z-index: -2;
 
           img {
-            content: url('https://media.tenor.com/fwRdoejcLPAAAAAi/shadow-the-hedgehog-shadow.gif');
+            content: var(--online-image);
             width: 10em;
             height: 10em;
             object-fit: contain;
