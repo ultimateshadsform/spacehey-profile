@@ -16,11 +16,11 @@
   @keyframes cursor-anim {
     @for $i from 1 through length($images) {
       $currentImage: nth($keylist, $i);
-      $percentage: math.div(
-        $i,
-        length($images)
+      $percentage: percentage(
+        // Calcuate percentage for each keyframe min 0% max 100%
+        math.div($i, length($images))
       ); // Calculate percentage for each keyframe
-      #{$percentage * 100%} {
+      #{nth($percentage, 1)} {
         cursor: url('#{$currentImage}'), auto;
       }
     }

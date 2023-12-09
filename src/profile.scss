@@ -26,7 +26,7 @@
 
 * {
   @if $include-cursor {
-    @include cursor($cursors);
+    @include cursor($cursors...);
   }
 
   font-family: $primary-font;
