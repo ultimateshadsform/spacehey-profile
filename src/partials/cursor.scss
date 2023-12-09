@@ -1,0 +1,22 @@
+@mixin cursor {
+  cursor: url('https://c.l3n.co/i/mxtyRK.png'), auto;
+  animation: cursor 500ms linear infinite;
+
+  @keyframes cursor {
+    0% {
+      cursor: url('https://c.l3n.co/i/mxtyRK.png'), auto;
+    }
+
+    25% {
+      cursor: url('https://b.l3n.co/i/mxt57Z.png'), auto;
+    }
+
+    50% {
+      cursor: url('https://c.l3n.co/i/mxtGFP.png'), auto;
+    }
+
+    100% {
+      cursor: url('https://b.l3n.co/i/mxthIm.png'), auto;
+    }
+  }
+}
