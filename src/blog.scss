@@ -3,8 +3,11 @@
 @use './utils/vars.scss' as *;
 @use './partials/comments.scss' as *;
 @use './partials/scrollbar.scss' as *;
+@use './partials/loading.scss' as *;
 @use './utils/root.scss' as *;
 @use './utils/fonts.scss' as *;
+@use './utils/settings.scss' as *;
+
 * {
   cursor: url('https://c.l3n.co/i/mxtyRK.png'), auto;
   animation: cursor 500ms linear infinite;
@@ -50,47 +53,12 @@
 html {
   overflow-x: clip;
 
-  &:before {
-    content: '';
-    height: 100vh;
-    width: 100vw;
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    background-image: var(--loading-image);
-    background-size: cover;
-    background-position: center;
-    background-color: var(--background-color);
-    animation: loading-anim 2.8s ease 0s 1 normal forwards;
-    pointer-events: none;
-
-    @keyframes loading-anim {
-      0% {
-        opacity: 1;
-        filter: sepia(100%) saturate(100%) contrast(100%);
-      }
-      75% {
-        opacity: 1;
-        filter: sepia(0%) saturate(200%) contrast(120%);
-      }
-      100% {
-        opacity: 0;
-        filter: sepia(0%) saturate(200%) contrast(120%);
-      }
-    }
+  @if $include-loading {
+    @include loading;
   }
 
-  &:after {
-    background-image: var(--overlay-image);
-    content: '';
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    pointer-events: none;
-    inset: 0;
-    z-index: -3;
+  @if $include-overlay {
+    @include overlay;
   }
 }
 

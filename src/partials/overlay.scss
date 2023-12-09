@@ -1,0 +1,12 @@
+@mixin overlay {
+  &:after {
+    background-image: var(--overlay-image);
+    content: '';
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    inset: 0;
+    z-index: -3;
+  }
+}
