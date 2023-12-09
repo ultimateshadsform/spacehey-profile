@@ -26,6 +26,99 @@
   font-family: "Beyonders";
   src: url("https://dl.dropboxusercontent.com/scl/fi/j10eailb22tuhayzf8k1y/Beyonders.ttf?rlkey=1jqbxp5ddm5enazoms02vp645&dl=1");
 }
+nav {
+  position: relative;
+  color: var(--primary-color);
+  z-index: 1;
+}
+nav:before {
+  content: "";
+  background-image: var(--nav-image);
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  z-index: -1;
+}
+nav .top {
+  background: linear-gradient(90deg, transparent 0%, hsl(0, 100%, 20%) 50%, transparent 100%);
+}
+nav .top div {
+  display: flex;
+  place-items: center;
+}
+nav .top .left a img.logo {
+  object-fit: contain;
+  margin: 0;
+  filter: drop-shadow(0px 0px 2px var(--secondary-color));
+  content: var(--logo-image);
+}
+nav .top .center .search-wrapper input {
+  background: transparent;
+  border-radius: 10px;
+  padding: 0.4rem 0.4rem;
+  outline: 1px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--accent-color);
+}
+nav .top .center form {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+nav .top .right {
+  color: var(--accent-color);
+  column-gap: 0.2rem;
+}
+nav .top .right a {
+  color: var(--primary-color);
+  font-size: 0%;
+}
+nav .top .right a:before {
+  content: "Therapy";
+  font-size: 1rem;
+}
+nav .top .right a:hover {
+  color: hsl(270, 80%, 80%) !important;
+}
+nav .links {
+  text-align: center;
+  background: linear-gradient(90deg, transparent 0%, hsl(0, 100%, 20%) 50%, transparent 100%);
+}
+nav .links a {
+  color: var(--primary-color);
+  text-decoration: none !important;
+  text-shadow: var(--text-shadow);
+}
+nav .links a:hover {
+  color: hsl(270, 80%, 80%) !important;
+}
+nav .links li:not(:last-child):after {
+  color: var(--accent-color);
+}
+nav .links li:first-child a:nth-child(1) .icon {
+  content: url("https://b.l3n.co/i/sj5s2o.png");
+  animation: shadow-spin 1s ease-in-out infinite;
+}
+@keyframes shadow-spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+nav .links li.active a {
+  color: hsl(270, 80%, 80%) !important;
+  font-weight: unset !important;
+}
+
 * {
   cursor: url("https://c.l3n.co/i/mxtyRK.png"), auto;
   animation: cursor 500ms linear infinite;
@@ -63,14 +156,12 @@
 * ::-webkit-scrollbar-thumb:hover {
   background-blend-mode: difference;
 }
-* a:hover {
-  text-decoration: none;
-}
 * a {
   color: var(--primary-color);
   transition: all 200ms ease;
 }
 * a:hover {
+  text-decoration: none;
   color: hsl(270, 80%, 80%);
 }
 
@@ -166,99 +257,6 @@ body:after {
   100% {
     transform: translate(50vw, -50vh);
   }
-}
-
-nav {
-  position: relative;
-  color: var(--primary-color);
-  z-index: 1;
-}
-nav:before {
-  content: "";
-  background-image: var(--nav-image);
-  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0));
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  inset: 0;
-  position: absolute;
-  z-index: -1;
-}
-nav .top {
-  background: linear-gradient(90deg, transparent 0%, hsl(0, 100%, 20%) 50%, transparent 100%);
-}
-nav .top div {
-  display: flex;
-  place-items: center;
-}
-nav .top .left a img.logo {
-  object-fit: contain;
-  margin: 0;
-  filter: drop-shadow(0px 0px 2px var(--secondary-color));
-  content: var(--logo-image);
-}
-nav .top .center .search-wrapper input {
-  background: transparent;
-  border-radius: 10px;
-  padding: 0.4rem 0.4rem;
-  outline: 1px solid var(--primary-color);
-  border: 1px solid var(--primary-color);
-  color: var(--accent-color);
-}
-nav .top .center form {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  gap: 1rem;
-}
-nav .top .right {
-  color: var(--accent-color);
-  column-gap: 0.2rem;
-}
-nav .top .right a {
-  color: var(--primary-color);
-  font-size: 0%;
-}
-nav .top .right a:before {
-  content: "Therapy";
-  font-size: 1rem;
-}
-nav .top .right a:hover {
-  color: hsl(270, 80%, 80%) !important;
-}
-nav .links {
-  text-align: center;
-  background: linear-gradient(90deg, transparent 0%, hsl(0, 100%, 20%) 50%, transparent 100%);
-}
-nav .links a {
-  color: var(--primary-color);
-  text-decoration: none !important;
-  text-shadow: var(--text-shadow);
-}
-nav .links a:hover {
-  color: hsl(270, 80%, 80%) !important;
-}
-nav .links li:not(:last-child):after {
-  color: var(--accent-color);
-}
-nav .links li:first-child a:nth-child(1) .icon {
-  content: url("https://b.l3n.co/i/sj5s2o.png");
-  animation: shadow-spin 1s ease-in-out infinite;
-}
-@keyframes shadow-spin {
-  0% {
-    transform: rotateZ(0);
-  }
-  100% {
-    transform: rotateZ(360deg);
-  }
-}
-nav .links li.active a {
-  color: hsl(270, 80%, 80%) !important;
-  font-weight: unset !important;
 }
 
 .logout-btn {

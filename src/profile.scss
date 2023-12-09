@@ -9,9 +9,11 @@
 // Partials
 @use './partials/comments.scss' as *;
 @use './partials/scrollbar.scss' as *;
+@use './partials//overlay.scss' as *;
 @use './partials/loading.scss' as *;
 @use './partials/nav.scss' as *;
 @use './partials/moving-ball.scss' as *;
+@use './partials/cursor.scss' as *;
 
 * {
   @if $include-cursor {
@@ -70,123 +72,6 @@ body {
 
   @if $include-moving-ball {
     @include moving-ball;
-  }
-}
-
-nav {
-  position: relative;
-  color: var(--primary-color);
-  z-index: 1;
-
-  @if $include-nav-image {
-    @include nav;
-  }
-
-  .top {
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      hsl(0, 100%, 20%) 50%,
-      transparent 100%
-    );
-
-    div {
-      display: flex;
-      place-items: center;
-    }
-
-    .left {
-      a {
-        img.logo {
-          object-fit: contain;
-          margin: 0;
-          filter: drop-shadow(0px 0px 2px var(--secondary-color));
-          content: var(--logo-image);
-        }
-      }
-    }
-
-    .center {
-      .search-wrapper input {
-        background: transparent;
-        border-radius: 10px;
-        padding: 0.4rem 0.4rem;
-        outline: 1px solid var(--primary-color);
-        border: 1px solid var(--primary-color);
-        color: var(--accent-color);
-      }
-
-      form {
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        gap: 1rem;
-      }
-    }
-
-    .right {
-      color: var(--accent-color);
-      column-gap: 0.2rem;
-
-      a {
-        color: var(--primary-color);
-        font-size: 0%;
-
-        &:before {
-          content: 'Therapy';
-          font-size: 1rem;
-        }
-
-        &:hover {
-          color: hsl(270, 80%, 80%) !important;
-        }
-      }
-    }
-  }
-
-  .links {
-    text-align: center;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      hsl(0, 100%, 20%) 50%,
-      transparent 100%
-    );
-
-    a {
-      color: var(--primary-color);
-      text-decoration: none !important;
-      text-shadow: var(--text-shadow);
-
-      &:hover {
-        color: hsl(270, 80%, 80%) !important;
-      }
-    }
-
-    li {
-      &:not(:last-child):after {
-        color: var(--accent-color);
-      }
-
-      &:first-child a:nth-child(1) .icon {
-        content: url('https://b.l3n.co/i/sj5s2o.png');
-        animation: shadow-spin 1s ease-in-out infinite;
-
-        @keyframes shadow-spin {
-          0% {
-            transform: rotateZ(0);
-          }
-          100% {
-            transform: rotateZ(360deg);
-          }
-        }
-      }
-
-      &.active a {
-        color: hsl(270, 80%, 80%) !important;
-        font-weight: unset !important;
-      }
-    }
   }
 }
 
