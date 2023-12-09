@@ -26,4 +26,7 @@
   --text-shadow: #{$text-shadow};
   --hover-color: #{$hover-color};
   --theme-background: #{$theme-background};
+
+  /* Content */
+  --separator: ' #{$separator} ';
 }

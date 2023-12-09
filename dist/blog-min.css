@@ -23,6 +23,8 @@
   --text-shadow: 3px -1px #d919e5;
   --hover-color: hsl(270, 80%, 80%);
   --theme-background: linear-gradient(to bottom, #d919e5 -50%, #d4b84f 100%);
+  /* Content */
+  --separator: " 🦔 ";
 }
 
 @font-face {
@@ -317,7 +319,7 @@ ul:not(nav .links):not(footer .links) li {
 
 nav .links li:not(:last-child)::after,
 footer .links li:not(:last-child)::after {
-  content: " 🦔 ";
+  content: var(--separator);
   color: var(--accent-color);
 }
 
