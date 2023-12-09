@@ -1,0 +1,13 @@
+@mixin profile-frame {
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: var(--profile-frame-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    scale: 1.14;
+    z-index: 1;
+  }
+}
