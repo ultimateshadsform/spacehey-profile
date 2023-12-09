@@ -1,0 +1,107 @@
+@mixin tails {
+  .tails {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url('https://b.l3n.co/i/s7l5VF.gif');
+    background-size: cover;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2;
+    position: fixed;
+    animation: moveX 5s linear 0s infinite alternate,
+      moveY 6.8s linear 0s infinite alternate;
+    @keyframes moveX {
+      from {
+        left: 0;
+        transform: rotateY(180deg);
+      }
+      to {
+        left: calc(100% - 50px);
+      }
+    }
+    @keyframes moveY {
+      from {
+        top: 0;
+      }
+      to {
+        top: calc(100% - 50px);
+      }
+    }
+  }
+}
+
+@mixin lights {
+  .lights {
+    position: fixed;
+    object-fit: contain;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background-repeat: repeat-x;
+    z-index: 2;
+  }
+}
+
+@mixin side-shadow {
+  .side-shadow {
+    position: fixed;
+    left: 10px;
+    object-fit: contain;
+    bottom: 10px;
+    max-height: 400px;
+    z-index: -2;
+    animation: bounce 200ms ease-in-out infinite alternate both;
+    @keyframes bounce {
+      to {
+        scale: 0.98;
+      }
+    }
+  }
+}
+
+@mixin sonic {
+  .sonic {
+    position: fixed;
+    object-fit: contain;
+    bottom: 10px;
+    left: 50%;
+    max-height: 400px;
+    z-index: -1;
+    transform: translateX(-50%);
+    animation: sonic-anim linear;
+    animation-timeline: scroll();
+    @keyframes sonic-anim {
+      0% {
+        transform: translateX(calc(-50% - 100svw));
+      }
+
+      100% {
+        transform: translateX(calc(-50% + 100svw));
+      }
+    }
+  }
+}
+
+@mixin shadow-art {
+  .shadow-art {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(
+      circle,
+      hsl(18deg, 100%, 38.03%) 10%,
+      #bf3f3f 40%,
+      var(--extra-color) 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: -1;
+    user-select: none;
+    overflow: hidden;
+    font-size: clamp(0.5em, 2vw, 1em) !important;
+    text-align: center;
+  }
+}
