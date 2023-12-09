@@ -85,12 +85,17 @@ nav {
       color: var(--accent-color);
       column-gap: 0.2rem;
 
+      .logout-btn {
+        font-family: inherit;
+      }
+
       @include rename('a', 'Therapy');
       a {
         color: var(--primary-color);
 
         &:hover {
           color: hsl(270, 80%, 80%) !important;
+          text-decoration: none;
         }
       }
     }

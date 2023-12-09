@@ -18,8 +18,8 @@
   --extra-color: #d4b84f;
   --background-color: hsl(0, 100%, 5%);
   --text-shadow: 3px -1px #d919e5;
-  --hover-color: hsl(270, 80%, 80%) !important;
-  --theme-background: linear-gradient(to bottom, #d919e5 -50%, #d4b84f 100%) !important;
+  --hover-color: hsl(270, 80%, 80%);
+  --theme-background: linear-gradient(to bottom, #d919e5 -50%, #d4b84f 100%);
 }
 
 @font-face {
@@ -80,6 +80,9 @@ nav .top .right {
   color: var(--accent-color);
   column-gap: 0.2rem;
 }
+nav .top .right .logout-btn {
+  font-family: inherit;
+}
 nav .top .right a {
   font-size: 0%;
 }
@@ -92,6 +95,7 @@ nav .top .right a {
 }
 nav .top .right a:hover {
   color: hsl(270, 80%, 80%) !important;
+  text-decoration: none;
 }
 nav .links {
   text-align: center;
