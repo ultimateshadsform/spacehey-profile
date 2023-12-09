@@ -431,7 +431,7 @@ ul:not(nav .links):not(footer .links) li {
 
 nav .links li:not(:last-child)::after,
 footer .links li:not(:last-child)::after {
-  content: ' 🦔 ';
+  content: ' #{$separator} ';
   color: var(--accent-color);
 }
 
