@@ -1,0 +1,9 @@
+@use '../utils/colors.scss' as *;
+
+footer {
+  color: var(--primary-color);
+  background: transparent;
+  p {
+    font-size: 1rem;
+  }
+}

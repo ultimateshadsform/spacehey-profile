@@ -24,7 +24,7 @@
 }
 @font-face {
   font-family: "Beyonders";
-  src: url("https://dl.dropboxusercontent.com/scl/fi/j10eailb22tuhayzf8k1y/Beyonders.ttf?rlkey=1jqbxp5ddm5enazoms02vp645&dl=1");
+  src: url("https://dl.dropboxusercontent.com/scl/fi/j10eailb22tuhayzf8k1y/Beyonders.ttf?rlkey=1jqbxp5ddm5enazoms02vp645&dl=1") format("truetype");
 }
 nav {
   position: relative;
@@ -117,6 +117,14 @@ nav .links li:first-child a:nth-child(1) .icon {
 nav .links li.active a {
   color: hsl(270, 80%, 80%) !important;
   font-weight: unset !important;
+}
+
+footer {
+  color: var(--primary-color);
+  background: transparent;
+}
+footer p {
+  font-size: 1rem;
 }
 
 * {
@@ -533,12 +541,4 @@ main #comments .comments-table .comment-replies .comment-reply:not(:first-child)
 }
 main #comments .comments-table .comment-replies .comment-reply p:not(:last-child):first-letter {
   text-transform: capitalize;
-}
-
-footer {
-  color: var(--primary-color);
-  background: transparent;
-}
-footer p {
-  font-size: 1rem;
 }

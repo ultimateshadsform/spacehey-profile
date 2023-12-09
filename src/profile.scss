@@ -5,22 +5,24 @@
 @use './utils/root.scss' as *;
 @use './utils/fonts.scss' as *;
 @use './utils/settings.scss' as *;
+@use './utils/fonts.scss' as *;
 
 // Partials
 @use './partials/comments.scss' as *;
 @use './partials/scrollbar.scss' as *;
-@use './partials//overlay.scss' as *;
+@use './partials/overlay.scss' as *;
 @use './partials/loading.scss' as *;
 @use './partials/nav.scss' as *;
 @use './partials/moving-ball.scss' as *;
 @use './partials/cursor.scss' as *;
+@use './partials/footer.scss' as *;
 
 * {
   @if $include-cursor {
     @include cursor;
   }
 
-  font-family: 'Feijoada', sans-serif;
+  font-family: $primary-font;
   scroll-behavior: smooth;
   font-size: 1rem;
 
@@ -103,7 +105,7 @@ button,
 .profile-info {
   border-color: var(--extra-color);
   border-radius: 10px;
-  font-family: 'Beyonders', sans-serif;
+  font-family: $secondary-font;
   overflow: hidden;
   position: relative;
 
@@ -937,7 +939,7 @@ main {
       h1 {
         text-align: center;
         font-size: 1.3rem;
-        font-family: 'Beyonders', sans-serif;
+        font-family: $secondary-font;
         transition: all 200ms ease;
 
         &:hover {
@@ -1027,13 +1029,5 @@ main {
     }
 
     @include comments;
-  }
-}
-
-footer {
-  color: var(--primary-color);
-  background: transparent;
-  p {
-    font-size: 1rem;
   }
 }
