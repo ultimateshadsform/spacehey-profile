@@ -937,8 +937,8 @@ main {
             transition: all 300ms ease;
             filter: invert(420%) sepia(69420%) saturate(1000%)
               hue-rotate(320deg) brightness(100%) contrast(100%);
-            -webkit-mask-image: url('https://c.l3n.co/i/mxgfcQ.png');
-            mask-image: url('https://c.l3n.co/i/mxgfcQ.png');
+            -webkit-mask-image: var(--friend-image-mask);
+            mask-image: var(--friend-image-mask);
             -webkit-mask-repeat: no-repeat;
             mask-repeat: no-repeat;
 
