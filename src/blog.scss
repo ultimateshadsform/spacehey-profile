@@ -2,19 +2,9 @@
 @use './utils/functions.scss' as *;
 @use './utils/vars.scss' as *;
 @use './partials/comments.scss' as *;
+@use './partials/scrollbar.scss' as *;
 @use './utils/root.scss' as *;
-
-@font-face {
-  font-family: 'Feijoada';
-  src: url('https://dl.dropboxusercontent.com/scl/fi/d4v2vt0k7562mhepj801x/Feijoada-Regular.ttf?rlkey=vtbsdxe4azusioddrws35fcx5&dl=1')
-    format('truetype');
-}
-
-@font-face {
-  font-family: 'Beyonders';
-  src: url('https://dl.dropboxusercontent.com/scl/fi/j10eailb22tuhayzf8k1y/Beyonders.ttf?rlkey=1jqbxp5ddm5enazoms02vp645&dl=1');
-}
-
+@use './utils/fonts.scss' as *;
 * {
   cursor: url('https://c.l3n.co/i/mxtyRK.png'), auto;
   animation: cursor 500ms linear infinite;
@@ -41,25 +31,7 @@
   scroll-behavior: smooth;
   font-size: 1rem;
 
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: hsl(0, 100%, 5%);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: red;
-    background-image: url(https://printler.com/media/photo/149787.jpg);
-    background-size: cover;
-    background-blend-mode: hard-light;
-    background-position: center;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background-blend-mode: difference;
-  }
+  @include scrollbar;
 
   a:hover {
     text-decoration: none;
