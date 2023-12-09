@@ -22,6 +22,7 @@
 @use './partials/optional/characters.scss' as *;
 @use './partials/optional/moon.scss' as *;
 @use './partials/optional/music-container.scss' as *;
+@use './partials/border.scss' as *;
 
 * {
   @if $include-cursor {
@@ -316,19 +317,8 @@ main {
     0 0 15px 10px var(--secondary-color) inset;
   border-radius: 1rem;
 
-  &:before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 1rem;
-    padding: 2px;
-    pointer-events: none;
-    background: var(--border-image);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
+  @if $include-border {
+    @include border;
   }
 
   &:after {
