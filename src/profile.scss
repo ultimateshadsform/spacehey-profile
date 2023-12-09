@@ -15,6 +15,7 @@
 @use './partials/loading.scss' as *;
 @use './partials/nav.scss' as *;
 @use './partials/moving-ball.scss' as *;
+@use './partials/profile-friend.scss' as *;
 @use './partials/cursor.scss' as *;
 @use './partials/footer.scss' as *;
 
@@ -93,18 +94,8 @@ button,
   overflow: hidden;
   position: relative;
 
-  &:before {
-    content: '';
-    background-image: url('https://img.wattpad.com/16adc1dab5d33b05b1458cb7861f6a9e0a996e06/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f39463649635656615f4c62736f773d3d2d3932333032343136302e313632333162363761353136663530613735313232323632313136312e676966');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0.5;
-    z-index: -1;
+  @if $include-you-are-friends {
+    @include you-are-friends;
   }
 
   &:after {

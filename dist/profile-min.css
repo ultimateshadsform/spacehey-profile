@@ -8,6 +8,7 @@
   --logo-image: url("https://b.l3n.co/i/myDWge.png");
   --nav-image: url("https://www.icegif.com/wp-content/uploads/2022/04/icegif-581.gif");
   --scrollbar-image: url("https://printler.com/media/photo/149787.jpg");
+  --profile-friend-image: url("https://img.wattpad.com/16adc1dab5d33b05b1458cb7861f6a9e0a996e06/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f39463649635656615f4c62736f773d3d2d3932333032343136302e313632333162363761353136663530613735313232323632313136312e676966");
   /* Colors */
   --primary-color: white;
   --secondary-color: #d919e5;
@@ -15,6 +16,7 @@
   --extra-color: #d4b84f;
   --background-color: hsl(0, 100%, 5%);
   --text-shadow: 3px -1px #d919e5;
+  --hover-color: hsl(270, 80%, 80%) !important;
   --theme-background: linear-gradient(to bottom, #d919e5 -50%, #d4b84f 100%) !important;
 }
 
@@ -170,7 +172,7 @@ footer p {
 }
 * a:hover {
   text-decoration: none;
-  color: hsl(270, 80%, 80%) !important;
+  color: var(--hover-color);
 }
 
 html {
@@ -271,7 +273,7 @@ body:after {
   font-size: 0%;
 }
 .logout-btn:before {
-  content: "Exploda";
+  content: "Explode";
   font-size: 1rem;
 }
 
@@ -289,7 +291,7 @@ button,
 button:hover,
 .logout-btn:hover,
 .blog-entry .kudos-btn:hover {
-  color: hsl(270, 80%, 80%) !important;
+  color: var(--hover-color);
 }
 
 .profile-info {
@@ -301,7 +303,7 @@ button:hover,
 }
 .profile-info:before {
   content: "";
-  background-image: url("https://img.wattpad.com/16adc1dab5d33b05b1458cb7861f6a9e0a996e06/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f39463649635656615f4c62736f773d3d2d3932333032343136302e313632333162363761353136663530613735313232323632313136312e676966");
+  background-image: var(--profile-friend-image);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
