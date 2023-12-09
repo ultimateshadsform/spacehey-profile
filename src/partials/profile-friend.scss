@@ -12,4 +12,29 @@
     opacity: 0.5;
     z-index: -1;
   }
+
+  @if $show-you-are-friends-overlay {
+    &:after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: var(--profile-friend-image-overlay);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      pointer-events: none;
+      animation: running 5s ease-in-out infinite;
+      @keyframes running {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+    }
+  }
 }
