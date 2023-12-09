@@ -17,6 +17,7 @@
 @use './partials/comments.scss' as *;
 @use './partials/scrollbar.scss' as *;
 @use './partials/background.scss' as *;
+@use './partials/profile-frame.scss' as *;
 @use './partials/optional/moving-ball.scss' as *;
 
 * {
@@ -173,6 +174,13 @@ main {
       .profile-pic {
         display: flex;
         justify-content: center;
+        width: fit-content;
+        margin: 0 auto;
+        position: relative;
+
+        @if $include-profile-frame {
+          @include profile-frame;
+        }
 
         img {
           max-height: 14rem;
