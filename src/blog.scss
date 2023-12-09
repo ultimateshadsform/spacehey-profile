@@ -13,10 +13,11 @@
 @use './partials/scrollbar.scss' as *;
 @use './partials/overlay.scss' as *;
 @use './partials/nav.scss' as *;
-@use './partials/optional/moving-ball.scss' as *;
 @use './partials/loading.scss' as *;
 @use './partials/cursor.scss' as *;
 @use './partials/footer.scss' as *;
+@use './partials/border.scss' as *;
+@use './partials/optional/moving-ball.scss' as *;
 
 * {
   @if $include-cursor {
@@ -145,19 +146,8 @@ main {
     0 0 15px 10px var(--secondary-color) inset;
   border-radius: 1rem;
 
-  &:before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 1rem;
-    padding: 2px;
-    pointer-events: none;
-    background: var(--border-image);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
+  @if $include-border {
+    @include border;
   }
 
   .article {

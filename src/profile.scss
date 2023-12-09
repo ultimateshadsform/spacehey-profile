@@ -18,11 +18,11 @@
 @use './partials/profile-frame.scss' as *;
 @use './partials/cursor.scss' as *;
 @use './partials/footer.scss' as *;
+@use './partials/border.scss' as *;
 @use './partials/optional/moving-ball.scss' as *;
 @use './partials/optional/characters.scss' as *;
 @use './partials/optional/moon.scss' as *;
 @use './partials/optional/music-container.scss' as *;
-@use './partials/border.scss' as *;
 
 * {
   @if $include-cursor {
