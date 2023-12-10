@@ -199,6 +199,8 @@ main {
         display: flex;
         flex-direction: column;
         place-items: center;
+        z-index: 1;
+        position: relative;
 
         h4 {
           display: flex;
