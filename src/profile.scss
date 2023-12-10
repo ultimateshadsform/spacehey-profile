@@ -425,19 +425,13 @@ main {
           both;
         @keyframes profile-anim {
           0% {
-            perspective: 1000px;
-            transform: perspective(1000px) translateX(100%) translateZ(-200px)
-              rotateY(45deg);
+            transform: translate(0, 0px);
           }
-
           50% {
-            perspective: 1000px;
-            transform: perspective(1000px) translateZ(100px);
+            transform: translate(0, 15px);
           }
           100% {
-            perspective: 1000px;
-            transform: perspective(1000px) translateX(-100%) translateZ(-200px)
-              rotateY(-45deg);
+            transform: translate(0, -0px);
           }
         }
 
