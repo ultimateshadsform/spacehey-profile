@@ -10,4 +10,18 @@
     transform: scale(1.2);
     z-index: 1;
   }
+
+  &:after {
+    content: '';
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    background-image: url('https://64.media.tumblr.com/1686a724a424593f45e24a88b58b22fb/tumblr_mt6g4rgeT41s5jjtzo1_400.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(-90deg);
+    left: -1rem;
+    top: -2.1rem;
+    z-index: 0;
+  }
 }
