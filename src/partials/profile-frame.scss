@@ -6,7 +6,7 @@
     position: absolute;
     background-image: var(--profile-frame-image);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     transform: scale(1.2);
     z-index: 1;
   }

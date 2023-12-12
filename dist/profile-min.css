@@ -887,7 +887,7 @@ main .profile .general-about .profile-pic:before {
   position: absolute;
   background-image: var(--profile-frame-image);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   transform: scale(1.2);
   z-index: 1;
 }
@@ -935,7 +935,7 @@ main .profile .general-about .details .online img {
 }
 main .profile .general-about .details .edit-link {
   position: absolute;
-  grid-row: 1;
+  grid-row: 2;
 }
 main .profile .mood {
   grid-column: span 2;
