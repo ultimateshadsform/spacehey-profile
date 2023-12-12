@@ -6,15 +6,10 @@
   "author": "Alexander Carlsson <alexxycarlsson@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build:blog": "sass src/blog.scss dist/blog-min.css --style expanded --no-source-map",
-    "build:profile": "sass src/profile.scss dist/profile-min.css --style expanded --no-source-map",
-    "build:blog:compressed": "sass src/blog.scss dist/blog-min.css --style compressed --no-source-map",
-    "build:profile:compressed": "sass src/profile.scss dist/profile-min.css --style compressed --no-source-map",
-    "build": "concurrently \"yarn build:blog\" \"yarn build:profile\"",
-    "build:compressed": "concurrently \"yarn build:blog:compressed\" \"yarn build:profile:compressed\""
+    "build": "sass --no-source-map --style=expanded src:dist",
+    "build:compressed": "sass --no-source-map --style=compressed src:dist"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2",
     "sass": "^1.69.5"
   }
 }
