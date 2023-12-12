@@ -1,0 +1,14 @@
+@use './utils/functions/funcs.scss' as *;
+@use './utils/colors.scss' as *;
+
+* {
+  text-shadow: generateShadow(
+    $extra-color,
+    $accent-color,
+    20,
+    0.5,
+    2,
+    0.5,
+    0deg
+  );
+}

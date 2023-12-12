@@ -1,6 +1,30 @@
 @use '../utils/settings.scss' as *;
 
 @mixin you-are-friends {
+  .inner {
+    h3,
+    h3 a {
+      color: var(--accent-color);
+      font-size: clamp(15px, 3vw, 2rem);
+      text-transform: uppercase;
+      animation: friend-text-anim 1s ease-in-out infinite alternate both;
+      @keyframes friend-text-anim {
+        0% {
+          color: var(--accent-color);
+        }
+        50% {
+          color: var(--primary-color);
+        }
+        100% {
+          color: var(--secondary-color);
+        }
+      }
+      text-shadow: var(--title-shadow);
+      top: -1rem;
+      position: relative;
+    }
+  }
+
   &:before {
     content: '';
     background-image: var(--profile-friend-image);
