@@ -12,6 +12,12 @@ $profile-frame-image: url('https://cdn.akamai.steamstatic.com/steamcommunity/pub
 $friend-image-mask: url('https://c.l3n.co/i/mxgfcQ.png');
 $notification-image: url('https://b.l3n.co/i/sj5s2o.png');
 $online-image: url('https://media.tenor.com/fwRdoejcLPAAAAAi/shadow-the-hedgehog-shadow.gif');
+
+// Place your cursor frame images here.
+// The first image is the default cursor.
+// If only one is provided, the cursor will not animate.
+// The keyframes are generated automatically. So place images in order from top to bottom.
+// If the images are too big the cursor might not show at all.
 $cursors: (
   'https://c.l3n.co/i/mxtyRK.png',
   'https://b.l3n.co/i/mxt57Z.png',
@@ -20,6 +26,8 @@ $cursors: (
 );
 
 // Fonts
+// Change fonts here.
+// But you can also change them in the code to your liking.
 $primary-font: 'Feijoada', sans-serif;
 $secondary-font: 'Beyonders', sans-serif;
 
