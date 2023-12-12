@@ -6,7 +6,15 @@ $accent-color: white;
 $extra-color: #ffbc00;
 $background-color: hsl(0, 100%, 5%);
 $text-shadow: 0 0 5px red;
-$title-shadow: generateShadow($extra-color, $accent-color, 20, 0.5, 2, 0.5);
+$title-shadow: generateShadow(
+  $extra-color,
+  $accent-color,
+  20,
+  0.5,
+  2,
+  0.5,
+  -45deg
+);
 $hover-color: red;
 $theme-background: linear-gradient(
   to bottom,

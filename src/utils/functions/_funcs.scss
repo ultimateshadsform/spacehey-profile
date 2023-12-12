@@ -7,11 +7,11 @@
   $layers,
   $blur,
   $slope,
-  $offsetFactor
+  $offsetFactor,
+  $angle
 ) {
   // Create a list of shadows using the colors
   $shadows: ();
-  $angle: -45deg; // Adjust this angle as needed
 
   @for $i from 1 through $layers {
     // Calculate the color for this layer manually
