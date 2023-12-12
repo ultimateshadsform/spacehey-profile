@@ -1,5 +1,6 @@
 @mixin moving-ball {
-  &:before {
+  &:after {
+    content: '';
     inset: 0;
     background: var(--extra-color);
     width: 100px;
