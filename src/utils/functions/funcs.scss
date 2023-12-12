@@ -1,0 +1,44 @@
+@function hsl-to-hex($hue, $saturation, $lightness) {
+  $rgb: hsl($hue, $saturation, $lightness);
+  $hex: rgb(red($rgb), green($rgb), blue($rgb));
+  @return $hex;
+}
+
+@function generateShadow(
+  $startColor,
+  $endColor,
+  $depth,
+  $blur,
+  $slope,
+  $offsetFactor
+) {
+  // Generate a 3D shadow using the provided colors
+
+  // Create a gradient from the start color to the end color using scss
+  $gradient: linear-gradient(to bottom, $startColor, $endColor);
+
+  // Create a list of colors from the gradient
+  $colors: nth($gradient, 2);
+
+  // Create a list of shadows
+  $shadows: ();
+
+  // Loop through the colors
+
+  @for $i from 1 through $depth {
+    // Get the current color
+    $color: nth($colors, $i);
+
+    // Calculate the y-offset
+    $yOffset: $slope * $i * $offsetFactor;
+
+    // Create the shadow
+    $shadow: $i * 1px $yOffset $blur $color, -$i * 1px $yOffset $blur $color;
+
+    // Add the shadow to the list
+    $shadows: append($shadows, $shadow);
+  }
+
+  // Return shadow pixels
+  @return $shadows;
+}
