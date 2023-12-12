@@ -1,0 +1,42 @@
+@use '../../utils/settings.scss' as *;
+@use './characters.scss' as *;
+@use './moving-ball.scss' as *;
+@use './music-container.scss' as *;
+@use './moon.scss' as *;
+
+// Here is where you can choose which things to include in your profile.
+// Like if you have custom stuff you want to add, you can add it here.
+
+@mixin profile-things {
+  @if $include-tails {
+    @include tails;
+  }
+
+  @if $include-sonic {
+    @include sonic;
+  }
+
+  @if $include-shadow {
+    @include side-shadow;
+  }
+
+  @if $include-shadow-art {
+    @include shadow-art;
+  }
+
+  @if $include-lights {
+    @include lights;
+  }
+
+  @if $include-moon {
+    @include moon;
+  }
+
+  @if $include-moving-ball {
+    @include moving-ball;
+  }
+
+  @if $include-music-container {
+    @include music-container;
+  }
+}

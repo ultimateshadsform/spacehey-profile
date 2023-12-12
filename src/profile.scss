@@ -19,10 +19,7 @@
 @use './partials/background.scss' as *;
 @use './partials/profile-frame.scss' as *;
 @use './partials/profile-friend.scss' as *;
-@use './partials/optional/characters.scss' as *;
-@use './partials/optional/moving-ball.scss' as *;
-@use './partials/optional/music-container.scss' as *;
-@use './partials/optional/moon.scss' as *;
+@use './partials/optional/profile-things.scss' as *;
 
 * {
   @if $include-cursor {
@@ -68,10 +65,6 @@ body {
   @if $include-background {
     @include background;
   }
-
-  @if $include-moving-ball {
-    @include moving-ball;
-  }
 }
 
 @include rename('.logout-btn', 'Explode');
@@ -111,37 +104,7 @@ button,
       color: var(--accent-color);
       margin: unset;
 
-      @if $include-tails {
-        @include tails;
-      }
-
-      @if $include-sonic {
-        @include sonic;
-      }
-
-      @if $include-shadow {
-        @include side-shadow;
-      }
-
-      @if $include-shadow-art {
-        @include shadow-art;
-      }
-
-      @if $include-lights {
-        @include lights;
-      }
-
-      @if $include-moon {
-        @include moon;
-      }
-
-      @if $include-moving-ball {
-        @include moving-ball;
-      }
-
-      @if $include-music-container {
-        @include music-container;
-      }
+      @include profile-things;
     }
   }
 }
