@@ -1,7 +1,7 @@
 @use '../utils/settings.scss' as *;
 @use '../utils/colors.scss' as *;
 @use '../utils/vars.scss' as *;
-@use '../utils/functions.scss' as *;
+@use '../utils/mixins/mixins.scss' as *;
 
 @mixin nav-background {
   &:before {

@@ -1,44 +1,37 @@
-@function hsl-to-hex($hue, $saturation, $lightness) {
-  $rgb: hsl($hue, $saturation, $lightness);
-  $hex: rgb(red($rgb), green($rgb), blue($rgb));
-  @return $hex;
-}
+@use 'sass:math';
+@use 'sass:color';
 
 @function generateShadow(
   $startColor,
   $endColor,
-  $depth,
+  $layers,
   $blur,
   $slope,
   $offsetFactor
 ) {
-  // Generate a 3D shadow using the provided colors
-
-  // Create a gradient from the start color to the end color using scss
-  $gradient: linear-gradient(to bottom, $startColor, $endColor);
-
-  // Create a list of colors from the gradient
-  $colors: nth($gradient, 2);
-
-  // Create a list of shadows
+  // Create a list of shadows using the colors
   $shadows: ();
 
-  // Loop through the colors
+  @for $i from 1 through $layers {
+    // Calculate the color for this layer manually
+    $color: color.mix(
+      $startColor,
+      $endColor,
+      percentage(math.div($i, $layers))
+    );
 
-  @for $i from 1 through $depth {
-    // Get the current color
-    $color: nth($colors, $i);
-
-    // Calculate the y-offset
-    $yOffset: $slope * $i * $offsetFactor;
-
-    // Create the shadow
-    $shadow: $i * 1px $yOffset $blur $color, -$i * 1px $yOffset $blur $color;
-
-    // Add the shadow to the list
-    $shadows: append($shadows, $shadow);
+    // Return the shadow string
+    $shadows: append(
+      $shadows,
+      #{$i}px #{($i * $slope) + $offsetFactor}px #{$blur}px $color,
+      comma
+    );
+    $shadows: append(
+      $shadows,
+      #{-$i}px #{($i * $slope) + $offsetFactor}px #{$blur}px $color,
+      comma
+    );
   }
 
-  // Return shadow pixels
   @return $shadows;
 }

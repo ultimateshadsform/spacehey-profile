@@ -1,5 +1,5 @@
 @use '../utils/colors.scss' as *;
-@use '../utils/functions.scss' as *;
+@use '../utils/mixins/mixins.scss' as *;
 
 @mixin comments {
   #comments {
