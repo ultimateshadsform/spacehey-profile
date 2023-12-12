@@ -18,8 +18,8 @@
 @use './partials/background.scss' as *;
 @use './partials/profile-frame.scss' as *;
 @use './partials/profile-friend.scss' as *;
-@use './partials/optional/profile-things.scss' as *;
 @use './partials/optional/moving-ball.scss' as *;
+@use './partials/optional/profile-things.scss' as *;
 
 * {
   @if $include-cursor {
