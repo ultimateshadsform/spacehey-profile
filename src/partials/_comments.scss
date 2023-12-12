@@ -35,6 +35,7 @@
           z-index: 1;
           position: relative;
           color: var(--accent-color);
+          text-shadow: var(--text-shadow);
         }
 
         img:not(.icon) {

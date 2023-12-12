@@ -85,30 +85,6 @@ button,
   }
 }
 
-.profile-info {
-  border-color: var(--extra-color);
-  border-radius: 10px;
-  font-family: $secondary-font;
-  overflow: hidden;
-  position: relative;
-
-  @if $include-you-are-friends {
-    @include you-are-friends;
-  }
-}
-
-.blurbs {
-  .inner {
-    .section {
-      position: relative;
-      color: var(--accent-color);
-      margin: unset;
-
-      @include profile-things;
-    }
-  }
-}
-
 .profile .friends .person p,
 .comments-table td:first-child p,
 .profile .blurbs .heading,
@@ -289,6 +265,18 @@ main {
 
       p:nth-child(2) {
         padding: 6px;
+      }
+    }
+
+    .profile-info {
+      border-color: var(--extra-color);
+      border-radius: 10px;
+      font-family: $secondary-font;
+      overflow: hidden;
+      position: relative;
+
+      @if $include-you-are-friends {
+        @include you-are-friends;
       }
     }
 
@@ -526,18 +514,12 @@ main {
         font-size: 1.5rem;
       }
 
-      .about-content {
-        * {
-          color: var(--accent-color);
-        }
+      .inner {
+        .section {
+          position: relative;
+          margin: unset;
 
-        .dni-flash h1 {
-          animation: dni-flash 300ms linear infinite alternate both;
-          @keyframes dni-flash {
-            to {
-              color: var(--secondary-color);
-            }
-          }
+          @include profile-things;
         }
       }
     }

@@ -1,0 +1,10 @@
+@mixin dni-flash {
+  .dni-flash h1 {
+    animation: dni-flash 300ms linear infinite alternate both;
+    @keyframes dni-flash {
+      to {
+        color: var(--secondary-color);
+      }
+    }
+  }
+}

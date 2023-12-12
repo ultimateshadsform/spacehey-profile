@@ -3,11 +3,18 @@
 @use './moving-ball.scss' as *;
 @use './music-container.scss' as *;
 @use './moon.scss' as *;
+@use './dni-flash.scss' as *;
 
 // Here is where you can choose which things to include in your profile.
 // Like if you have custom stuff you want to add, you can add it here.
 
 @mixin profile-things {
+  .about-content {
+    * {
+      color: var(--accent-color);
+    }
+  }
+
   @if $include-tails {
     @include tails;
   }
@@ -38,5 +45,9 @@
 
   @if $include-music-container {
     @include music-container;
+  }
+
+  @if $include-dni-flash {
+    @include dni-flash;
   }
 }
