@@ -1,5 +1,5 @@
 // Utils
-@use './utils/functions/funcs.scss' as *;
+@use './utils/mixins/mixins.scss' as *;
 @use './utils/mixins/mixins.scss' as *;
 @use './utils/settings.scss' as *;
 @use './utils/colors.scss' as *;
@@ -10,7 +10,6 @@
 
 // Partials
 @use './partials/nav.scss' as *;
-@use './partials/cursor.scss' as *;
 @use './partials/footer.scss' as *;
 @use './partials/border.scss' as *;
 @use './partials/overlay.scss' as *;

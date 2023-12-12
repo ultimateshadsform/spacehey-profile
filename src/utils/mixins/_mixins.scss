@@ -1,4 +1,4 @@
-// functions.scss
+@use 'sass:math';
 
 @mixin hoverShadow($image) {
   content: url($image);
@@ -47,6 +47,29 @@
     &:before {
       content: '#{$text}';
       font-size: 1rem;
+    }
+  }
+}
+
+@mixin cursor($images...) {
+  // Only use the first image in the list
+  cursor: url('#{nth($images, 1)}'), auto;
+
+  // loop through the images
+  // Only create keyframes if there are more than 1 image
+
+  @if length($images) > 1 {
+    animation: cursor-anim 500ms linear infinite;
+    @keyframes cursor-anim {
+      @for $i from 0 through length($images) - 1 {
+        $currentImage: nth($images, $i + 1);
+        $percentage: percentage(
+          math.div($i, length($images) - 1)
+        ); // Calculate percentage for each keyframe
+        #{$percentage} {
+          cursor: url('#{$currentImage}'), auto;
+        }
+      }
     }
   }
 }

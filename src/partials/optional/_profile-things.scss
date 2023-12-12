@@ -39,10 +39,6 @@
     @include moon;
   }
 
-  @if $include-moving-ball {
-    @include moving-ball;
-  }
-
   @if $include-music-container {
     @include music-container;
   }
