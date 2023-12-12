@@ -29,7 +29,7 @@
   --extra-color: #ffbc00;
   --background-color: hsl(0, 100%, 5%);
   --text-shadow: 0 0 5px red;
-  --title-shadow: 1px 5px 1px #ffa900, -1px 5px 1px #ffa900, 2px 9px 1px #ff9600, -2px 9px 1px #ff9600, 3px 13px 1px #ff8400, -3px 13px 1px #ff8400, 4px 17px 1px #ff7100, -4px 17px 1px #ff7100, 5px 21px 1px #ff5e00, -5px 21px 1px #ff5e00, 6px 25px 1px #ff4b00, -6px 25px 1px #ff4b00, 7px 29px 1px #ff3800, -7px 29px 1px #ff3800, 8px 33px 1px #ff2600, -8px 33px 1px #ff2600, 9px 37px 1px #ff1300, -9px 37px 1px #ff1300, 10px 41px 1px red, -10px 41px 1px red;
+  --title-shadow: -1px 1px 0.5px #fffcf2, -2px 2px 0.5px #fff8e6, -3px 3px 0.5px #fff5d9, -4px 4px 0.5px #fff2cc, -5px 5px 0.5px #ffeebf, -6px 6px 0.5px #ffebb3, -7px 7px 0.5px #ffe8a6, -8px 8px 0.5px #ffe499, -9px 9px 0.5px #ffe18c, -10px 10px 0.5px #ffde80, -11px 11px 0.5px #ffda73, -12px 12px 0.5px #ffd766, -13px 13px 0.5px #ffd359, -14px 14px 0.5px #ffd04d, -15px 15px 0.5px #ffcd40, -16px 16px 0.5px #ffc933, -17px 17px 0.5px #ffc626, -18px 18px 0.5px #ffc31a, -19px 19px 0.5px #ffbf0d, -20px 20px 0.5px #ffbc00;
   --hover-color: red;
   --theme-background: linear-gradient(to bottom, red -50%, var(--extra-color) 100%);
   /* Content */

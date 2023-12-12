@@ -11,6 +11,7 @@
 ) {
   // Create a list of shadows using the colors
   $shadows: ();
+  $angle: -45deg; // Adjust this angle as needed
 
   @for $i from 1 through $layers {
     // Calculate the color for this layer manually
@@ -20,15 +21,14 @@
       percentage(math.div($i, $layers))
     );
 
+    // Calculate the offset for each layer to create a shrinking effect
+    $offsetY: $slope * $i * $offsetFactor; // Adjust this factor as needed
+    $offsetX: tan($angle) * $offsetY; // Calculate X offset based on the angle
+
     // Return the shadow string
     $shadows: append(
       $shadows,
-      #{$i}px #{($i * $slope) + $offsetFactor}px #{$blur}px $color,
-      comma
-    );
-    $shadows: append(
-      $shadows,
-      #{-$i}px #{($i * $slope) + $offsetFactor}px #{$blur}px $color,
+      #{$offsetX}px #{$offsetY}px #{$blur}px $color,
       comma
     );
   }
