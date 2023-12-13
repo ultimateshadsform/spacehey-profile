@@ -142,6 +142,7 @@ nav {
       a[title='SpaceHey Mobile'] .icon {
         content: url('https://media1.giphy.com/headers/jmckeehen/s2wy7iphPP98.gif');
         object-fit: cover;
+        border-radius: 5px;
       }
 
       &.active a {
