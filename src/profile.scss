@@ -594,10 +594,10 @@ main {
 
         .person {
           p {
-            color: var(--accent-color);
+            color: var(--secondary-color);
 
             &:first-child {
-              color: yellow;
+              color: var(--extra-color);
             }
           }
 
@@ -628,6 +628,16 @@ main {
             &:hover {
               filter: unset;
               transform: scale(1.2);
+            }
+
+            animation: wiggle 200ms ease-in-out infinite alternate both;
+            @keyframes wiggle {
+              from {
+                transform: rotate(-5deg);
+              }
+              to {
+                transform: rotate(5deg);
+              }
             }
           }
 
