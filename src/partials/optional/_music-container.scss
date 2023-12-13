@@ -1,7 +1,5 @@
 @mixin music-container {
   .music-container {
-    --radius: 10px;
-
     display: flex;
     justify-content: space-evenly;
     background-color: #212121;
@@ -9,7 +7,6 @@
     border-radius: 1rem;
     column-gap: 1rem;
     position: relative;
-    border-radius: var(--radius);
     overflow: hidden;
 
     &:before {
@@ -37,7 +34,7 @@
       justify-content: center;
       padding: 1rem;
       background: #212121;
-      border-radius: var(--radius);
+      border-radius: 0.5rem;
     }
 
     .iframe-container {
