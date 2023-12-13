@@ -206,8 +206,9 @@ b {
       }
     }
 
-    .spin-box {
+    .music-container {
       flex-direction: column;
+      row-gap: 1rem;
       img {
         height: auto;
       }
