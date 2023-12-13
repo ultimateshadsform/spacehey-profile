@@ -206,7 +206,7 @@ b {
       }
     }
 
-    .music-container {
+    .spin-box {
       flex-direction: column;
       row-gap: 1rem;
       img {
@@ -593,17 +593,19 @@ main {
         place-items: center;
 
         .person {
-          p {
-            color: var(--secondary-color);
-
-            &:first-child {
+          &:first-child {
+            p {
               color: var(--extra-color);
+            }
+
+            img:not(.icon) {
+              filter: invert(420%) sepia(69420%) saturate(1000%)
+                hue-rotate(235deg) brightness(100%) contrast(100%);
             }
           }
 
-          &:first-child img:not(.icon) {
-            filter: invert(420%) sepia(69420%) saturate(1000%)
-              hue-rotate(235deg) brightness(100%) contrast(100%);
+          p {
+            color: var(--secondary-color);
           }
 
           img:not(.icon) {
