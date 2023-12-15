@@ -45,4 +45,8 @@
   @if $include-dni-flash {
     @include dni-flash;
   }
+
+  @if $include-knuckles {
+    @include knuckles;
+  }
 }

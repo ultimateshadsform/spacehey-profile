@@ -18,15 +18,15 @@
     @keyframes loading-anim {
       0% {
         opacity: 1;
-        filter: sepia(100%) saturate(100%) contrast(100%);
+        filter: grayscale(0%) saturate(200%) contrast(120%);
       }
       75% {
         opacity: 1;
-        filter: sepia(0%) saturate(200%) contrast(120%);
+        filter: grayscale(100%) saturate(200%) contrast(120%);
       }
       100% {
         opacity: 0;
-        filter: sepia(0%) saturate(200%) contrast(120%);
+        filter: grayscale(100%) saturate(0%) contrast(0%);
       }
     }
   }
