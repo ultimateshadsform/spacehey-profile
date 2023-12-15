@@ -508,6 +508,22 @@ main {
       }
     }
 
+    // .profile-info {
+    //   opacity: 0.3;
+    //   transition: all 200ms ease;
+    //   &:hover {
+    //     opacity: 1;
+    //   }
+    // }
+
+    // .blog-preview {
+    //   opacity: 0.3;
+    //   transition: all 200ms ease;
+    //   &:hover {
+    //     opacity: 1;
+    //   }
+    // }
+
     .blurbs {
       .heading h4:before {
         content: 'My shit';
@@ -581,6 +597,12 @@ main {
     }
 
     .friends {
+      opacity: 0.3;
+      transition: all 200ms ease;
+      &:hover {
+        opacity: 1;
+      }
+
       .heading h4:before {
         content: 'Furballs';
         font-size: 1.5rem;
@@ -593,6 +615,12 @@ main {
         place-items: center;
 
         .person {
+          &:hover {
+            img:not(.icon),
+            p {
+              opacity: 1 !important;
+            }
+          }
           &:first-child {
             p {
               color: var(--extra-color);
@@ -606,6 +634,7 @@ main {
 
           p {
             color: var(--secondary-color);
+            opacity: 0.3;
           }
 
           img:not(.icon) {
@@ -626,6 +655,7 @@ main {
             mask-size: contain;
             -webkit-mask-type: alpha;
             mask-type: alpha;
+            opacity: 0.3;
 
             &:hover {
               filter: unset;
