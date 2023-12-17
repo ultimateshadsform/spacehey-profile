@@ -9,7 +9,7 @@
     "build": "yarn cleardist && sass --no-source-map --style=expanded src:dist && yarn rename",
     "build:compressed": "yarn cleardist && sass --no-source-map --style=compressed src:dist && yarn rename",
     "rename": "rname dist/*.css dist/\"{{f}}.min.css\"",
-    "cleardist": "rd /s /q dist && mkdir dist"
+    "cleardist": "rm -rf ./dist && mkdir dist"
   },
   "devDependencies": {
     "rename-cli": "^7.0.2",
