@@ -3,7 +3,7 @@
 $primary-color: white;
 $secondary-color: red;
 $accent-color: white;
-$extra-color: red;
+$extra-color: yellow;
 $background-color: hsl(0, 100%, 5%);
 $text-shadow: 0 0 5px red;
 $title-shadow: generateShadow(
@@ -18,6 +18,6 @@ $title-shadow: generateShadow(
 $hover-color: red;
 $theme-background: linear-gradient(
   to bottom,
-  black -50%,
-  var(--extra-color) 100%
+  yellow -50%,
+  orange 100%
 );
