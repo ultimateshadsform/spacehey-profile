@@ -1,5 +1,5 @@
-@use './colors.scss' as *;
-@use './vars.scss' as *;
+@use "./colors.scss" as *;
+@use "./vars.scss" as *;
 
 :root {
   /* Images */
@@ -13,6 +13,7 @@
   --profile-friend-image: #{$profile-friend-image};
   --profile-friend-image-overlay: #{$profile-friend-image-overlay};
   --profile-frame-image: #{$profile-frame-image};
+  --friend-first-image-mask: #{$friend-first-image-mask};
   --friend-image-mask: #{$friend-image-mask};
   --notification-image: #{$notification-image};
   --online-image: #{$online-image};
@@ -29,5 +30,5 @@
   --theme-background: #{$theme-background};
 
   /* Content */
-  --separator: ' #{$separator} ';
+  --separator: " #{$separator} ";
 }

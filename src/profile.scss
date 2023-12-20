@@ -213,12 +213,26 @@ b {
         height: auto;
       }
     }
+
     .blurbs .inner .section {
       .moon-container,
       .side-shadow,
       .sonic,
       .knuckles {
         max-height: 200px !important;
+      }
+    }
+
+    .friends .inner .friends-grid {
+      grid-template-columns: repeat(3, minmax(auto, 1fr)) !important;
+
+      .person {
+        &:first-child {
+          grid-column: span 3;
+        }
+        &:last-child {
+          grid-column: span 3;
+        }
       }
     }
   }
@@ -516,22 +530,6 @@ main {
       }
     }
 
-    // .profile-info {
-    //   opacity: 0.3;
-    //   transition: all 200ms ease;
-    //   &:hover {
-    //     opacity: 1;
-    //   }
-    // }
-
-    // .blog-preview {
-    //   opacity: 0.3;
-    //   transition: all 200ms ease;
-    //   &:hover {
-    //     opacity: 1;
-    //   }
-    // }
-
     .blurbs {
       .heading h4:before {
         content: "My shit";
@@ -605,12 +603,6 @@ main {
     }
 
     .friends {
-      opacity: 0.3;
-      transition: all 200ms ease;
-      &:hover {
-        opacity: 1;
-      }
-
       .heading h4:before {
         content: "Furballs";
         font-size: 1.5rem;
@@ -618,18 +610,24 @@ main {
 
       .friends-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-        align-items: center;
+        grid-template-columns: repeat(7, minmax(auto, 1fr));
+        grid-template-rows: repeat(2, minmax(10rem, 1fr));
         place-items: center;
 
         .person {
-          &:hover {
-            img:not(.icon),
-            p {
-              opacity: 1 !important;
-            }
-          }
+          padding: 0;
+
           &:first-child {
+            grid-column: span 7;
+            grid-row: span 2;
+            transform: scale(2);
+
+            &:hover {
+              img:not(.icon) {
+                transform: scale(2.1);
+              }
+            }
+
             p {
               color: var(--extra-color);
             }
@@ -637,12 +635,13 @@ main {
             img:not(.icon) {
               filter: invert(420%) sepia(69420%) saturate(1000%)
                 hue-rotate(235deg) brightness(100%) contrast(100%);
+              mask-image: var(--friend-first-image-mask);
+              -webkit-mask-image: var(--friend-first-image-mask);
             }
           }
 
           p {
             color: var(--secondary-color);
-            opacity: 0.3;
           }
 
           img:not(.icon) {
@@ -663,7 +662,6 @@ main {
             mask-size: contain;
             -webkit-mask-type: alpha;
             mask-type: alpha;
-            opacity: 0.3;
 
             &:hover {
               filter: unset;
