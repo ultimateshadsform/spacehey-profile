@@ -1,25 +1,25 @@
 // Utils
-@use './utils/functions/funcs.scss' as *;
-@use './utils/mixins/mixins.scss' as *;
-@use './utils/settings.scss' as *;
-@use './utils/colors.scss' as *;
-@use './utils/fonts.scss' as *;
-@use './utils/vars.scss' as *;
-@use './utils/root.scss' as *;
+@use "./utils/functions/funcs.scss" as *;
+@use "./utils/mixins/mixins.scss" as *;
+@use "./utils/settings.scss" as *;
+@use "./utils/colors.scss" as *;
+@use "./utils/fonts.scss" as *;
+@use "./utils/vars.scss" as *;
+@use "./utils/root.scss" as *;
 
 // Partials
-@use './partials/nav.scss' as *;
-@use './partials/footer.scss' as *;
-@use './partials/border.scss' as *;
-@use './partials/overlay.scss' as *;
-@use './partials/loading.scss' as *;
-@use './partials/comments.scss' as *;
-@use './partials/scrollbar.scss' as *;
-@use './partials/background.scss' as *;
-@use './partials/profile-frame.scss' as *;
-@use './partials/profile-friend.scss' as *;
-@use './partials/optional/moving-ball.scss' as *;
-@use './partials/optional/profile-things.scss' as *;
+@use "./partials/nav.scss" as *;
+@use "./partials/footer.scss" as *;
+@use "./partials/border.scss" as *;
+@use "./partials/overlay.scss" as *;
+@use "./partials/loading.scss" as *;
+@use "./partials/comments.scss" as *;
+@use "./partials/scrollbar.scss" as *;
+@use "./partials/background.scss" as *;
+@use "./partials/profile-frame.scss" as *;
+@use "./partials/profile-friend.scss" as *;
+@use "./partials/optional/moving-ball.scss" as *;
+@use "./partials/optional/profile-things.scss" as *;
 
 * {
   @if $include-cursor {
@@ -71,7 +71,7 @@ body {
   }
 }
 
-@include rename('.logout-btn', 'Explode');
+@include rename(".logout-btn", "Explode");
 
 button,
 .logout-btn,
@@ -93,7 +93,7 @@ button,
 .comments-table td:first-child p,
 .profile .blurbs .heading,
 .profile .friends .heading h4,
-span[itemprop='name'] h1,
+span[itemprop="name"] h1,
 .profile .contact .heading h4,
 .profile .table-section .heading h4,
 .setting-section .heading,
@@ -167,7 +167,7 @@ b {
       align-items: center;
     }
 
-    div:nth-child(3) span[itemprop='name'] {
+    div:nth-child(3) span[itemprop="name"] {
       position: unset;
       top: unset;
       left: unset;
@@ -213,6 +213,14 @@ b {
         height: auto;
       }
     }
+    .blurbs .inner .section {
+      .moon-container,
+      .side-shadow,
+      .sonic,
+      .knuckles {
+        max-height: 200px !important;
+      }
+    }
   }
 }
 
@@ -230,8 +238,8 @@ main {
   }
 
   &:after {
-    content: '';
-    background-image: url('https://i.pinimg.com/originals/41/48/2d/41482d8c56dcb537ba570c47366fb2f7.gif');
+    content: "";
+    background-image: url("https://i.pinimg.com/originals/41/48/2d/41482d8c56dcb537ba570c47366fb2f7.gif");
     top: 0;
     z-index: -2;
     position: absolute;
@@ -467,41 +475,41 @@ main {
         }
 
         @include addImage(
-          'https://b.l3n.co/i/my91Ti.png',
-          'https://media.tenor.com/JuFnnZnCCloAAAAd/shadow-the-hedgehog-vr-chat.gif',
+          "https://b.l3n.co/i/my91Ti.png",
+          "https://media.tenor.com/JuFnnZnCCloAAAAd/shadow-the-hedgehog-vr-chat.gif",
           1,
           1
         );
         @include addImage(
-          'https://b.l3n.co/i/my9geP.png',
-          'https://media.tenor.com/YqGbiw9VaiAAAAAC/sonic-the-hedgehog-shadow-the-hedgehog.gif',
+          "https://b.l3n.co/i/my9geP.png",
+          "https://media.tenor.com/YqGbiw9VaiAAAAAC/sonic-the-hedgehog-shadow-the-hedgehog.gif",
           1,
           2
         );
         @include addImage(
-          'https://c.l3n.co/i/my98Fx.png',
-          'https://media.tenor.com/6SOIHmw9t9AAAAAC/sonic-prime-shadow-the-hedgehog.gif',
+          "https://c.l3n.co/i/my98Fx.png",
+          "https://media.tenor.com/6SOIHmw9t9AAAAAC/sonic-prime-shadow-the-hedgehog.gif",
           2,
           1
         );
 
         @include addImage(
-          'https://c.l3n.co/i/my9im1.png',
-          'https://pa1.aminoapps.com/6535/c77e4957b5b29263155c5e786f6b26cfe06edcab_hq.gif',
+          "https://c.l3n.co/i/my9im1.png",
+          "https://pa1.aminoapps.com/6535/c77e4957b5b29263155c5e786f6b26cfe06edcab_hq.gif",
           2,
           2
         );
-        @include addImage('https://b.l3n.co/i/my9joc.png', null, 3, 1);
+        @include addImage("https://b.l3n.co/i/my9joc.png", null, 3, 1);
         @include addImage(
-          'https://a.l3n.co/i/my9rym.png',
-          'https://pbs.twimg.com/media/D5LF5fHW4AEzPTM.jpg',
+          "https://a.l3n.co/i/my9rym.png",
+          "https://pbs.twimg.com/media/D5LF5fHW4AEzPTM.jpg",
           3,
           2
         );
-        @include addImage('https://c.l3n.co/i/my9I8K.png', null, 4, 1);
+        @include addImage("https://c.l3n.co/i/my9I8K.png", null, 4, 1);
         @include addImage(
-          'https://a.l3n.co/i/my9ZQZ.png',
-          'https://media.tenor.com/jx7PJaSohs4AAAAC/sonic-shadow.gif',
+          "https://a.l3n.co/i/my9ZQZ.png",
+          "https://media.tenor.com/jx7PJaSohs4AAAAC/sonic-shadow.gif",
           4,
           2
         );
@@ -526,7 +534,7 @@ main {
 
     .blurbs {
       .heading h4:before {
-        content: 'My shit';
+        content: "My shit";
         font-size: 1.5rem;
       }
 
@@ -540,7 +548,7 @@ main {
       }
     }
 
-    meta[itemprop='identifier'] + div.left {
+    meta[itemprop="identifier"] + div.left {
       display: grid;
       grid-template-columns: repeat(2, minmax(auto, 1fr));
       grid-template-rows: minmax(20px, 1fr);
@@ -548,7 +556,7 @@ main {
       width: 100%;
       position: relative;
 
-      span[itemprop='name'] {
+      span[itemprop="name"] {
         grid-column: span 2;
       }
 
@@ -575,7 +583,7 @@ main {
       }
     }
 
-    span[itemprop='name'] {
+    span[itemprop="name"] {
       display: flex;
       width: fit-content;
       justify-self: center;
@@ -604,7 +612,7 @@ main {
       }
 
       .heading h4:before {
-        content: 'Furballs';
+        content: "Furballs";
         font-size: 1.5rem;
       }
 
