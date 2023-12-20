@@ -1,6 +1,6 @@
 @mixin border {
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     border-radius: 1rem;
@@ -8,6 +8,10 @@
     pointer-events: none;
     background: var(--border-image);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    // Keep legacy webkit syntax for compatibility.
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
     mask-composite: exclude;
+    -webkit-mask-composite: xor;
   }
 }
