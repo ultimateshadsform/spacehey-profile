@@ -227,9 +227,7 @@ b {
       grid-template-columns: repeat(3, minmax(auto, 1fr)) !important;
 
       .person {
-        &:first-child {
-          grid-column: span 3;
-        }
+        &:first-child,
         &:last-child {
           grid-column: span 3;
         }
