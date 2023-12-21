@@ -1,23 +1,24 @@
 // Utils
-@use './utils/mixins/mixins.scss' as *;
-@use './utils/settings.scss' as *;
-@use './utils/colors.scss' as *;
-@use './utils/fonts.scss' as *;
-@use './utils/fonts.scss' as *;
-@use './utils/vars.scss' as *;
-@use './utils/root.scss' as *;
+@use "./utils/mixins/mixins.scss" as *;
+@use "./utils/settings.scss" as *;
+@use "./utils/colors.scss" as *;
+@use "./utils/fonts.scss" as *;
+@use "./utils/fonts.scss" as *;
+@use "./utils/vars.scss" as *;
+@use "./utils/root.scss" as *;
 
 // Partials
-@use './partials/nav.scss' as *;
-@use './partials/footer.scss' as *;
-@use './partials/border.scss' as *;
-@use './partials/overlay.scss' as *;
-@use './partials/loading.scss' as *;
-@use './partials/comments.scss' as *;
-@use './partials/scrollbar.scss' as *;
-@use './partials/background.scss' as *;
-@use './partials/profile-frame.scss' as *;
-@use './partials/optional/moving-ball.scss' as *;
+@use "./partials/nav.scss" as *;
+@use "./partials/footer.scss" as *;
+@use "./partials/border.scss" as *;
+@use "./partials/overlay.scss" as *;
+@use "./partials/loading.scss" as *;
+@use "./partials/comments.scss" as *;
+@use "./partials/scrollbar.scss" as *;
+@use "./partials/background.scss" as *;
+@use "./partials/progress-bar.scss" as *;
+@use "./partials/profile-frame.scss" as *;
+@use "./partials/optional/moving-ball.scss" as *;
 
 * {
   @if $include-cursor {
@@ -51,25 +52,136 @@ html {
   @if $include-overlay {
     @include overlay;
   }
+
+  body {
+    background: var(--background-color);
+    overflow-x: clip;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @if $include-background {
+      @include background;
+    }
+
+    @if $include-moving-ball {
+      @include moving-ball;
+    }
+
+    @if $include-progress-bar {
+      @include progress-bar;
+    }
+
+    main {
+      background: transparent;
+      position: relative;
+      color: var(--accent-color);
+      box-shadow: -10px -10px 15px 10px var(--secondary-color),
+        10px 10px 15px 10px var(--extra-color),
+        0 0 15px 10px var(--secondary-color) inset;
+      border-radius: 1rem;
+
+      @if $include-border {
+        @include border;
+      }
+
+      .article {
+        display: flex;
+        flex-direction: column-reverse !important;
+
+        .w-20 {
+          width: 100% !important;
+        }
+
+        .title {
+          color: var(--accent-color);
+          font-size: clamp(0.5rem, 1svw, 2rem);
+          font-family: $secondary-font;
+          text-shadow: var(--text-shadow);
+        }
+
+        .edit-info {
+          background: transparent;
+          border: 1px solid var(--extra-color);
+          border-radius: 1rem;
+
+          .profile-pic {
+            display: flex;
+            justify-content: center;
+            width: fit-content;
+            margin: 0 auto;
+            position: relative;
+
+            @if $include-profile-frame {
+              @include profile-frame;
+            }
+
+            img {
+              max-height: 14rem;
+              max-width: 14rem;
+              perspective: 1000px;
+              border-radius: 0.5rem;
+              border: 3px solid var(--secondary-color);
+              box-shadow: -10px -10px 15px 10px var(--secondary-color),
+                10px 10px 15px 10px var(--extra-color),
+                0 0 15px 10px var(--secondary-color) inset;
+              object-fit: cover;
+            }
+          }
+
+          .author-details {
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+            z-index: 1;
+            position: relative;
+
+            h4 {
+              display: flex;
+              flex-direction: column;
+              row-gap: 1rem;
+              place-items: center;
+
+              a {
+                font-size: 1.3rem;
+                font-family: $secondary-font;
+                transition: all 200ms ease;
+                color: var(--accent-color);
+                text-shadow: 3px -1px var(--secondary-color);
+
+                &:hover {
+                  text-shadow: var(--title-shadow);
+                }
+              }
+            }
+
+            .links {
+              $links: (
+                "https://c.l3n.co/i/mxgfcQ.png",
+                "https://b.l3n.co/i/my9joc.png",
+                "https://a.l3n.co/i/my9ZQZ.png"
+              );
+
+              @for $i from 1 through length($links) {
+                a:nth-child(#{$i}) img {
+                  content: url(nth($links, $i));
+                }
+              }
+            }
+          }
+        }
+      }
+
+      #comments .heading {
+        border-top: 2px solid var(--secondary-color);
+      }
+
+      @include comments;
+    }
+  }
 }
 
-body {
-  background: var(--background-color);
-  overflow-x: clip;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-
-  @if $include-background {
-    @include background;
-  }
-
-  @if $include-moving-ball {
-    @include moving-ball;
-  }
-}
-
-@include rename('.logout-btn', 'Explode');
+@include rename(".logout-btn", "Explode");
 
 button,
 .logout-btn,
@@ -127,111 +239,4 @@ b {
       margin-top: unset;
     }
   }
-}
-
-main {
-  background: transparent;
-  position: relative;
-  color: var(--accent-color);
-  box-shadow: -10px -10px 15px 10px var(--secondary-color),
-    10px 10px 15px 10px var(--extra-color),
-    0 0 15px 10px var(--secondary-color) inset;
-  border-radius: 1rem;
-
-  @if $include-border {
-    @include border;
-  }
-
-  .article {
-    display: flex;
-    flex-direction: column-reverse !important;
-
-    .w-20 {
-      width: 100% !important;
-    }
-
-    .title {
-      color: var(--accent-color);
-      font-size: clamp(0.5rem, 1svw, 2rem);
-      font-family: $secondary-font;
-      text-shadow: var(--text-shadow);
-    }
-
-    .edit-info {
-      background: transparent;
-      border: 1px solid var(--extra-color);
-      border-radius: 1rem;
-
-      .profile-pic {
-        display: flex;
-        justify-content: center;
-        width: fit-content;
-        margin: 0 auto;
-        position: relative;
-
-        @if $include-profile-frame {
-          @include profile-frame;
-        }
-
-        img {
-          max-height: 14rem;
-          max-width: 14rem;
-          perspective: 1000px;
-          border-radius: 0.5rem;
-          border: 3px solid var(--secondary-color);
-          box-shadow: -10px -10px 15px 10px var(--secondary-color),
-            10px 10px 15px 10px var(--extra-color),
-            0 0 15px 10px var(--secondary-color) inset;
-          object-fit: cover;
-        }
-      }
-
-      .author-details {
-        display: flex;
-        flex-direction: column;
-        place-items: center;
-        z-index: 1;
-        position: relative;
-
-        h4 {
-          display: flex;
-          flex-direction: column;
-          row-gap: 1rem;
-          place-items: center;
-
-          a {
-            font-size: 1.3rem;
-            font-family: $secondary-font;
-            transition: all 200ms ease;
-            color: var(--accent-color);
-            text-shadow: 3px -1px var(--secondary-color);
-
-            &:hover {
-              text-shadow: var(--title-shadow);
-            }
-          }
-        }
-
-        .links {
-          $links: (
-            'https://c.l3n.co/i/mxgfcQ.png',
-            'https://b.l3n.co/i/my9joc.png',
-            'https://a.l3n.co/i/my9ZQZ.png'
-          );
-
-          @for $i from 1 through length($links) {
-            a:nth-child(#{$i}) img {
-              content: url(nth($links, $i));
-            }
-          }
-        }
-      }
-    }
-  }
-
-  #comments .heading {
-    border-top: 2px solid var(--secondary-color);
-  }
-
-  @include comments;
 }
