@@ -1,5 +1,5 @@
-@use '../utils/colors.scss' as *;
-@use '../utils/mixins/mixins.scss' as *;
+@use "../utils/colors.scss" as *;
+@use "../utils/mixins/mixins.scss" as *;
 
 @mixin comments {
   #comments {
@@ -10,14 +10,14 @@
     }
 
     .heading {
-      @include rename('h4', 'Complaints');
+      @include rename("h4", "Complaints");
       h4:before {
         font-size: 1.5rem;
       }
     }
 
     .report a img {
-      content: url('https://a.l3n.co/i/my9ZQZ.png');
+      content: url("https://a.l3n.co/i/my9ZQZ.png");
     }
 
     .comments-table {
@@ -110,8 +110,8 @@
           }
 
           p {
-            font-family: 'Beyonders', sans-serif;
-            font-size: clamp(15px, 2vw, 1rem);
+            font-family: "Beyonders", sans-serif;
+            font-size: clamp(0.5rem, 1.5svw, 1rem);
             z-index: 1;
             position: relative;
             opacity: 0.3;
@@ -168,7 +168,7 @@
           color: var(--accent-color);
 
           p small a b {
-            font-family: 'Beyonders', sans-serif;
+            font-family: "Beyonders", sans-serif;
             text-shadow: var(--text-shadow);
             font-size: 0.5em;
           }
