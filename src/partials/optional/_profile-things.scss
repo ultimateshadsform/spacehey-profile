@@ -1,8 +1,8 @@
-@use '../../utils/settings.scss' as *;
-@use './characters.scss' as *;
-@use './music-container.scss' as *;
-@use './moon.scss' as *;
-@use './dni-flash.scss' as *;
+@use "../../utils/settings.scss" as *;
+@use "./characters.scss" as *;
+@use "./music-container.scss" as *;
+@use "./moon.scss" as *;
+@use "./dni-flash.scss" as *;
 
 /* Here is where you can choose which things to include in your profile.
    Like if you have custom stuff you want to add, you can add it here. */
@@ -48,5 +48,20 @@
 
   @if $include-knuckles {
     @include knuckles;
+  }
+
+  .stamps {
+    .kurse {
+      background-image: linear-gradient(
+        to right,
+        red 50%,
+        rgba(255, 255, 255, 0) 0%
+      );
+      padding: 10px;
+      background-position: left;
+      background-size: 8% 1px;
+      background-repeat: repeat;
+      background-color: white;
+    }
   }
 }
