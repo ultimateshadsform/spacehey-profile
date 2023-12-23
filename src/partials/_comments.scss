@@ -2,6 +2,8 @@
 @use "../utils/mixins/mixins.scss" as *;
 @use "../utils/vars.scss" as *;
 
+$border-style: 2px solid var(--secondary-color);
+
 @mixin comments {
   #comments {
     .heading {
@@ -33,12 +35,25 @@
               &:first-child {
                 align-self: center;
                 width: 100%;
+                border-top: $border-style !important;
+                border-left: $border-style !important;
+                border-right: $border-style !important;
+                border-bottom-left-radius: 0 !important;
+                border-bottom-right-radius: 0 !important;
+
                 &:after {
                   border-radius: 1rem 1rem 0 0 !important;
                 }
               }
-              &:last-child:after {
-                border-radius: 0 0 1rem 1rem !important;
+              &:last-child {
+                border-left: $border-style !important;
+                border-right: $border-style !important;
+                border-bottom: $border-style !important;
+                border-top-left-radius: 0 !important;
+                border-top-right-radius: 0 !important;
+                &:after {
+                  border-radius: 0 0 1rem 1rem !important;
+                }
               }
             }
           }
@@ -118,8 +133,9 @@
           }
 
           td {
-            border: none !important;
+            border: none;
             background: transparent;
+
             &:after {
               content: "";
               transition: background-color 300ms ease;
@@ -132,6 +148,9 @@
             &:first-child {
               position: relative;
               border-radius: 1rem 0 0 1rem;
+              border-top: $border-style;
+              border-left: $border-style;
+              border-bottom: $border-style;
 
               p {
                 font-family: "Beyonders", sans-serif;
@@ -179,6 +198,9 @@
             }
             &:last-child {
               border-radius: 0 1rem 1rem 0;
+              border-top: $border-style;
+              border-right: $border-style;
+              border-bottom: $border-style;
               flex: 1;
               .ago {
                 color: var(--accent-color);
