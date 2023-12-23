@@ -38,6 +38,7 @@ $border-style: 2px solid var(--secondary-color);
                 border-top: $border-style !important;
                 border-left: $border-style !important;
                 border-right: $border-style !important;
+                border-bottom: unset !important;
                 border-bottom-left-radius: 0 !important;
                 border-bottom-right-radius: 0 !important;
 
@@ -49,6 +50,7 @@ $border-style: 2px solid var(--secondary-color);
                 border-left: $border-style !important;
                 border-right: $border-style !important;
                 border-bottom: $border-style !important;
+                border-top: unset !important;
                 border-top-left-radius: 0 !important;
                 border-top-right-radius: 0 !important;
                 &:after {
