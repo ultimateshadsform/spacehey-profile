@@ -620,7 +620,7 @@ b {
   background: var(--theme-background);
 }
 
-@media only screen and (max-width: 675px) {
+@media only screen and (max-width: var(--mobile)) {
   .general-about {
     flex-direction: column;
 

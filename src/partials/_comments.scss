@@ -24,7 +24,7 @@
         tr {
           display: flex;
           margin: 10px 0 10px 0;
-          @media only screen and (max-width: 675px) {
+          @media only screen and (max-width: var(--mobile)) {
             flex-direction: column;
             td {
               border-radius: 1rem !important;
