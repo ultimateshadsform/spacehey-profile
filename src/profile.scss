@@ -87,17 +87,6 @@ html {
         @include border;
       }
 
-      &:after {
-        content: "";
-        background-image: url("https://i.pinimg.com/originals/41/48/2d/41482d8c56dcb537ba570c47366fb2f7.gif");
-        top: 0;
-        z-index: -2;
-        position: absolute;
-        width: 100%;
-        height: 20rem;
-        background-repeat: repeat no-repeat;
-      }
-
       .profile {
         display: flex !important;
         flex-direction: column;
