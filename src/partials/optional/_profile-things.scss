@@ -1,4 +1,5 @@
 @use "../../utils/settings.scss" as *;
+@use "../../utils/colors.scss" as *;
 @use "./characters.scss" as *;
 @use "./music-container.scss" as *;
 @use "./moon.scss" as *;
@@ -50,7 +51,7 @@
     .kurse {
       background-image: linear-gradient(
         to right,
-        red 50%,
+        $extra-color 50%,
         rgba(255, 255, 255, 0) 0%
       );
       padding: 10px;

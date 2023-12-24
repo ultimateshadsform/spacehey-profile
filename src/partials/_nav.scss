@@ -1,11 +1,11 @@
-@use '../utils/settings.scss' as *;
-@use '../utils/colors.scss' as *;
-@use '../utils/vars.scss' as *;
-@use '../utils/mixins/mixins.scss' as *;
+@use "../utils/settings.scss" as *;
+@use "../utils/colors.scss" as *;
+@use "../utils/vars.scss" as *;
+@use "../utils/mixins/mixins.scss" as *;
 
 @mixin nav-background {
   &:before {
-    content: '';
+    content: "";
     background-image: var(--nav-image);
     -webkit-mask-image: linear-gradient(
       to right,
@@ -43,7 +43,7 @@ nav {
     background: linear-gradient(
       90deg,
       transparent 0%,
-      hsl(0, 100%, 20%) 50%,
+      $extra-color 50%,
       transparent 100%
     );
 
@@ -89,7 +89,7 @@ nav {
         font-family: inherit;
       }
 
-      @include rename('a', 'Therapy');
+      @include rename("a", "Therapy");
       a {
         color: var(--primary-color);
 
@@ -106,7 +106,7 @@ nav {
     background: linear-gradient(
       90deg,
       transparent 0%,
-      hsl(0, 100%, 20%) 50%,
+      $extra-color 50%,
       transparent 100%
     );
 
@@ -139,8 +139,8 @@ nav {
         }
       }
 
-      a[title='SpaceHey Mobile'] .icon {
-        content: url('https://media1.giphy.com/headers/jmckeehen/s2wy7iphPP98.gif');
+      a[title="SpaceHey Mobile"] .icon {
+        content: url("https://media1.giphy.com/headers/jmckeehen/s2wy7iphPP98.gif");
         object-fit: cover;
         border-radius: 5px;
       }

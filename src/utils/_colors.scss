@@ -1,11 +1,11 @@
-@use './functions/funcs.scss' as *;
+@use "./functions/funcs.scss" as *;
 
 $primary-color: white;
-$secondary-color: red;
+$secondary-color: white;
 $accent-color: white;
-$extra-color: yellow;
+$extra-color: rgb(90, 214, 255);
 $background-color: hsl(0, 100%, 5%);
-$text-shadow: 0 0 5px red;
+$text-shadow: 0 0 5px white;
 $title-shadow: generateShadow(
   $extra-color,
   $accent-color,
@@ -15,9 +15,5 @@ $title-shadow: generateShadow(
   0.5,
   -45deg
 );
-$hover-color: red;
-$theme-background: linear-gradient(
-  to bottom,
-  yellow -50%,
-  orange 100%
-);
+$hover-color: $extra-color;
+$theme-background: linear-gradient(to bottom, white -50%, $extra-color 100%);

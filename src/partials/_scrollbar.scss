@@ -1,14 +1,16 @@
+@use "../utils/colors.scss" as *;
+
 @mixin scrollbar() {
   ::-webkit-scrollbar {
     width: 10px;
   }
 
   ::-webkit-scrollbar-track {
-    background: hsl(0, 100%, 5%);
+    background: $extra-color;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: red;
+    background: $extra-color;
     background-image: var(--scrollbar-image);
     background-size: cover;
     background-blend-mode: hard-light;
