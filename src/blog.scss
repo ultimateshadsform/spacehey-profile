@@ -147,7 +147,7 @@ html {
                 font-family: $secondary-font;
                 transition: all 200ms ease;
                 color: var(--accent-color);
-                text-shadow: 3px -1px var(--secondary-color);
+                text-shadow: 3px -1px var(--extra-color);
 
                 &:hover {
                   text-shadow: var(--title-shadow);
