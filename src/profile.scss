@@ -186,6 +186,7 @@ html {
             height: auto !important;
             margin: unset !important;
             width: fit-content;
+            z-index: -1;
             perspective: 1000px;
             display: flex !important;
             justify-content: center;
@@ -209,10 +210,8 @@ html {
             }
 
             img {
-              height: 14rem;
-              width: 14rem;
-              max-width: unset;
-              max-height: unset;
+              max-height: 14rem;
+              max-width: 14rem;
               perspective: 1000px;
               border-radius: 0.5rem;
               border: 3px solid var(--secondary-color);
