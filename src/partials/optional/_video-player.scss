@@ -1,0 +1,38 @@
+@mixin video-player {
+  .video-container {
+    position: fixed;
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    bottom: 1rem;
+    right: 1rem;
+    overflow: clip;
+    transition: all 200ms ease;
+    animation: spin-record 5s linear infinite;
+    @keyframes spin-record {
+      0% {
+        transform: rotateZ(0deg);
+      }
+      100% {
+        transform: rotateZ(360deg);
+      }
+    }
+
+    &:hover {
+      overflow: visible !important;
+      border-radius: unset !important;
+      animation: none !important;
+
+      iframe {
+        scale: 1 !important;
+      }
+    }
+
+    iframe {
+      position: absolute;
+      height: 100%;
+      scale: 2;
+      transition: all 200ms ease;
+    }
+  }
+}

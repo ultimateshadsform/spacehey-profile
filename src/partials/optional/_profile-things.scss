@@ -4,6 +4,7 @@
 @use "./music-container.scss" as *;
 @use "./moon.scss" as *;
 @use "./dni-flash.scss" as *;
+@use "./video-player.scss" as *;
 
 /* Here is where you can choose which things to include in your profile.
    Like if you have custom stuff you want to add, you can add it here. */
@@ -45,6 +46,10 @@
 
   @if $include-knuckles {
     @include knuckles;
+  }
+
+  @if $include-video-player {
+    @include video-player;
   }
 
   .stamps {
