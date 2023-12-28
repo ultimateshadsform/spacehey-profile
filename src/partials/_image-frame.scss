@@ -1,10 +1,10 @@
-@mixin profile-frame {
+@mixin image-frame($image: var(--profile-frame-image)) {
   &:before {
     content: "";
     width: 100%;
     height: 100%;
     position: absolute;
-    background-image: var(--profile-frame-image);
+    background-image: $image;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     transform: scale(1.2);

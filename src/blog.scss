@@ -17,7 +17,7 @@
 @use "./partials/scrollbar.scss" as *;
 @use "./partials/background.scss" as *;
 @use "./partials/progress-bar.scss" as *;
-@use "./partials/profile-frame.scss" as *;
+@use "./partials/image-frame.scss" as *;
 @use "./partials/optional/moving-ball.scss" as *;
 
 * {
@@ -113,7 +113,7 @@ html {
             position: relative;
 
             @if $include-profile-frame {
-              @include profile-frame;
+              @include image-frame;
             }
 
             img {

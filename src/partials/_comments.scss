@@ -1,6 +1,8 @@
 @use "../utils/colors.scss" as *;
 @use "../utils/mixins/mixins.scss" as *;
 @use "../utils/vars.scss" as *;
+@use "../utils/settings.scss" as *;
+@use "../partials/image-frame.scss" as *;
 
 $border-style: 2px solid var(--secondary-color);
 
@@ -98,7 +100,7 @@ $border-style: 2px solid var(--secondary-color);
                     }
                   }
                 }
-                img:not(.icon) {
+                a:last-child {
                   animation: first-comment-profile-photo-anim 0.4s ease-in-out
                     infinite alternate both;
                   @keyframes first-comment-profile-photo-anim {
@@ -148,11 +150,24 @@ $border-style: 2px solid var(--secondary-color);
             }
 
             &:first-child {
+              display: flex;
+              flex-direction: column;
               position: relative;
               border-radius: 1rem 0 0 1rem;
               border-top: $border-style;
               border-left: $border-style;
               border-bottom: $border-style;
+
+              @if $include-comments-image-frame {
+                a:last-child {
+                  display: block;
+                  position: relative;
+                  width: 100%;
+                  border-radius: 10px;
+                  overflow: clip;
+                  @include image-frame($comment-frame-image);
+                }
+              }
 
               p {
                 font-family: "Beyonders", sans-serif;
@@ -173,11 +188,7 @@ $border-style: 2px solid var(--secondary-color);
                 }
               }
 
-              img:not(.icon) {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 10px;
+              a:last-child {
                 animation: comment-profile-photo-anim 200ms ease-in-out infinite
                   alternate both;
                 @keyframes comment-profile-photo-anim {
@@ -196,6 +207,12 @@ $border-style: 2px solid var(--secondary-color);
                 &:hover {
                   box-shadow: var(--title-shadow);
                 }
+              }
+
+              img:not(.icon) {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
               }
             }
             &:last-child {
