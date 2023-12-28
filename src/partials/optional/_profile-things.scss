@@ -56,7 +56,7 @@
     .kurse {
       background-image: linear-gradient(
         to right,
-        $extra-color 50%,
+        red 50%,
         rgba(255, 255, 255, 0) 0%
       );
       padding: 10px;
@@ -64,6 +64,7 @@
       background-size: 8% 1px;
       background-repeat: repeat;
       background-color: white;
+      filter: hue-rotate(295deg);
     }
   }
 }
