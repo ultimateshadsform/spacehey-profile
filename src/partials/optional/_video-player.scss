@@ -25,6 +25,7 @@
 
       iframe {
         scale: 1 !important;
+        filter: unset !important;
       }
     }
 
@@ -33,6 +34,7 @@
       height: 100%;
       scale: 2;
       transition: all 200ms ease;
+      filter: sepia(100%) saturate(1000%) invert(10%) hue-rotate(245deg);
     }
   }
 }

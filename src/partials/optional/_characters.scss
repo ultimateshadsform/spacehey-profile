@@ -39,6 +39,7 @@
     bottom: 10px;
     max-height: 400px;
     z-index: -2;
+    filter: hue-rotate(295deg);
     animation: bounce 200ms ease-in-out infinite alternate both;
     @keyframes bounce {
       to {
