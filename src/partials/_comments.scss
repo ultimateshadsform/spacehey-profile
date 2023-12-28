@@ -176,8 +176,8 @@ $border-style: 2px solid var(--secondary-color);
                 position: relative;
                 color: var(--accent-color);
                 text-shadow: var(--text-shadow);
-                transition: all 200ms ease;
-                animation: name-anim 200ms ease-in-out infinite alternate both;
+                transition: all 600ms ease;
+                animation: name-anim 600ms ease-in-out infinite alternate both;
                 @keyframes name-anim {
                   0% {
                     transform: rotateZ(-15deg);
@@ -189,7 +189,7 @@ $border-style: 2px solid var(--secondary-color);
               }
 
               a:last-child {
-                animation: comment-profile-photo-anim 200ms ease-in-out infinite
+                animation: comment-profile-photo-anim 600ms ease-in-out infinite
                   alternate both;
                 @keyframes comment-profile-photo-anim {
                   0% {
