@@ -18,10 +18,28 @@
       }
     }
 
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-image: url("https://png2.cleanpng.com/dy/2ca9039f0139279382b86cb0d6c0578f/L0KzQYm3U8A5N5RBiZH0aYP2gLBuTgBpd590fARqcHiwgrbqjCJlNZ11ReRuY3B1dH7qhL1lcaRoh9l7YYDriX68gfExbpYAe6ZuY3K3SXA4U8Y5OWQ7T6MAMkC4QIG6WMA0OmM9RuJ3Zx==/kisspng-phonograph-record-lp-record-cd-discography-5aa0fe9c4ecb49.1368136715205003803228.png");
+      background-repeat: no-repeat;
+      pointer-events: none;
+      transition: opacity 200ms ease;
+      opacity: 0.5;
+    }
+
     &:hover {
       overflow: visible !important;
       border-radius: unset !important;
       animation: none !important;
+      &:before {
+        opacity: 0;
+      }
 
       iframe {
         scale: 1 !important;
