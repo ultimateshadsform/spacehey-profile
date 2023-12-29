@@ -3,20 +3,10 @@
     position: fixed;
     height: 200px;
     width: 200px;
-    border-radius: 100%;
     bottom: 1rem;
     right: 1rem;
     overflow: clip;
     transition: all 200ms ease;
-    animation: spin-record 5s linear infinite;
-    @keyframes spin-record {
-      0% {
-        transform: rotateZ(0deg);
-      }
-      100% {
-        transform: rotateZ(360deg);
-      }
-    }
 
     &:before {
       content: "";
@@ -33,25 +23,47 @@
       opacity: 0.5;
     }
 
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0fbb4f5f-e5a7-4193-96e6-841d2b21496d/d90taiz-8f4cc47f-06e3-4afe-989e-f1b4b1ff3ce1.png/v1/fill/w_475,h_430/jewel_cd_case_cover_by_gigabeatmusiccoverar_d90taiz-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDMwIiwicGF0aCI6IlwvZlwvMGZiYjRmNWYtZTVhNy00MTkzLTk2ZTYtODQxZDJiMjE0OTZkXC9kOTB0YWl6LThmNGNjNDdmLTA2ZTMtNGFmZS05ODllLWYxYjRiMWZmM2NlMS5wbmciLCJ3aWR0aCI6Ijw9NDc1In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.JYe_Z5U-Jta4tJ7eGAiUpRrHGtxqLXKXU4Lvujnt6uk");
+      background-repeat: no-repeat;
+      pointer-events: none;
+    }
+
+    &:before {
+      animation: spin-record 5s linear infinite;
+      @keyframes spin-record {
+        0% {
+          transform: rotateZ(0deg);
+        }
+        100% {
+          transform: rotateZ(360deg);
+        }
+      }
+    }
+
     &:hover {
-      overflow: visible !important;
-      border-radius: unset !important;
-      animation: none !important;
       &:before {
         opacity: 0;
       }
 
       iframe {
-        scale: 1 !important;
         filter: unset !important;
+        scale: 1;
       }
     }
 
     iframe {
       position: absolute;
       height: 100%;
-      scale: 2;
       transition: all 200ms ease;
+      scale: 2;
       filter: sepia(100%) saturate(1000%) invert(10%) hue-rotate(245deg);
     }
   }
