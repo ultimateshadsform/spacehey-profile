@@ -1,6 +1,5 @@
 @mixin video-player {
   $mask-image: url("https://b.l3n.co/i/3lLxz2.webp");
-
   $cover-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0fbb4f5f-e5a7-4193-96e6-841d2b21496d/d90taiz-8f4cc47f-06e3-4afe-989e-f1b4b1ff3ce1.png/v1/fill/w_475,h_430/jewel_cd_case_cover_by_gigabeatmusiccoverar_d90taiz-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDMwIiwicGF0aCI6IlwvZlwvMGZiYjRmNWYtZTVhNy00MTkzLTk2ZTYtODQxZDJiMjE0OTZkXC9kOTB0YWl6LThmNGNjNDdmLTA2ZTMtNGFmZS05ODllLWYxYjRiMWZmM2NlMS5wbmciLCJ3aWR0aCI6Ijw9NDc1In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.JYe_Z5U-Jta4tJ7eGAiUpRrHGtxqLXKXU4Lvujnt6uk");
 
   .video-container {
@@ -38,8 +37,8 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      mask-image: $mask-image;
       animation: spin-record 5s linear infinite;
+      mask-image: $mask-image;
       -webkit-mask-image: $mask-image;
       mask-repeat: no-repeat;
       -webkit-mask-repeat: no-repeat;
