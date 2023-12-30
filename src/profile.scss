@@ -121,6 +121,7 @@ html {
           font-family: $secondary-font;
           overflow: hidden;
           position: relative;
+          z-index: -1;
 
           @if $include-you-are-friends {
             @include you-are-friends;
