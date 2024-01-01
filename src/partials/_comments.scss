@@ -55,6 +55,7 @@ $border-style: 2px solid var(--secondary-color);
                 border-top: unset !important;
                 border-top-left-radius: 0 !important;
                 border-top-right-radius: 0 !important;
+
                 &:after {
                   border-radius: 0 0 1rem 1rem !important;
                 }
@@ -222,6 +223,8 @@ $border-style: 2px solid var(--secondary-color);
               border-right: $border-style;
               border-bottom: $border-style;
               flex: 1;
+              padding: 1rem;
+
               .ago {
                 color: var(--accent-color);
               }
