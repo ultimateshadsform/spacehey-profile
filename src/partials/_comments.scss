@@ -228,6 +228,12 @@ $border-style: 2px solid var(--secondary-color);
               .ago {
                 color: var(--accent-color);
               }
+
+              .comment-replies + a:last-child {
+                margin-top: 1rem;
+                display: flex;
+                width: fit-content;
+              }
             }
           }
         }
