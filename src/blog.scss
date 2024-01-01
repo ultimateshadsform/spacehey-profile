@@ -173,7 +173,16 @@ html {
       }
 
       #comments .heading {
-        border-top: 2px solid var(--secondary-color);
+        border-top: none;
+
+        &:before {
+          content: "";
+          height: 2px;
+          background: var(--secondary-color);
+          display: flex;
+          border-radius: 100%;
+          box-shadow: 0 0 20px 1px var(--secondary-color);
+        }
       }
 
       @include comments;

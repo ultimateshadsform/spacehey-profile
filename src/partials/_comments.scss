@@ -253,7 +253,16 @@ $border-style: 2px solid var(--secondary-color);
           }
 
           &:not(:first-child) {
-            border-top: 1px solid var(--secondary-color);
+            border-top: none;
+
+            &:before {
+              content: "";
+              height: 2px;
+              background: var(--secondary-color);
+              display: flex;
+              border-radius: 100%;
+              box-shadow: 0 0 20px 1px var(--secondary-color);
+            }
           }
 
           p:not(:last-child):first-letter {
