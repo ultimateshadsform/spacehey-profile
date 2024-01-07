@@ -467,6 +467,7 @@ html {
                 img:not(.icon) {
                   mask-image: var(--friend-first-image-mask);
                   -webkit-mask-image: var(--friend-first-image-mask);
+                  filter: unset;
                 }
               }
 
