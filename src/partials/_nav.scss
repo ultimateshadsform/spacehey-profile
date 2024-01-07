@@ -43,7 +43,7 @@ nav {
     background: linear-gradient(
       90deg,
       transparent 0%,
-      $extra-color 50%,
+      var(--secondary-color) 50%,
       transparent 100%
     );
 
@@ -57,8 +57,7 @@ nav {
         img.logo {
           object-fit: contain;
           margin: 0;
-          filter: drop-shadow(0px 0px 2px var(--secondary-color))
-            hue-rotate(295deg);
+          filter: drop-shadow(0px 0px 2px var(--secondary-color));
           content: var(--logo-image);
         }
       }
@@ -107,7 +106,7 @@ nav {
     background: linear-gradient(
       90deg,
       transparent 0%,
-      $extra-color 50%,
+      var(--secondary-color) 50%,
       transparent 100%
     );
 

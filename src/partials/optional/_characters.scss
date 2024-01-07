@@ -39,7 +39,6 @@
     bottom: 10px;
     max-height: 400px;
     z-index: -2;
-    filter: hue-rotate(295deg);
     animation: bounce 200ms ease-in-out infinite alternate both;
     @keyframes bounce {
       to {
@@ -84,8 +83,8 @@
     transform: translate(-50%, -50%);
     background: radial-gradient(
       circle,
-      hsl(18deg, 100%, 38.03%) 10%,
-      #bf3f3f 40%,
+      var(--extra-color) 10%,
+      var(--secondary-color) 40%,
       var(--extra-color) 80%
     );
     -webkit-background-clip: text;

@@ -184,9 +184,9 @@ html {
           width: 100%;
 
           .profile-pic {
-            height: auto !important;
-            margin: unset !important;
+            height: 100%;
             width: fit-content;
+            margin: unset !important;
             z-index: -1;
             perspective: 1000px;
             display: flex !important;
@@ -211,8 +211,7 @@ html {
             }
 
             img {
-              max-height: 14rem;
-              max-width: 14rem;
+              display: flex;
               perspective: 1000px;
               border-radius: 0.5rem;
               border: 3px solid var(--secondary-color);
@@ -467,7 +466,7 @@ html {
 
                 img:not(.icon) {
                   filter: invert(420%) sepia(69420%) saturate(1000%)
-                    hue-rotate(235deg) brightness(100%) contrast(100%);
+                    hue-rotate(170deg) brightness(100%) contrast(100%);
                   mask-image: var(--friend-first-image-mask);
                   -webkit-mask-image: var(--friend-first-image-mask);
                 }
