@@ -465,8 +465,6 @@ html {
                 }
 
                 img:not(.icon) {
-                  filter: invert(420%) sepia(69420%) saturate(1000%)
-                    hue-rotate(170deg) brightness(100%) contrast(100%);
                   mask-image: var(--friend-first-image-mask);
                   -webkit-mask-image: var(--friend-first-image-mask);
                 }
@@ -482,7 +480,7 @@ html {
                 height: 96px;
                 transition: all 300ms ease;
                 filter: invert(420%) sepia(69420%) saturate(1000%)
-                  hue-rotate(320deg) brightness(100%) contrast(100%);
+                  hue-rotate(170deg) brightness(100%) contrast(100%);
                 -webkit-mask-image: var(--friend-image-mask);
                 mask-image: var(--friend-image-mask);
                 -webkit-mask-repeat: no-repeat;

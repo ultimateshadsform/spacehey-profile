@@ -1,4 +1,4 @@
-@use '../utils/settings.scss' as *;
+@use "../utils/settings.scss" as *;
 
 @mixin you-are-friends {
   .inner {
@@ -26,7 +26,7 @@
   }
 
   &:before {
-    content: '';
+    content: "";
     background-image: var(--profile-friend-image);
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,11 +41,11 @@
 
   @if $show-you-are-friends-overlay {
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       inset: 0;
       background-image: var(--profile-friend-image-overlay);
-      background-size: cover;
+      background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       z-index: 1;
