@@ -452,16 +452,14 @@ html {
                 p {
                   white-space: nowrap;
                   font-size: clamp(0.5rem, 1.5svw, 1rem);
+                  color: var(--extra-color);
+                  text-shadow: 0 0 2px var(--secondary-color);
                 }
 
                 &:hover {
                   img:not(.icon) {
                     transform: scale(2.1);
                   }
-                }
-
-                p {
-                  color: var(--extra-color);
                 }
 
                 img:not(.icon) {

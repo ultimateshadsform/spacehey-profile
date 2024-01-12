@@ -1,11 +1,12 @@
 @use "./functions/funcs.scss" as *;
 
 $primary-color: white;
-$secondary-color: #ffbe19;
+$secondary-color: red;
 $accent-color: white;
-$extra-color: #a97d0e;
+$extra-color: black;
 $background-color: hsl(222, 100%, 5%);
-$text-shadow: 0 0 5px var(--extra-color);
+$text-shadow: 0 0 5px var(--secondary-color);
+$text-shadow-invert: 0 0 5px var(--extra-color);
 $title-shadow: generateShadow(
   $extra-color,
   $accent-color,

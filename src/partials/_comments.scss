@@ -88,7 +88,8 @@ $border-style: 2px solid var(--secondary-color);
             td {
               &:first-child {
                 p {
-                  color: var(--extra-color);
+                  color: var(--secondary-color);
+                  text-shadow: var(--text-shadow-invert);
                   animation: first-name-anim 400ms ease-in-out infinite
                     alternate both;
                   @keyframes first-name-anim {
@@ -165,7 +166,7 @@ $border-style: 2px solid var(--secondary-color);
                   position: relative;
                   width: 100%;
                   border-radius: 10px;
-                  overflow: clip;
+                  // overflow: clip;
                   @include image-frame($comment-frame-image);
                 }
               }
@@ -175,7 +176,7 @@ $border-style: 2px solid var(--secondary-color);
                 font-size: clamp(0.5rem, 1.5svw, 1rem);
                 z-index: 1;
                 position: relative;
-                color: var(--accent-color);
+                color: var(--extra-color);
                 text-shadow: var(--text-shadow);
                 transition: all 600ms ease;
                 animation: name-anim 600ms ease-in-out infinite alternate both;
