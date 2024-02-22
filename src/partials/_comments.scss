@@ -167,7 +167,7 @@ $border-style: 2px solid var(--secondary-color);
                   width: 100%;
                   border-radius: 10px;
                   // overflow: clip;
-                  @include image-frame($comment-frame-image);
+                  @include image-frame(var(--comment-frame-image));
                 }
               }
 
