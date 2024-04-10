@@ -6,13 +6,11 @@
   "author": "Alexander Carlsson <alexxycarlsson@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "yarn cleardist && sass --no-source-map --style=expanded src:dist && yarn rename",
-    "build:compressed": "yarn cleardist && sass --no-source-map --style=compressed src:dist && yarn rename",
-    "rename": "rname dist/*.css dist/\"{{f}}.min.css\"",
-    "cleardist": "rmdir /s /q dist && mkdir dist"
+    "build": "bun run cleardist && sass --no-source-map --style=expanded src:dist",
+    "build:compressed": "bun run cleardist && sass --no-source-map --style=compressed src:dist",
+    "cleardist": "cmd /c rmdir dist /s /q && mkdir dist"
   },
   "devDependencies": {
-    "rename-cli": "^7.0.2",
     "sass": "^1.69.5"
   }
 }
