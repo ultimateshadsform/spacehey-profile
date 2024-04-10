@@ -129,3 +129,44 @@
     }
   }
 }
+
+@mixin sonic-wtf {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 20rem;
+    height: 20rem;
+    background: url("https://media.tenor.com/nVV5NCZRX0AAAAAi/sonic-dance-fast-goofy-meme.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    inset: 0;
+    animation: moveXX 300ms linear 0s infinite alternate,
+      moveYY 10s linear 0s infinite alternate, rotate 300ms linear 0s infinite;
+    @keyframes moveXX {
+      from {
+        left: 0;
+      }
+      to {
+        left: calc(100% - 20rem);
+      }
+    }
+    @keyframes moveYY {
+      from {
+        top: 0;
+      }
+      to {
+        top: calc(100% - 20rem);
+      }
+    }
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

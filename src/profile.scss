@@ -6,6 +6,7 @@
 @use "./utils/fonts.scss" as *;
 @use "./utils/vars.scss" as *;
 @use "./utils/root.scss" as *;
+@use "./partials/optional/characters.scss" as *;
 
 // Partials
 @use "./partials/nav.scss" as *;
@@ -86,6 +87,8 @@ html {
       @if $include-border {
         @include border;
       }
+
+      @include sonic-wtf;
 
       .profile {
         display: flex !important;
