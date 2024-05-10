@@ -110,6 +110,7 @@ html {
             justify-content: center;
             width: fit-content;
             margin: 0 auto;
+            z-index: 1;
             position: relative;
             pointer-events: none;
             animation: the-forbidden-dance 0.5s linear infinite alternate;
@@ -135,6 +136,39 @@ html {
               to {
                 transform: translateZ(0) scaleY(0.25) scaleX(2);
               }
+            }
+
+            @keyframes cool-flip-dude {
+              0% {
+                transform: rotate(0deg);
+              }
+
+              21% {
+                transform: rotate(0deg);
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+              }
+
+              28% {
+                transform: rotate(-1turn);
+              }
+
+              71% {
+                transform: rotate(-1turn);
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+              }
+
+              78% {
+                transform: rotate(1turn);
+              }
+
+              to {
+                transform: rotate(1turn);
+              }
+            }
+            &:before,
+            img {
+              animation: cool-flip-dude 10s cubic-bezier(0.645, 0.045, 0.355, 1)
+                0.5s infinite;
             }
 
             @if $include-profile-frame {

@@ -1,37 +1,4 @@
 @mixin image-frame($image: var(--profile-frame-image)) {
-  @keyframes cool-flip-dude {
-    0% {
-      transform: rotate(0deg);
-    }
-
-    21% {
-      transform: rotate(0deg);
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-
-    28% {
-      transform: rotate(-1turn);
-    }
-
-    71% {
-      transform: rotate(-1turn);
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-
-    78% {
-      transform: rotate(1turn);
-    }
-
-    to {
-      transform: rotate(1turn);
-    }
-  }
-  &:before,
-  img {
-    animation: cool-flip-dude 10s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s
-      infinite;
-  }
-
   &:before {
     content: "";
     width: 100%;
