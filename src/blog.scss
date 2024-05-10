@@ -111,6 +111,31 @@ html {
             width: fit-content;
             margin: 0 auto;
             position: relative;
+            pointer-events: none;
+            animation: the-forbidden-dance 0.5s linear infinite alternate;
+            @keyframes the-forbidden-dance {
+              0% {
+                transform: translate3d(0, -180px, 0) scaleY(1);
+                animation-timing-function: cubic-bezier(
+                  0.895,
+                  0.03,
+                  0.685,
+                  0.22
+                );
+              }
+
+              80% {
+                transform: translateZ(0) scaleY(2) scaleX(0.6);
+              }
+
+              90% {
+                transform: translateZ(0) scaleY(0.4) scaleX(1);
+              }
+
+              to {
+                transform: translateZ(0) scaleY(0.25) scaleX(2);
+              }
+            }
 
             @if $include-profile-frame {
               @include image-frame;

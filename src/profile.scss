@@ -215,21 +215,33 @@ html {
             height: 100%;
             width: fit-content;
             margin: unset !important;
-            z-index: -1;
+            pointer-events: none;
+            z-index: 1;
             perspective: 1000px;
             display: flex !important;
             justify-content: center;
-            animation: profile-anim calc(200ms * 4) ease-in-out infinite
-              alternate both;
-            @keyframes profile-anim {
+            animation: the-forbidden-dance 0.5s linear infinite alternate;
+            @keyframes the-forbidden-dance {
               0% {
-                transform: translate(0, 0px);
+                transform: translate3d(0, -180px, 0) scaleY(1);
+                animation-timing-function: cubic-bezier(
+                  0.895,
+                  0.03,
+                  0.685,
+                  0.22
+                );
               }
-              50% {
-                transform: translate(0, 15px);
+
+              80% {
+                transform: translateZ(0) scaleY(2) scaleX(0.6);
               }
-              100% {
-                transform: translate(0, -0px);
+
+              90% {
+                transform: translateZ(0) scaleY(0.4) scaleX(1);
+              }
+
+              to {
+                transform: translateZ(0) scaleY(0.25) scaleX(2);
               }
             }
             position: relative;
