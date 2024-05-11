@@ -116,7 +116,7 @@ html {
             animation: the-forbidden-dance 0.5s linear infinite alternate;
             @keyframes the-forbidden-dance {
               0% {
-                transform: translate3d(0, -180px, 0) scaleY(1);
+                transform: translate3d(0, -5rem, 0) scaleY(1);
                 animation-timing-function: cubic-bezier(
                   0.895,
                   0.03,
