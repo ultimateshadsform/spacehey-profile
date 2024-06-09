@@ -3,27 +3,25 @@
 ## About Me
 
 ```html
-<iframe
-  width="0"
-  height="0"
-  style="position: absolute;"
-  src="https://www.youtube.com/embed/videoseries?list=PL6gJHLN8FcTNJGwUfUp81NzUE996LaNCP&autoplay=1&loop=1&start=57"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen=""
-  loading="lazy"
->
-</iframe>
-<div class="moving-ball"></div>
+<img class="lmfao" src="https://b.l3n.co/i/3M42fM.png" />
+<div class="video-container">
+  <div class="cover">
+    <iframe
+      width="100%"
+      height="100%"
+      src="https://www.youtube.com/embed/videoseries?list=PL6gJHLN8FcTNJGwUfUp81NzUE996LaNCP&autoplay=1&loop=1&start=0"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+  </div>
+</div>
 <div class="moon-container">
   <div class="moon-shaker"></div>
 </div>
 <div class="tails"></div>
-<img
-  class="lights"
-  src="https://nda.nebraska.gov/publications/promotion/christmas_trees/flashing_lights_bottom.gif"
-/>
 <img
   class="side-shadow"
   src="https://collection.ju.mp/assets/images/gallery18/ab27fde1_original.gif"
@@ -86,6 +84,7 @@
   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡾⠋⣾⢻⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢸⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 </h1>
 <div class="stamps">
+  <img class="kurse" width="100%" src="https://a.l3n.co/i/39KnB0.gif" />
   <img
     src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f6a35763-f971-40ff-ab1a-51fc31f0daac/dd5nach-6695275b-d5b5-473a-a3c1-8764a456f59b.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Y2YTM1NzYzLWY5NzEtNDBmZi1hYjFhLTUxZmMzMWYwZGFhY1wvZGQ1bmFjaC02Njk1Mjc1Yi1kNWI1LTQ3M2EtYTNjMS04NzY0YTQ1NmY1OWIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.5a9YJrO2h-eHlR9kqn7Ue4ojqlXECwOsnYn78eeDpC0"
   />
@@ -105,8 +104,9 @@
     target="_blank"
     href="https://blog.spacehey.com/entry?id=991914"
     ><h1>PLEASE READ MY DNI BLOG BEFORE ANYTHING!!!</h1></a
-  >I'm Alexander.<br />I like femboys.<br />I go by he/him/his. :3<br />Beware I
-  talk a lot.<br />I also love programming sometimes!
+  >I'm /\ L E X. (Alexander) 22 yo.<br />I like femboys.<br />I go by
+  he/him/his. :3<br />Beware I talk a lot.<br />I also love programming
+  sometimes!<br />I usually go by 🖤 SHADOW 🖤
 </div>
 ```
 
@@ -114,8 +114,9 @@
 
 ```html
 Mostly gay people. But anything will do.<br /><a
-  href="https://steamcommunity.com/id/ultimateshadsform"
-  >https://steamcommunity.com/id/ultimateshadsform</a
+  target="_blank"
+  href="https://steamcommunity.com/id/hedgehogform"
+  >https://steamcommunity.com/id/hedgehogform</a
 ><br /><br />
 <div class="music-container">
   <a target="_blank" href="https://www.last.fm/user/ultimateshdform"
@@ -135,4 +136,55 @@ Mostly gay people. But anything will do.<br /><a
     ></iframe>
   </div>
 </div>
+```
+
+## General:
+
+```html
+Anything Sonic. Mostly Shadow.
+<div class="stampcollection">
+  <img src="https://i.ibb.co/ctLWvF6/Untitled19-20240530184830.png" />
+  <img src="https://files.catbox.moe/wli3ug.jpg" />
+  <img src="https://files.catbox.moe/2c06uh.jpg" />
+  <img src="https://files.catbox.moe/s12dvp.jpg" />
+  <img src="https://files.catbox.moe/5tz9ga.jpg" />
+  <img src="https://files.catbox.moe/y1rzp9.jpg" />
+</div>
+```
+
+## Music:
+
+```html
+kets4eki, asteria, Kim Petras, COBRAH, Britney Manson, Odetari, 6arelyhuman,
+Axxad, Love Eli, BigKlit, Lil Mariko, 100 gecs, SEGA SOUND TEAM, Crush 40,
+Crystal Castles, Boy Fantasy, La+ch, COUCOU CHLOE, Kenya Grace, Sorana,
+Sidewalks and Skeletons, VTSS. And all similar artists.
+```
+
+## Movies:
+
+```html
+<img src="https://i.ebayimg.com/images/g/gvUAAOSwTFhkZEhe/s-l1600.jpg" /><img
+  src="https://www.littledaisycafe.com/wp-content/uploads/2021/07/film_poster_900.jpg"
+/>
+```
+
+## Television:
+
+```html
+I don't watch TV.
+```
+
+## Books:
+
+```html
+Lackadaisy comics. (put compiled style here)
+```
+
+## Heroes:
+
+```html
+<img
+  src="https://static.wikia.nocookie.net/disneythehunchbackofnotredame/images/a/ae/Shadow_%28Modern%29.png"
+/>
 ```
